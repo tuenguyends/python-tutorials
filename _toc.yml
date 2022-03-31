@@ -15,6 +15,7 @@ parts:
     chapters:
     - file: "02_basics/01_basic_syntax"
     - file: "02_basics/02_variables"
+    - file: "02_basics/03_naming"
     
   - caption: "Data types"
     chapters:
