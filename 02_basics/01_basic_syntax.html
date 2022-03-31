@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Variables and assignments" href="02_variables.html" />
-    <link rel="prev" title="Environment setup" href="../01_get_started/02_setup.html" />
+    <link rel="prev" title="Introduction to Markdown" href="../01_get_started/04_intro_markdown.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -94,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../000_index.html">
-   Python tutorials
+   Introduction
   </a>
  </li>
 </ul>
@@ -112,6 +112,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../01_get_started/02_setup.html">
    Environment setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_get_started/03_intro_jupyter_lab.html">
+   Introduction to Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_get_started/04_intro_markdown.html">
+   Introduction to Markdown
   </a>
  </li>
 </ul>
@@ -236,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-as-a-calculator">
-   Python as a calculator
+  <a class="reference internal nav-link" href="#math">
+   Math
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -306,8 +316,8 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-as-a-calculator">
-   Python as a calculator
+  <a class="reference internal nav-link" href="#math">
+   Math
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -367,8 +377,8 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="python-s-basic-syntax">
 <h1>Python’s basic syntax<a class="headerlink" href="#python-s-basic-syntax" title="Permalink to this headline">¶</a></h1>
 <p>This chapter aims to provide just some very basic syntax so that you can get started immediately. It’s like when you first learn a new language. you don’t dive into learning grammar right away. Instead, you learn some basic vocabulary and simple sentences. This chapter serves such a purpose. In the next chapters, you will learn Python in a more systematic way.</p>
-<div class="section" id="python-as-a-calculator">
-<h2>Python as a calculator<a class="headerlink" href="#python-as-a-calculator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="math">
+<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
 <p>You can use Python as a calculator to compute math expressions, for example</p>
 <p>Addition</p>
 <div class="cell docutils container">
@@ -448,7 +458,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Exponential (use <code class="docutils literal notranslate"><span class="pre">**</span></code> not <code class="docutils literal notranslate"><span class="pre">^</span></code>)</p>
+<p>Exponential (use <code class="docutils literal notranslate"><span class="pre">**</span></code>, not <code class="docutils literal notranslate"><span class="pre">^</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
@@ -477,7 +487,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="assignments">
 <h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
-<p>An assignment assigns a value to a variable, for example, the following assignment assign value <code class="docutils literal notranslate"><span class="pre">1000</span></code> to variable <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<p>An assignment assigns a value to a variable, for example, the following assignment assigns value <code class="docutils literal notranslate"><span class="pre">1000</span></code> to variable <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -592,7 +602,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is also a comments</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is also a comment</span>
 <span class="c1"># but it spans</span>
 <span class="c1"># on multiple lines</span>
 </pre></div>
@@ -603,7 +613,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="printing">
 <h2>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h2>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to print out values associated with a literal, a variable, or an expression.</p>
-<p>Roughly speaking, a function takes some input (inside the parentheses), does something with the input, and spits out some output. You will learn about functions in details later.</p>
+<p>Roughly speaking, a function takes some input (inside the parentheses), does something with the input, and spits out some output. You will learn about functions in detail later.</p>
 <p>Print a number literal</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -642,7 +652,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Print a</p>
+<p>Print a variable</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
@@ -692,7 +702,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>However, <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">=</span> </code> is not a statement. You will get an error if trying to run it.</p>
+<p>However, <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">=</span> </code> is not a statement. You will get an error if you try to run it.</p>
 <p>Each statement <em>normally</em> sits on one line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -900,11 +910,11 @@ Good morning
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../01_get_started/02_setup.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../01_get_started/04_intro_markdown.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Environment setup</p>
+            <p class="prev-next-title">Introduction to Markdown</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="02_variables.html" title="next page">
