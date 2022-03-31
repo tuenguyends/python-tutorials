@@ -8,6 +8,8 @@ parts:
     chapters:
     - file: "01_get_started/01_intro_python"
     - file: "01_get_started/02_setup"
+    - file: "01_get_started/03_intro_jupyter_lab"
+    - file: "01_get_started/04_intro_markdown"
 
   - caption: "The basics"
     chapters:
