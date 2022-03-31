@@ -18,7 +18,7 @@ For more information about me or other resources, please visit my website at htt
 
 ## Feedback
 
-Any feedback on typos or suggestions for improvement is welcome. Please send me an email to the following address <tuenguyends@gmail.com>.
+Any feedback on typos and suggestions for improvement are welcome. Please send me an email to the following address <tuenguyends@gmail.com>.
 
 ## Contents
 
