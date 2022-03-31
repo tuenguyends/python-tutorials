@@ -15,3 +15,21 @@ parts:
     chapters:
     - file: "02_basics/01_basic_syntax"
     - file: "02_basics/02_variables"
+    
+  - caption: "Data types"
+    chapters:
+    - file: "03_datatypes/01_typing_system"
+    - file: "03_datatypes/02_flat_types"
+    - file: "03_datatypes/03_lists"
+    - file: "03_datatypes/04_tuples"
+    - file: "03_datatypes/05_ranges"
+    - file: "03_datatypes/06_strings"
+    - file: "03_datatypes/07_dicts"
+    - file: "03_datatypes/08_sets"
+    
+  - caption: "Extra topics 1"
+    chapters:
+    - file: "04_extra_1/01_basic_oop"
+    - file: "04_extra_1/02_comprehensions"
+    - file: "04_extra_1/03_colection_util"
+    - file: "04_extra_1/04_advanced_strings"
