@@ -34,3 +34,4 @@ parts:
     - file: "04_extra_1/02_comprehensions"
     - file: "04_extra_1/03_colection_util"
     - file: "04_extra_1/04_advanced_strings"
+    - file: "04_extra_1/05_styles"
