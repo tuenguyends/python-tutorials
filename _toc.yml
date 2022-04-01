@@ -2,36 +2,36 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: "jb-book"
-root: "000_index"
+root: "intro"
 parts:
   - caption: "Getting started"
     chapters:
-    - file: "01_get_started/01_intro_python"
-    - file: "01_get_started/02_setup"
-    - file: "01_get_started/03_intro_jupyter_lab"
-    - file: "01_get_started/04_intro_markdown"
+    - file: "get-started/intro-python"
+    - file: "get-started/setup"
+    - file: "get-started/intro-jupyter-lab"
+    - file: "get-started/intro-markdown"
 
   - caption: "The basics"
     chapters:
-    - file: "02_basics/01_basic_syntax"
-    - file: "02_basics/02_variables"
-    - file: "02_basics/03_naming"
+    - file: "basics/basic-syntax"
+    - file: "basics/variables"
+    - file: "basics/naming"
     
   - caption: "Data types"
     chapters:
-    - file: "03_datatypes/01_typing_system"
-    - file: "03_datatypes/02_flat_types"
-    - file: "03_datatypes/03_lists"
-    - file: "03_datatypes/04_tuples"
-    - file: "03_datatypes/05_ranges"
-    - file: "03_datatypes/06_strings"
-    - file: "03_datatypes/07_dicts"
-    - file: "03_datatypes/08_sets"
+    - file: "datatypes/typing-system"
+    - file: "datatypes/flat-types"
+    - file: "datatypes/lists"
+    - file: "datatypes/tuples"
+    - file: "datatypes/ranges"
+    - file: "datatypes/strings"
+    - file: "datatypes/dicts"
+    - file: "datatypes/sets"
     
   - caption: "Extra topics 1"
     chapters:
-    - file: "04_extra_1/01_basic_oop"
-    - file: "04_extra_1/02_comprehensions"
-    - file: "04_extra_1/03_colection_util"
-    - file: "04_extra_1/04_advanced_strings"
-    - file: "04_extra_1/05_styles"
+    - file: "extra-1/basic-oop"
+    - file: "extra-1/comprehensions"
+    - file: "extra-1/colection-util"
+    - file: "extra-1/advanced-strings"
+    - file: "extra-1/coding-styles"
