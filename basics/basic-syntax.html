@@ -159,37 +159,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../datatypes/flat-types.html">
-   Flat types
+  <a class="reference internal" href="../datatypes/flat-dtypes.html">
+   Flat data types
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../datatypes/lists.html">
+  <a class="reference internal" href="../datatypes/nonetype.html">
+   NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datatypes/bool.html">
+   Truth values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datatypes/int.html">
+   Integers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datatypes/float.html">
+   Real numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datatypes/collection-dtypes.html">
+   Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datatypes/list.html">
    Lists
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../datatypes/tuples.html">
+  <a class="reference internal" href="../datatypes/tuple.html">
    Tuples
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../datatypes/ranges.html">
+  <a class="reference internal" href="../datatypes/range.html">
    Ranges
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../datatypes/strings.html">
+  <a class="reference internal" href="../datatypes/str.html">
    Strings
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../datatypes/dicts.html">
-   Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../datatypes/sets.html">
+  <a class="reference internal" href="../datatypes/set.html">
    Sets
   </a>
  </li>
@@ -374,6 +394,11 @@ const thebe_selector_output = ".output, .cell_output"
    Indentation
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-help">
+   Getting help
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -442,6 +467,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#indentation">
    Indentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-help">
+   Getting help
   </a>
  </li>
 </ul>
@@ -961,6 +991,34 @@ Good morning
 </pre></div>
 </div>
 <p>You will learn about indentation later. For now, if there is no reason, never indent your code.</p>
+</div>
+<div class="section" id="getting-help">
+<h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
+<p>If you encounter some function you don’t know (or don’t remember its details), you can invoke its documentation in two ways: using <code class="docutils literal notranslate"><span class="pre">?</span></code> or <code class="docutils literal notranslate"><span class="pre">help()</span></code>. They are the same, but <code class="docutils literal notranslate"><span class="pre">?</span></code> is more convenient.</p>
+<p>Example 1: using <code class="docutils literal notranslate"><span class="pre">?</span></code> to read documentation for <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>print
+</pre></div>
+</div>
+</div>
+</div>
+<p>Example 2: using <code class="docutils literal notranslate"><span class="pre">help()</span></code> to read documentation for <code class="docutils literal notranslate"><span class="pre">abs()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">abs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function abs in module builtins:
+
+abs(x, /)
+    Return the absolute value of the argument.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

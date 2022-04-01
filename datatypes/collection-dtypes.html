@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lists &#8212; Python tutorials</title>
+    <title>Collection types &#8212; Python tutorials</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tuples" href="tuples.html" />
-    <link rel="prev" title="Flat types" href="flat-types.html" />
+    <link rel="next" title="Lists" href="list.html" />
+    <link rel="prev" title="Real numbers" href="float.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -159,37 +159,57 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="flat-types.html">
-   Flat types
+  <a class="reference internal" href="flat-dtypes.html">
+   Flat data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nonetype.html">
+   NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bool.html">
+   Truth values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="int.html">
+   Integers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="float.html">
+   Real numbers
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
+   Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="list.html">
    Lists
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
+  <a class="reference internal" href="tuple.html">
    Tuples
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ranges.html">
+  <a class="reference internal" href="range.html">
    Ranges
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
+  <a class="reference internal" href="str.html">
    Strings
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="dicts.html">
-   Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
+  <a class="reference internal" href="set.html">
    Sets
   </a>
  </li>
@@ -261,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/datatypes/lists.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/datatypes/collection-dtypes.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -281,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fdatatypes/lists.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fdatatypes/collection-dtypes.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -302,7 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/datatypes/lists.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/datatypes/collection-dtypes.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -326,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lists</h1>
+                <h1>Collection types</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -337,9 +357,9 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lists">
-<h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
-<p>To be updated</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="collection-types">
+<h1>Collection types<a class="headerlink" href="#collection-types" title="Permalink to this headline">¶</a></h1>
+<p>TBU</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -367,17 +387,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="flat-types.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="float.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Flat types</p>
+            <p class="prev-next-title">Real numbers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tuples.html" title="next page">
+    <a class='right-next' id="next-link" href="list.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tuples</p>
+        <p class="prev-next-title">Lists</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

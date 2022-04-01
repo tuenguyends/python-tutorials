@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python typing system &#8212; Python tutorials</title>
+    <title>NoneType type &#8212; Python tutorials</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Flat data types" href="flat-dtypes.html" />
-    <link rel="prev" title="Naming rules and conventions" href="../basics/naming.html" />
+    <link rel="next" title="Truth values" href="bool.html" />
+    <link rel="prev" title="Flat data types" href="flat-dtypes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -153,8 +153,8 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="typing-system.html">
    Python typing system
   </a>
  </li>
@@ -163,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
    Flat data types
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="nonetype.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    NoneType type
   </a>
  </li>
@@ -281,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/datatypes/typing-system.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/datatypes/nonetype.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -301,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fdatatypes/typing-system.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fdatatypes/nonetype.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -322,7 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/datatypes/typing-system.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/datatypes/nonetype.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -350,13 +350,24 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#typing-hierarchy">
-   Typing hierarchy
+  <a class="reference internal nav-link" href="#when-use-nonetype">
+   When use
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   ?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-check-type">
-   How to check type
+  <a class="reference internal nav-link" href="#operations-on-nonetype">
+   Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
   </a>
  </li>
 </ul>
@@ -369,7 +380,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Python typing system</h1>
+                <h1>NoneType type</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -385,13 +396,24 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#typing-hierarchy">
-   Typing hierarchy
+  <a class="reference internal nav-link" href="#when-use-nonetype">
+   When use
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   ?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-check-type">
-   How to check type
+  <a class="reference internal nav-link" href="#operations-on-nonetype">
+   Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
   </a>
  </li>
 </ul>
@@ -403,65 +425,22 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="python-typing-system">
-<h1>Python typing system<a class="headerlink" href="#python-typing-system" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="nonetype-type">
+<h1>NoneType type<a class="headerlink" href="#nonetype-type" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>We can categorize data into two major types: built-in and user-defined.</p>
-<ol class="simple">
-<li><p>Built-in types are is part of the language and are readily available when we installed Python</p></li>
-<li><p>User-defined types are built by programmers (based on the built-in types) to suit their needs for more complex applications.</p></li>
-</ol>
-<p>This book focuses mostly on the built-in types and some user-defined types developed by professional programmers. You won’t learn to build your own user-defined types in this book. In fact, you rarely create user-defined types when working as a data analyst/scientist even at intermediate levels.</p>
-</div>
-<div class="section" id="typing-hierarchy">
-<h2>Typing hierarchy<a class="headerlink" href="#typing-hierarchy" title="Permalink to this headline">¶</a></h2>
-<p>The following picture illustrates a bird-eye view of Python’s typing hierarchy. Note that the diagram is not complete. I only show common types that, based on my experience, are relevant and important.</p>
-<img src="../_static/img/type-system.png" width="400"><p><strong>None types</strong> are used to represent the state of being undefined/unknown (both in datatype and in value).</p>
-<ul class="simple">
-<li><p>Being undefined is not the same as being empty. A variable of <code class="docutils literal notranslate"><span class="pre">list</span></code> type can be an empty list, but it still has a type.</p></li>
-<li><p>Python implementation: <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>.</p></li>
-</ul>
-<p><strong>Numbers</strong> are used to represent numeric values.</p>
-<ul class="simple">
-<li><p>Python implementation: <code class="docutils literal notranslate"><span class="pre">int</span></code> (integers), <code class="docutils literal notranslate"><span class="pre">float</span></code> (real numbers), <code class="docutils literal notranslate"><span class="pre">complex</span></code> (complex numbers), <code class="docutils literal notranslate"><span class="pre">bool</span></code> (truth values).</p></li>
-<li><p>Note that, in Python <code class="docutils literal notranslate"><span class="pre">bool</span></code> type is a sub-type of <code class="docutils literal notranslate"><span class="pre">int</span></code>. As you will see, <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> of <code class="docutils literal notranslate"><span class="pre">bool</span></code> is actually <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> of <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
-</ul>
-<p><strong>Sequences</strong> are used to represent an ordered collection of elements under the same name.</p>
-<ul class="simple">
-<li><p>Python implementation: <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">range</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code></p></li>
-<li><p>The order of the elements of the sequence matters.</p></li>
-<li><p>We access an element of a sequence using the sequence name and the element’s position (or index).</p></li>
-</ul>
-<p><strong>Mappings</strong> are used to represent a collection of <code class="docutils literal notranslate"><span class="pre">key-value</span></code> pairs.</p>
-<ul class="simple">
-<li><p>Python implementation: <code class="docutils literal notranslate"><span class="pre">dict</span></code> (dictionaries)</p></li>
-<li><p>Example <code class="docutils literal notranslate"><span class="pre">student</span> <span class="pre">=</span> <span class="pre">{&quot;name&quot;:</span> <span class="pre">&quot;Rob&quot;,</span> <span class="pre">&quot;age&quot;:</span> <span class="pre">20}</span></code></p></li>
-<li><p>There is no instrinsic order in a mapping.</p></li>
-<li><p>We access an element of a dictionary using the correspondiong  <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p></li>
-</ul>
-<p><strong>Sets</strong> are used to represent a set (as in mathematics)</p>
-<ul class="simple">
-<li><p>Python implementation: <code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">frozenset</span></code>.</p></li>
-<li><p>Elements of sets are unique and are not ordered.</p></li>
-<li><p>There is no way to access an element of a set. We can only check if a value is in a set or not.</p></li>
-</ul>
-<p><strong>Callable</strong> types are <em>callable</em> (you call/invoke a function or a method to do something)</p>
-<ul class="simple">
-<li><p>Python implementation: <code class="docutils literal notranslate"><span class="pre">builtin_function_or_method</span></code> (functions or methods), <code class="docutils literal notranslate"><span class="pre">type</span></code> (classes)</p></li>
-</ul>
-<blockquote>
-<div><p>Note that there are other types that are not included in this chapter (and in this book). The main purpose is to provide the fundamentals, not to overwhelm you with types that you will never use.</p>
-</div></blockquote>
-</div>
-<div class="section" id="how-to-check-type">
-<h2>How to check type<a class="headerlink" href="#how-to-check-type" title="Permalink to this headline">¶</a></h2>
-<p>You can use <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to check the type of a literal, expression, or variable.</p>
-<p><strong>Example 1: check types of literals</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">NoneType</span></code> is used to represent the state of being undefined/unknown. Python uses the keyword <code class="docutils literal notranslate"><span class="pre">None</span></code> to represent this special value.</p>
+<p>To create a variable of <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>, simply assign <code class="docutils literal notranslate"><span class="pre">None</span></code> to it, for example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># None literal</span>
-<span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -471,207 +450,153 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<p>When you evaluate <code class="docutils literal notranslate"><span class="pre">None</span></code> on a code cell of Jupyter Lab, you will not see anything printed out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bool literal</span>
-<span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To display <code class="docutils literal notranslate"><span class="pre">None</span></code> you have to explicitly print it out using <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
 </pre></div>
 </div>
 </div>
 </div>
+<p>You can also create a <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> variable by assign to it an expression that produces <code class="docutils literal notranslate"><span class="pre">None</span></code>, for example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integer literal</span>
-<span class="nb">type</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
 </pre></div>
 </div>
 </div>
 </div>
+<p>Many misunderstand that x will assume the value <code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code> after the above assignment. It’s not true.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code> is what <code class="docutils literal notranslate"><span class="pre">print</span></code> prints out, it’s not what <code class="docutils literal notranslate"><span class="pre">print</span></code> returns. You will learn more about function later. For now, just accept that <code class="docutils literal notranslate"><span class="pre">print</span></code> prints out <code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code>, but after the printing is done, it returns something else to the place where it is called. This returned value is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>Let’s confirm it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Real literal</span>
-<span class="nb">type</span><span class="p">(</span><span class="mf">1.23</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="when-use-nonetype">
+<h2>When use <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?<a class="headerlink" href="#when-use-nonetype" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">NoneType</span></code> is normally used as a return option of a function to indicate that the function already did what you asked, but it couldn’t find anything that makes sense.</p>
+<p>Suppose we have a string <code class="docutils literal notranslate"><span class="pre">s</span></code> as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Complex literal</span>
-<span class="nb">type</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;This is a dog&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, suppose we want to check if some other string is contained in <code class="docutils literal notranslate"><span class="pre">s</span></code>. We can use <code class="docutils literal notranslate"><span class="pre">re.search()</span></code> function of module <code class="docutils literal notranslate"><span class="pre">re</span></code>.</p>
+<p>First, we need to import module <code class="docutils literal notranslate"><span class="pre">re</span></code> to use its <code class="docutils literal notranslate"><span class="pre">search</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, check if <code class="docutils literal notranslate"><span class="pre">&quot;cat&quot;</span></code> is in <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">find</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">find</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>complex
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+&lt;class &#39;NoneType&#39;&gt;
 </pre></div>
 </div>
 </div>
 </div>
+<p>As you can see, the result is <code class="docutils literal notranslate"><span class="pre">None</span></code> because there is no <code class="docutils literal notranslate"><span class="pre">&quot;cat&quot;</span></code> in <code class="docutils literal notranslate"><span class="pre">s</span></code>. Now, try to search for <code class="docutils literal notranslate"><span class="pre">&quot;dog&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># String literal</span>
-<span class="nb">type</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">find</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">find</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;re.Match object; span=(10, 13), match=&#39;dog&#39;&gt;
+&lt;class &#39;re.Match&#39;&gt;
 </pre></div>
 </div>
 </div>
 </div>
+<p>As you can see, this time, <code class="docutils literal notranslate"><span class="pre">re.search()</span></code> found something, and it did not return <code class="docutils literal notranslate"><span class="pre">None</span></code>. Instead, it returned a <code class="docutils literal notranslate"><span class="pre">re.Match</span></code> object that contain the relevant information about the search result.</p>
+</div>
+<div class="section" id="operations-on-nonetype">
+<h2>Operations on <code class="docutils literal notranslate"><span class="pre">NoneType</span></code><a class="headerlink" href="#operations-on-nonetype" title="Permalink to this headline">¶</a></h2>
+<p>There is not much we can do with <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> because it is so simple. The most commonly used operation is to check if a variable is actually <code class="docutils literal notranslate"><span class="pre">None</span></code>. To do this, we perform a comparison using <code class="docutils literal notranslate"><span class="pre">is</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List literal</span>
-<span class="nb">type</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuple literal</span>
-<span class="nb">type</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tuple
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set literal</span>
-<span class="nb">type</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">})</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>set
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dictionary literal</span>
-<span class="nb">type</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Example 2: check types of variables</strong></p>
-<p>Almost the same as in the previous examples. This time, you use the variable names instead.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integer variable</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># String variable</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Hello. How are you?&quot;</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if x is None</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List variable</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if x is not None</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Example 3: check types of expressions</strong></p>
-<p>When you check the type of an expression, Python will evaluate the expression and return the type of the result.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Int expression</span>
-<span class="nb">type</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Float expression</span>
-<span class="nb">type</span><span class="p">(</span><span class="mf">2.5</span> <span class="o">+</span> <span class="mf">1.2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;Hello.&quot;</span> <span class="o">+</span> <span class="s2">&quot; How are you&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
-</pre></div>
-</div>
-</div>
-</div>
+<p><strong>Remarks</strong>:</p>
+<ol class="simple">
+<li><p>We can also compare using <code class="docutils literal notranslate"><span class="pre">==</span></code>, but it is not recommended. For a detailed explanation, read <a class="reference external" href="https://stackoverflow.com/questions/3257919/what-is-the-difference-between-is-none-and-none/3257957#3257957">here</a>.</p></li>
+<li><p>For now, you might not appreciate <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> much. But you will after gaining an adequate knowledge about Python.</p></li>
+</ol>
 </div>
 </div>
 
@@ -700,17 +625,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../basics/naming.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="flat-dtypes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Naming rules and conventions</p>
+            <p class="prev-next-title">Flat data types</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="flat-dtypes.html" title="next page">
+    <a class='right-next' id="next-link" href="bool.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Flat data types</p>
+        <p class="prev-next-title">Truth values</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
