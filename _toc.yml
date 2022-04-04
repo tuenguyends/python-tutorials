@@ -2,112 +2,119 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: "jb-book"
-root: "intro"
+root: "contents/intro"
 parts:
   - caption: "Getting started"
+    numbered: true
     chapters:
-    - file: "get-started/intro-python"
+    - file: "contents/get-started/intro-python"
     
     # Setup
-    - file: "get-started/setup/setup-00"
+    - file: "contents/get-started/setup/main"
       sections:
-      - file: "get-started/setup/setup-01"
-      - file: "get-started/setup/setup-02"
-      - file: "get-started/setup/setup-03"
-      - file: "get-started/setup/setup-04"
+      - file: "contents/get-started/setup/anaconda"
+      - file: "contents/get-started/setup/git"
+      - file: "contents/get-started/setup/check"
+      - file: "contents/get-started/setup/workspace"
     
     # Jupyter lab
-    - file: "get-started/jlab/jlab-00"
+    - file: "contents/get-started/jlab/main"
       sections:
-      - file: "get-started/jlab/jlab-01"
-      - file: "get-started/jlab/jlab-02"
-      - file: "get-started/jlab/jlab-03"
-      - file: "get-started/jlab/jlab-04"
+      - file: "contents/get-started/jlab/overview"
+      - file: "contents/get-started/jlab/create-nb"
+      - file: "contents/get-started/jlab/work-with-nb"
+      - file: "contents/get-started/jlab/practice"
     
     # Markdown
-    - file: "get-started/markdown/markdown-00"
+    - file: "contents/get-started/markdown/main"
       sections:
-      - file: "get-started/markdown/markdown-01"
-      - file: "get-started/markdown/markdown-02"
-      - file: "get-started/markdown/markdown-03"
-      - file: "get-started/markdown/markdown-04"
+      - file: "contents/get-started/markdown/overview"
+      - file: "contents/get-started/markdown/basic"
+      - file: "contents/get-started/markdown/advanced"
+      - file: "contents/get-started/markdown/summary"
+      - file: "contents/get-started/markdown/practice"
       
   - caption: "The basics"
+    numbered: true
     chapters:
-    - file: "basics/basic-syntax"
+    - file: "contents/basics/basic-syntax"
     
     # Variables
-    - file: "basics/variables/var-00"
+    - file: "contents/basics/variables/main"
       sections:
-      - file: "basics/variables/var-01"
-      - file: "basics/variables/var-02"
-      - file: "basics/variables/var-03"
-      - file: "basics/variables/var-04"
-      - file: "basics/variables/var-05"
-      - file: "basics/variables/var-06"
-    - file: "basics/naming"
+      - file: "contents/basics/variables/overview"
+      - file: "contents/basics/variables/var-in-action"
+      - file: "contents/basics/variables/interning"
+      - file: "contents/basics/variables/formatted-print"
+      - file: "contents/basics/variables/summary"
+      - file: "contents/basics/variables/practice"
+    - file: "contents/basics/naming"
     
   - caption: "Data types"
+    numbered: true
     chapters:
     
     # Typing system
-    - file: "datatypes/types-00"
+    - file: "contents/dtypes/types/main"
       sections:
-      - file: "datatypes/types-01"
-      - file: "datatypes/types-02"
+      - file: "contents/dtypes/types/overview"
+      - file: "contents/dtypes/types/brief-description"
+      - file: "contents/dtypes/types/check-types"
     
     # Flat & None
-    - file: "datatypes/flat-dtypes"
-    - file: "datatypes/nonetype"
+    - file: "contents/dtypes/flat-dtypes"
+    - file: "contents/dtypes/nonetype"
     
     # Bool
-    - file: "datatypes/bool/bool-00"
+    - file: "contents/dtypes/bool/main"
       sections:
-      - file: "datatypes/bool/bool-01"
-      - file: "datatypes/bool/bool-02"
-      - file: "datatypes/bool/bool-03"
-      - file: "datatypes/bool/bool-04"
+      - file: "contents/dtypes/bool/overview"
+      - file: "contents/dtypes/bool/typecast"
+      - file: "contents/dtypes/bool/operations"
+      - file: "contents/dtypes/bool/practice"
     
     # Int
-    - file: "datatypes/int/int-00"
+    - file: "contents/dtypes/int/main"
       sections:
-      - file: "datatypes/int/int-01"
-      - file: "datatypes/int/int-02"
-      - file: "datatypes/int/int-03"
+      - file: "contents/dtypes/int/overview"
+      - file: "contents/dtypes/int/operations"
+      - file: "contents/dtypes/int/practice"
     
     # Float
-    - file: "datatypes/float/float-00"
+    - file: "contents/dtypes/float/main"
       sections:
-      - file: "datatypes/float/float-01"
-      - file: "datatypes/float/float-02"
-      - file: "datatypes/float/float-03"
+      - file: "contents/dtypes/float/overview"
+      - file: "contents/dtypes/float/operations"
+      - file: "contents/dtypes/float/practice"
     
     # Collections
-    - file: "datatypes/collection-dtypes"
+    - file: "contents/dtypes/collection-dtypes"
     
     # List
-    - file: "datatypes/list/list-00"
+    - file: "contents/dtypes/list/main"
       sections:
-      - file: "datatypes/list/list-01"
-      - file: "datatypes/list/list-02"
-      - file: "datatypes/list/list-03"
-      - file: "datatypes/list/list-04"
-      - file: "datatypes/list/list-05"
-      - file: "datatypes/list/list-06"
-      - file: "datatypes/list/list-07"
-      - file: "datatypes/list/list-08"
-      - file: "datatypes/list/list-09"
+      - file: "contents/dtypes/list/overview"
+      - file: "contents/dtypes/list/index"
+      - file: "contents/dtypes/list/slice"
+      - file: "contents/dtypes/list/iterate"
+      - file: "contents/dtypes/list/mutability"
+      - file: "contents/dtypes/list/copy"
+      - file: "contents/dtypes/list/operations"
+      - file: "contents/dtypes/list/unpack"
+      - file: "contents/dtypes/list/comprehensions"
+      - file: "contents/dtypes/list/practice"
       
     # Tuple
-    - file: "datatypes/tuple"
-    - file: "datatypes/range"
-    - file: "datatypes/str"
-    - file: "datatypes/dict"
-    - file: "datatypes/set"
+    - file: "contents/dtypes/tuple"
+    - file: "contents/dtypes/range"
+    - file: "contents/dtypes/str"
+    - file: "contents/dtypes/dict"
+    - file: "contents/dtypes/set"
+
   - caption: "Extra topics 1"
+    numbered: true
     chapters:
-    - file: "extra-1/basic-oop"
-    - file: "extra-1/comprehensions"
-    - file: "extra-1/colection-util"
-    - file: "extra-1/advanced-strings"
-    - file: "extra-1/coding-styles"
+    - file: "contents/extra-1/basic-oop"
+    - file: "contents/extra-1/colection-util"
+    - file: "contents/extra-1/advanced-strings"
+    - file: "contents/extra-1/coding-styles"
