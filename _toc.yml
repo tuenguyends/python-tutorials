@@ -20,7 +20,7 @@ parts:
     - file: "basics/basic-syntax"
     - file: "basics/assignments-variables"
     - file: "basics/naming"
-    - file: "basics/typing-sytem"
+    - file: "basics/typing-system"
     
   - caption: "Flat data types"
     numbered: true
