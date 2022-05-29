@@ -1,4 +1,0 @@
-# Real numbers
-
-```{tableofcontents}
-```

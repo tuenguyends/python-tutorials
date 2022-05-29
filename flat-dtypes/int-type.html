@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9. Int type &#8212; Python tutorials</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Float type" href="float-type.html" />
+    <link rel="prev" title="8. Bool type" href="bool-type.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python tutorials</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/jupyter-lab.html">
+   2. Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/markdown.html">
+   3. Introduction to Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/basic-syntax.html">
+   4. Python’s basic syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/assignments-variables.html">
+   5. Variables and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
+   6. Naming rules and conventions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Flat data types
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nonetype-type.html">
+   7. NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bool-type.html">
+   8. Bool type
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. Int type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="float-type.html">
+   10. Float type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Collection data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/collection-types.html">
+   11. Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/list-type.html">
+   12. List type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/tuple-type.html">
+   13. Tuple type
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/flat-dtypes/int-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fflat-dtypes/int-type.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/flat-dtypes/int-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   9.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-int-type">
+   9.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-an-int">
+   9.3. How to get an
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-int-literals">
+     9.3.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       int
+      </span>
+     </code>
+     literals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-a-int">
+     9.3.2. Ex 2: from an expression that produces a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       int
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-uses-int">
+   9.4. When uses
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-int">
+   9.5. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   9.6. Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice">
+   9.7. Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     9.7.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     9.7.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     9.7.3. Exercise 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Int type</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   9.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-int-type">
+   9.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-an-int">
+   9.3. How to get an
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-int-literals">
+     9.3.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       int
+      </span>
+     </code>
+     literals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-a-int">
+     9.3.2. Ex 2: from an expression that produces a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       int
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-uses-int">
+   9.4. When uses
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-int">
+   9.5. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   9.6. Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice">
+   9.7. Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     9.7.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     9.7.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     9.7.3. Exercise 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="int-type">
+<h1><span class="section-number">9. </span>Int type<a class="headerlink" href="#int-type" title="Permalink to this headline">¶</a></h1>
+<p>Author: Tue Nguyen</p>
+<div class="section" id="overview">
+<h2><span class="section-number">9.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This lecture covers the following topics</p>
+<ul class="simple">
+<li><p>Why <code class="docutils literal notranslate"><span class="pre">int</span></code> type?</p></li>
+<li><p>How to get an <code class="docutils literal notranslate"><span class="pre">int</span></code>?</p></li>
+<li><p>Conversion to <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p>When uses <code class="docutils literal notranslate"><span class="pre">int</span></code>?</p></li>
+<li><p>Operations on <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="why-int-type">
+<h2><span class="section-number">9.2. </span>Why <code class="docutils literal notranslate"><span class="pre">int</span></code> type?<a class="headerlink" href="#why-int-type" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Motivation:</strong> used to represent integers such as count values</p></li>
+<li><p><strong>Real-life data:</strong> number of children, years of educations, number of items purchased</p></li>
+<li><p><strong>Python implementation:</strong></p>
+<ul>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p>Possible values: any integers</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="how-to-get-an-int">
+<h2><span class="section-number">9.3. </span>How to get an <code class="docutils literal notranslate"><span class="pre">int</span></code>?<a class="headerlink" href="#how-to-get-an-int" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ex-1-from-int-literals">
+<h3><span class="section-number">9.3.1. </span>Ex 1: from <code class="docutils literal notranslate"><span class="pre">int</span></code> literals<a class="headerlink" href="#ex-1-from-int-literals" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init an int variable</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+&lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integers in Python can be arbitrarily long </span>
+<span class="c1"># there is no overflow behavior as in some other languages</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3565622255488771132323355767676856586585965999884384</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3565622255488771132323355767676856586585965999884384
+&lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-from-an-expression-that-produces-a-int">
+<h3><span class="section-number">9.3.2. </span>Ex 2: from an expression that produces a <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#ex-2-from-an-expression-that-produces-a-int" title="Permalink to this headline">¶</a></h3>
+<p>Here are some examples of expressions producing <code class="docutils literal notranslate"><span class="pre">int</span></code>s</p>
+<ul class="simple">
+<li><p>Math operations between <code class="docutils literal notranslate"><span class="pre">int</span></code>s</p></li>
+<li><p>A call to a function that returns an <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p>Typecasting to <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+</ul>
+<p><strong>Math operations between <code class="docutils literal notranslate"><span class="pre">int</span></code>s</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init two variable</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Addition</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subtraction</span>
+<span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Multiplication</span>
+<span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exponential</span>
+<span class="n">x</span><span class="o">**</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integer division</span>
+<span class="n">x</span> <span class="o">//</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modulus</span>
+<span class="n">x</span> <span class="o">%</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>A call to a function producing an <code class="docutils literal notranslate"><span class="pre">int</span></code></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum of a list of integers</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count the number of elements of a list</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Typecasting to <code class="docutils literal notranslate"><span class="pre">int</span></code></strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">int()</span></code> to convert a value to <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p>Conversion to <code class="docutils literal notranslate"><span class="pre">int</span></code> is NOT always</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From None to int</span>
+<span class="c1"># Not possible</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From a bool to int</span>
+<span class="c1"># True -&gt; 1</span>
+<span class="c1"># False -&gt; 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From float to int</span>
+<span class="c1"># The decimal part will be truncated</span>
+<span class="nb">int</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From str to int</span>
+<span class="c1"># Only strings that look like integers can be converted</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;50&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;-50&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+-50
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># White space at two ends are ignored</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;  50      &quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;  -50      &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+-50
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Leading zeros are also ignored</span>
+<span class="nb">int</span><span class="p">(</span><span class="s2">&quot;050&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># However, &quot;50,000&quot; or &quot;50.0&quot; can not be converted to int</span>
+<span class="c1"># Try them to see the errors</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="when-uses-int">
+<h2><span class="section-number">9.4. </span>When uses <code class="docutils literal notranslate"><span class="pre">int</span></code>?<a class="headerlink" href="#when-uses-int" title="Permalink to this headline">¶</a></h2>
+<p>Any time we need an integer</p>
+</div>
+<div class="section" id="operations-on-int">
+<h2><span class="section-number">9.5. </span>Operations on <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#operations-on-int" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Math operations: <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">-,</span> <span class="pre">*,</span> <span class="pre">/,</span> <span class="pre">//,</span> <span class="pre">%,</span> <span class="pre">**</span></code></p></li>
+<li><p>Comparison operations: <code class="docutils literal notranslate"><span class="pre">==,</span> <span class="pre">!=,</span> <span class="pre">&gt;=,</span> <span class="pre">&lt;=,</span> <span class="pre">&gt;,</span> <span class="pre">&lt;,</span> <span class="pre">is,</span> <span class="pre">is</span> <span class="pre">not</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">9.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p><strong>Why <code class="docutils literal notranslate"><span class="pre">int</span></code> type?</strong></p>
+<ul class="simple">
+<li><p>Used to represent integers such as count values</p></li>
+</ul>
+<p><strong>Conversion to <code class="docutils literal notranslate"><span class="pre">int</span></code></strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">int()</span></code></p></li>
+<li><p>Rules</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> to <code class="docutils literal notranslate"><span class="pre">int</span></code>: <code class="docutils literal notranslate"><span class="pre">True</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> to <code class="docutils literal notranslate"><span class="pre">int</span></code>: the decimal part will be truncated</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code> to <code class="docutils literal notranslate"><span class="pre">int</span></code>: the string must look like an integer</p>
+<ul>
+<li><p>Whitespaces at two ends will be ignored</p></li>
+<li><p>Leading zeros will be ignored</p></li>
+</ul>
+</li>
+<li><p>Conversion to <code class="docutils literal notranslate"><span class="pre">int</span></code> is NOT ALWAYS possible</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>How to get an <code class="docutils literal notranslate"><span class="pre">int</span></code>?</strong></p>
+<ul class="simple">
+<li><p>From <code class="docutils literal notranslate"><span class="pre">int</span></code> literals: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">1000</span></code></p></li>
+<li><p>From an expression that produces an <code class="docutils literal notranslate"><span class="pre">int</span></code> such as</p>
+<ul>
+<li><p>Math operations between <code class="docutils literal notranslate"><span class="pre">int</span></code>s: <code class="docutils literal notranslate"><span class="pre">500</span> <span class="pre">+</span> <span class="pre">200</span></code></p></li>
+<li><p>Call a function that returns an <code class="docutils literal notranslate"><span class="pre">int</span></code>: <code class="docutils literal notranslate"><span class="pre">len(x)</span></code></p></li>
+<li><p>Typecasting: <code class="docutils literal notranslate"><span class="pre">int(x)</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>When uses <code class="docutils literal notranslate"><span class="pre">int</span></code>?</strong></p>
+<ul class="simple">
+<li><p>Any time we need an integer</p></li>
+</ul>
+<p><strong>Operations on <code class="docutils literal notranslate"><span class="pre">int</span></code></strong></p>
+<ul class="simple">
+<li><p>Math operations</p></li>
+<li><p>Comparison operations</p></li>
+</ul>
+</div>
+<div class="section" id="practice">
+<h2><span class="section-number">9.7. </span>Practice<a class="headerlink" href="#practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1">
+<h3><span class="section-number">9.7.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Create a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with value <code class="docutils literal notranslate"><span class="pre">100</span></code></p></li>
+<li><p>Show its value and type</p></li>
+</ul>
+</div>
+<div class="section" id="exercise-2">
+<h3><span class="section-number">9.7.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Create a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with value <code class="docutils literal notranslate"><span class="pre">10.5</span></code></p></li>
+<li><p>Show the value and type of <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>Create a variable <code class="docutils literal notranslate"><span class="pre">y</span></code> by applying <code class="docutils literal notranslate"><span class="pre">int()</span></code> on <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>Show the value and type of <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="exercise-3">
+<h3><span class="section-number">9.7.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+<p>Gives three examples that produce an integer</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./flat-dtypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="bool-type.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Bool type</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="float-type.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Float type</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tue Nguyen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

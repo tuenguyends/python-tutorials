@@ -1,0 +1,1588 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8. Bool type &#8212; Python tutorials</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Int type" href="int-type.html" />
+    <link rel="prev" title="7. NoneType type" href="nonetype-type.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python tutorials</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/jupyter-lab.html">
+   2. Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/markdown.html">
+   3. Introduction to Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/basic-syntax.html">
+   4. Python’s basic syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/assignments-variables.html">
+   5. Variables and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
+   6. Naming rules and conventions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Flat data types
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nonetype-type.html">
+   7. NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Bool type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="int-type.html">
+   9. Int type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="float-type.html">
+   10. Float type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Collection data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/collection-types.html">
+   11. Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/list-type.html">
+   12. List type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/tuple-type.html">
+   13. Tuple type
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/flat-dtypes/bool-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fflat-dtypes/bool-type.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/flat-dtypes/bool-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   8.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-bool-type">
+   8.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-a-bool">
+   8.3. How to get a
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-true-and-false-literals">
+     8.3.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       True
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       False
+      </span>
+     </code>
+     literals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-a-bool">
+     8.3.2. Ex 2: from an expression that produces a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       bool
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-to-bool">
+   8.4. Conversion to
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-nonetype">
+     8.4.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       NoneType
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-int">
+     8.4.2. Ex 2: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       int
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-3-from-float">
+     8.4.3. Ex 3: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       float
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-3-from-collections">
+     8.4.4. Ex 3: from collections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-4-implicit-typecasting">
+     8.4.5. Ex 4: implicit typecasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-use-bool">
+   8.5. When use
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-bool">
+   8.6. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-logical-operations">
+     8.6.1. Ex 1: logical operations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-treat-bool-values-as-integers">
+     8.6.2. Ex 2: treat
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       bool
+      </span>
+     </code>
+     values as integers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   8.7. Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice">
+   8.8. Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     8.8.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     8.8.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     8.8.3. Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     8.8.4. Exercise 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5">
+     8.8.5. Exercise 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-6">
+     8.8.6. Exercise 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-7">
+     8.8.7. Exercise 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-8">
+     8.8.8. Exercise 8
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Bool type</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   8.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-bool-type">
+   8.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-a-bool">
+   8.3. How to get a
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-true-and-false-literals">
+     8.3.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       True
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       False
+      </span>
+     </code>
+     literals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-a-bool">
+     8.3.2. Ex 2: from an expression that produces a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       bool
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-to-bool">
+   8.4. Conversion to
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-nonetype">
+     8.4.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       NoneType
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-int">
+     8.4.2. Ex 2: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       int
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-3-from-float">
+     8.4.3. Ex 3: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       float
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-3-from-collections">
+     8.4.4. Ex 3: from collections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-4-implicit-typecasting">
+     8.4.5. Ex 4: implicit typecasting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-use-bool">
+   8.5. When use
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-bool">
+   8.6. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-logical-operations">
+     8.6.1. Ex 1: logical operations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-treat-bool-values-as-integers">
+     8.6.2. Ex 2: treat
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       bool
+      </span>
+     </code>
+     values as integers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   8.7. Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice">
+   8.8. Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     8.8.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     8.8.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     8.8.3. Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     8.8.4. Exercise 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5">
+     8.8.5. Exercise 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-6">
+     8.8.6. Exercise 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-7">
+     8.8.7. Exercise 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-8">
+     8.8.8. Exercise 8
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="bool-type">
+<h1><span class="section-number">8. </span>Bool type<a class="headerlink" href="#bool-type" title="Permalink to this headline">¶</a></h1>
+<p>Author: Tue Nguyen</p>
+<div class="section" id="overview">
+<h2><span class="section-number">8.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This lecture covers the following topics</p>
+<ul class="simple">
+<li><p>Why <code class="docutils literal notranslate"><span class="pre">bool</span></code> type?</p></li>
+<li><p>How to get a <code class="docutils literal notranslate"><span class="pre">bool</span></code>?</p></li>
+<li><p>Conversion to <code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
+<li><p>When uses <code class="docutils literal notranslate"><span class="pre">bool</span></code>?</p></li>
+<li><p>Operations on <code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="why-bool-type">
+<h2><span class="section-number">8.2. </span>Why <code class="docutils literal notranslate"><span class="pre">bool</span></code> type?<a class="headerlink" href="#why-bool-type" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Motivation:</strong> used to represent binary data</p></li>
+<li><p><strong>Real-life data:</strong> True/False, Yes/No, Success/Failure, Male/Female, Good/Bad</p></li>
+<li><p><strong>Python implementation:</strong></p>
+<ul>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
+<li><p>Possible values: <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+</ul>
+</li>
+<li><p>Note that Python is case-sensitive. Thus, <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>, and <code class="docutils literal notranslate"><span class="pre">true</span></code> are different</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-get-a-bool">
+<h2><span class="section-number">8.3. </span>How to get a <code class="docutils literal notranslate"><span class="pre">bool</span></code>?<a class="headerlink" href="#how-to-get-a-bool" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ex-1-from-true-and-false-literals">
+<h3><span class="section-number">8.3.1. </span>Ex 1: from <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> literals<a class="headerlink" href="#ex-1-from-true-and-false-literals" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init two bool variables</span>
+<span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">y</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print types</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;bool&#39;&gt;
+&lt;class &#39;bool&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-from-an-expression-that-produces-a-bool">
+<h3><span class="section-number">8.3.2. </span>Ex 2: from an expression that produces a <code class="docutils literal notranslate"><span class="pre">bool</span></code><a class="headerlink" href="#ex-2-from-an-expression-that-produces-a-bool" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">bool</span></code> is often produced from</p>
+<ul class="simple">
+<li><p>A comparison</p></li>
+<li><p>A call to a function that returns a <code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
+</ul>
+<p><strong>Get a <code class="docutils literal notranslate"><span class="pre">bool</span></code> from a comparison</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init two variable</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check equal</span>
+<span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check NOT equal</span>
+<span class="n">x</span> <span class="o">!=</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Another way to check NOT equal</span>
+<span class="ow">not</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if IDs are the same</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if IDs are NOT the same</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check greater than</span>
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check greater than or equal</span>
+<span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check less than</span>
+<span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check less than ro equal</span>
+<span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Get a <code class="docutils literal notranslate"><span class="pre">bool</span></code> from a function call</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init 2 strings</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;HELLO&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if all chacters in s1 are uppercase</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if all chacters in s2 are uppercase</span>
+<span class="n">s2</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conversion-to-bool">
+<h2><span class="section-number">8.4. </span>Conversion to <code class="docutils literal notranslate"><span class="pre">bool</span></code><a class="headerlink" href="#conversion-to-bool" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Type conversion is the action of converting a value of one type to a different type</p></li>
+<li><p>Other names: typecasting,type-coercion</p></li>
+<li><p>Think of it as converting USD to Euro</p></li>
+<li><p>To convert a value to <code class="docutils literal notranslate"><span class="pre">bool</span></code>, we use <code class="docutils literal notranslate"><span class="pre">bool()</span></code> function.</p></li>
+<li><p>Some rules to remember when converting a value of another type to <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code>, and values considered as “empty” will produce <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>None-zero and non-empty values will produce <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="ex-1-from-nonetype">
+<h3><span class="section-number">8.4.1. </span>Ex 1: from <code class="docutils literal notranslate"><span class="pre">NoneType</span></code><a class="headerlink" href="#ex-1-from-nonetype" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-from-int">
+<h3><span class="section-number">8.4.2. </span>Ex 2: from <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#ex-2-from-int" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-3-from-float">
+<h3><span class="section-number">8.4.3. </span>Ex 3: from <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#ex-3-from-float" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-3-from-collections">
+<h3><span class="section-number">8.4.4. </span>Ex 3: from collections<a class="headerlink" href="#ex-3-from-collections" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Empty list</span>
+<span class="nb">bool</span><span class="p">([])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Empty dict</span>
+<span class="nb">bool</span><span class="p">({})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Empty string</span>
+<span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Non-empty list</span>
+<span class="nb">bool</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Non-empty dict</span>
+<span class="nb">bool</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Non-empty string</span>
+<span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-4-implicit-typecasting">
+<h3><span class="section-number">8.4.5. </span>Ex 4: implicit typecasting<a class="headerlink" href="#ex-4-implicit-typecasting" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Python sometimes does this conversion <strong>implicitly</strong></p></li>
+<li><p>Ex: in a <code class="docutils literal notranslate"><span class="pre">if</span></code> statement where it expects a bool value to make a decision</p></li>
+<li><p>Consider the following example</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">if</span> <span class="n">students</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There is at least 1 student&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There is no student&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There is no student
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What happened?</strong></p>
+<ul class="simple">
+<li><p>Here, <code class="docutils literal notranslate"><span class="pre">if</span></code> expect a <code class="docutils literal notranslate"><span class="pre">bool</span></code>, but it receives an empty list</p></li>
+<li><p>Thus, Python converts this empty list to bool and ends up a <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>Since the condition is <code class="docutils literal notranslate"><span class="pre">False</span></code>, Python execute the statement under <code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="when-use-bool">
+<h2><span class="section-number">8.5. </span>When use <code class="docutils literal notranslate"><span class="pre">bool</span></code>?<a class="headerlink" href="#when-use-bool" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">bool</span></code> is normally used as the condition for branching in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement</p></li>
+<li><p>We will learn more about <code class="docutils literal notranslate"><span class="pre">if</span></code> later in the “Control flows” sections</p></li>
+<li><p>For now, consider the following simple example</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Passed&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Passed
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What happened?</strong></p>
+<ul class="simple">
+<li><p>As you can see, <code class="docutils literal notranslate"><span class="pre">&quot;Passed&quot;</span></code> was printed out because <code class="docutils literal notranslate"><span class="pre">grade</span> <span class="pre">&gt;=</span> <span class="pre">4</span></code> produces <code class="docutils literal notranslate"><span class="pre">True</span></code> (since <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">&gt;</span> <span class="pre">4</span></code>)</p></li>
+<li><p>so Python executes the statements under <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p>If we change <code class="docutils literal notranslate"><span class="pre">8</span></code> to <code class="docutils literal notranslate"><span class="pre">3</span></code>, then <code class="docutils literal notranslate"><span class="pre">grade</span> <span class="pre">&gt;=</span> <span class="pre">4</span></code> will produces <code class="docutils literal notranslate"><span class="pre">False</span></code>, and Python will run the statements under <code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
+<li><p>Let’s confirm this</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Passed&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Failed
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operations-on-bool">
+<h2><span class="section-number">8.6. </span>Operations on <code class="docutils literal notranslate"><span class="pre">bool</span></code><a class="headerlink" href="#operations-on-bool" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Since <code class="docutils literal notranslate"><span class="pre">bool</span></code> type is also so simple, there are not much operations</p></li>
+<li><p>Here is all you need to know</p>
+<ul>
+<li><p>Logical operations</p></li>
+<li><p>Since <code class="docutils literal notranslate"><span class="pre">bool</span></code> is a sub-type of <code class="docutils literal notranslate"><span class="pre">int</span></code>, we can also perform</p>
+<ul>
+<li><p>Math operations</p></li>
+<li><p>Comparison operations</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="ex-1-logical-operations">
+<h3><span class="section-number">8.6.1. </span>Ex 1: logical operations<a class="headerlink" href="#ex-1-logical-operations" title="Permalink to this headline">¶</a></h3>
+<p>There are 2 logical operators: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></p>
+<p><strong>Simple examples on <code class="docutils literal notranslate"><span class="pre">bool</span></code> literals</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>More interesting examples on <code class="docutils literal notranslate"><span class="pre">bool</span></code> expression</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init 2 variables</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">health</span> <span class="o">=</span> <span class="s2">&quot;bad&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rule 1: if age &gt;= 18 AND good health, then you can buy a vodka</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;good&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congrats. You can buy a vodka&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry. You cannot buy a vodka&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sorry. You cannot buy a vodka
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rule 2: if age &gt;= 18 OR good health, then you can buy a vodka</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;good&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congrats. You can buy a vodka&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry. You cannot buy a vodka&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Congrats. You can buy a vodka
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-treat-bool-values-as-integers">
+<h3><span class="section-number">8.6.2. </span>Ex 2: treat <code class="docutils literal notranslate"><span class="pre">bool</span></code> values as integers<a class="headerlink" href="#ex-2-treat-bool-values-as-integers" title="Permalink to this headline">¶</a></h3>
+<p>Remember</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># True + True</span>
+<span class="kc">True</span> <span class="o">+</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># True + False</span>
+<span class="kc">True</span> <span class="o">+</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># True &gt; False</span>
+<span class="kc">True</span> <span class="o">&gt;</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">8.7. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p><strong>Why <code class="docutils literal notranslate"><span class="pre">bool</span></code> type?</strong></p>
+<ul class="simple">
+<li><p>Used to represent binary data</p></li>
+<li><p>Used as conditions in branching statements</p></li>
+</ul>
+<p><strong>Conversion to <code class="docutils literal notranslate"><span class="pre">bool</span></code></strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">bool()</span></code></p></li>
+<li><p>Rules</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> and empty values will produces <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>Non-zero and non-empty values will produce <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+</ul>
+</li>
+<li><p>Sometimes Python does implicit type conversion to <code class="docutils literal notranslate"><span class="pre">bool</span></code> as in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement</p></li>
+</ul>
+<p><strong>How to get a <code class="docutils literal notranslate"><span class="pre">bool</span></code>?</strong></p>
+<ul class="simple">
+<li><p>From <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> literals</p></li>
+<li><p>From an expression that produces a <code class="docutils literal notranslate"><span class="pre">bool</span></code> such as</p>
+<ul>
+<li><p>Comparison: <code class="docutils literal notranslate"><span class="pre">==,</span> <span class="pre">!=,</span> <span class="pre">&gt;=,</span> <span class="pre">&lt;=,</span> <span class="pre">&gt;,</span> <span class="pre">&lt;,</span> <span class="pre">is,</span> <span class="pre">is</span> <span class="pre">not</span></code></p></li>
+<li><p>Typecasting: <code class="docutils literal notranslate"><span class="pre">bool(x)</span></code></p></li>
+<li><p>Logical operations on <code class="docutils literal notranslate"><span class="pre">bool</span></code>s: <code class="docutils literal notranslate"><span class="pre">(age</span> <span class="pre">&gt;=</span> <span class="pre">18)</span> <span class="pre">and</span> <span class="pre">(health</span> <span class="pre">==</span> <span class="pre">&quot;good&quot;</span></code></p></li>
+<li><p>A call to a function that returns a <code class="docutils literal notranslate"><span class="pre">bool</span></code>: <code class="docutils literal notranslate"><span class="pre">x.isupper()</span></code>, <code class="docutils literal notranslate"><span class="pre">isinstance(x,</span> <span class="pre">float)</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>When uses <code class="docutils literal notranslate"><span class="pre">bool</span></code>?</strong></p>
+<ul class="simple">
+<li><p>When representing binary data</p></li>
+<li><p>As conditions in branching statements</p></li>
+</ul>
+<p><strong>Operations on <code class="docutils literal notranslate"><span class="pre">bool</span></code></strong></p>
+<ul class="simple">
+<li><p>Logical operations: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></p></li>
+<li><p>Other math and logical operations when <code class="docutils literal notranslate"><span class="pre">bool</span></code> values are treated as <code class="docutils literal notranslate"><span class="pre">int</span></code> values</p></li>
+</ul>
+</div>
+<div class="section" id="practice">
+<h2><span class="section-number">8.8. </span>Practice<a class="headerlink" href="#practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1">
+<h3><span class="section-number">8.8.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with value <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p>Print the value associated with <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>Print the data type of <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="exercise-2">
+<h3><span class="section-number">8.8.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with value <code class="docutils literal notranslate"><span class="pre">10</span></code></p></li>
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">y</span></code> with a value from a comparison that checks whether <code class="docutils literal notranslate"><span class="pre">x</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">5</span></code> or not</p></li>
+<li><p>Print the value associated with <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+<li><p>Print the data type of <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="exercise-3">
+<h3><span class="section-number">8.8.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with value <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">y</span></code> with value <code class="docutils literal notranslate"><span class="pre">100</span></code></p></li>
+<li><p>Check if <code class="docutils literal notranslate"><span class="pre">x</span></code> is of type <code class="docutils literal notranslate"><span class="pre">bool</span></code> (Hint: type <code class="docutils literal notranslate"><span class="pre">?isinstance</span></code> to see how you can use it)</p></li>
+<li><p>Similarly, check if <code class="docutils literal notranslate"><span class="pre">y</span></code> is of type <code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="exercise-4">
+<h3><span class="section-number">8.8.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with value <code class="docutils literal notranslate"><span class="pre">7</span></code></p></li>
+<li><p>Check if <code class="docutils literal notranslate"><span class="pre">x</span></code> is greater than or equal to <code class="docutils literal notranslate"><span class="pre">5</span></code>. If true, print <code class="docutils literal notranslate"><span class="pre">&quot;Above</span> <span class="pre">average&quot;</span></code>. Otherwise, print <code class="docutils literal notranslate"><span class="pre">&quot;Below</span> <span class="pre">average&quot;</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="exercise-5">
+<h3><span class="section-number">8.8.5. </span>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h3>
+<p>Replicate Ex 4, but this time, use <code class="docutils literal notranslate"><span class="pre">not</span></code></p>
+</div>
+<div class="section" id="exercise-6">
+<h3><span class="section-number">8.8.6. </span>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">¶</a></h3>
+<p>Give three typecasting examples that produce <code class="docutils literal notranslate"><span class="pre">True</span></code> and three others that produce <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div>
+<div class="section" id="exercise-7">
+<h3><span class="section-number">8.8.7. </span>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Initialize a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with an arbitrary value</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">x</span></code> is even, print <code class="docutils literal notranslate"><span class="pre">&quot;Even&quot;</span></code>. Otherwise, print <code class="docutils literal notranslate"><span class="pre">&quot;Odd&quot;</span></code></p></li>
+<li><p>Try your code with different values of <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="exercise-8">
+<h3><span class="section-number">8.8.8. </span>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Replicate Ex 7, but this time assign <code class="docutils literal notranslate"><span class="pre">5.5</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>What happens?</p></li>
+<li><p>What is your opinion?</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./flat-dtypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="nonetype-type.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>NoneType type</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="int-type.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Int type</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tue Nguyen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

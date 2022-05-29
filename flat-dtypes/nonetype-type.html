@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. NoneType type &#8212; Python tutorials</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Bool type" href="bool-type.html" />
+    <link rel="prev" title="6. Naming rules and conventions" href="../basics/naming.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python tutorials</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/jupyter-lab.html">
+   2. Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/markdown.html">
+   3. Introduction to Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/basic-syntax.html">
+   4. Python’s basic syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/assignments-variables.html">
+   5. Variables and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
+   6. Naming rules and conventions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Flat data types
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bool-type.html">
+   8. Bool type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="int-type.html">
+   9. Int type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="float-type.html">
+   10. Float type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Collection data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/collection-types.html">
+   11. Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/list-type.html">
+   12. List type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/tuple-type.html">
+   13. Tuple type
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/flat-dtypes/nonetype-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fflat-dtypes/nonetype-type.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/flat-dtypes/nonetype-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   7.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-nonetype-type">
+   7.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-a-nonetype">
+   7.3. How to get a
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-the-none-literal">
+     7.3.1. Ex 1: from the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       None
+      </span>
+     </code>
+     literal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-none">
+     7.3.2. Ex 2: from an expression that produces
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       None
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-uses-nonetype">
+   7.4. When uses
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-nonetype">
+   7.5. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-simple-examples">
+     7.5.1. Ex 1: simple examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-more-interesting-examples">
+     7.5.2. Ex 2: more interesting examples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   7.6. Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>NoneType type</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   7.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-nonetype-type">
+   7.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-a-nonetype">
+   7.3. How to get a
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-the-none-literal">
+     7.3.1. Ex 1: from the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       None
+      </span>
+     </code>
+     literal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-none">
+     7.3.2. Ex 2: from an expression that produces
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       None
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-uses-nonetype">
+   7.4. When uses
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-nonetype">
+   7.5. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     NoneType
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-simple-examples">
+     7.5.1. Ex 1: simple examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-more-interesting-examples">
+     7.5.2. Ex 2: more interesting examples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   7.6. Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="nonetype-type">
+<h1><span class="section-number">7. </span>NoneType type<a class="headerlink" href="#nonetype-type" title="Permalink to this headline">¶</a></h1>
+<p>Author: Tue Nguyen</p>
+<div class="section" id="overview">
+<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This lecture covers the following topics</p>
+<ul class="simple">
+<li><p>Why <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> type?</p></li>
+<li><p>How to get a <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?</p></li>
+<li><p>When uses <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?</p></li>
+<li><p>Operations on <code class="docutils literal notranslate"><span class="pre">NoneType</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="why-nonetype-type">
+<h2><span class="section-number">7.2. </span>Why <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> type?<a class="headerlink" href="#why-nonetype-type" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Motivation:</strong> used to represent the state of being unknown/undefined in both data kind and data value</p>
+<ul>
+<li><p>Note that being undefined is NOT the same as being empty</p></li>
+<li><p>An empty list still belong to the list type</p></li>
+</ul>
+</li>
+<li><p><strong>Real-life data:</strong> unknown values, missing values</p></li>
+<li><p><strong>Python implementation:</strong></p>
+<ul>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">NoneType</span></code></p></li>
+<li><p>Possible values: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="how-to-get-a-nonetype">
+<h2><span class="section-number">7.3. </span>How to get a <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?<a class="headerlink" href="#how-to-get-a-nonetype" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ex-1-from-the-none-literal">
+<h3><span class="section-number">7.3.1. </span>Ex 1: from the <code class="docutils literal notranslate"><span class="pre">None</span></code> literal<a class="headerlink" href="#ex-1-from-the-none-literal" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign None to x</span>
+<span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check type</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notes</p>
+<ul class="simple">
+<li><p>When you evaluate <code class="docutils literal notranslate"><span class="pre">None</span></code> on a code cell of Jupyter Lab, you will not see anything printed out</p></li>
+<li><p>To display <code class="docutils literal notranslate"><span class="pre">None</span></code> you have to explicitly print it out using <code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># None value will not show up this way</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Explicity print out the None value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-from-an-expression-that-produces-none">
+<h3><span class="section-number">7.3.2. </span>Ex 2: from an expression that produces <code class="docutils literal notranslate"><span class="pre">None</span></code><a class="headerlink" href="#ex-2-from-an-expression-that-produces-none" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A print statement returns None</span>
+<span class="c1"># Thus, after the assignment, x will be None, not Hello</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Notes</strong></p>
+<ul class="simple">
+<li><p>Many people misunderstand that x will assume the value <code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code> after the above assignment</p></li>
+<li><p>It’s NOT true</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code> is what <code class="docutils literal notranslate"><span class="pre">print</span></code> prints out, it’s not what <code class="docutils literal notranslate"><span class="pre">print</span></code> returns</p></li>
+<li><p>You will learn more about function later. For now, just accept that</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">print</span></code> prints out <code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code></p></li>
+<li><p>But after the printing is done, it returns something else to the place where it is called</p></li>
+<li><p>This returned value is <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s confirm that x is indeed None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+&lt;class &#39;NoneType&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="when-uses-nonetype">
+<h2><span class="section-number">7.4. </span>When uses <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?<a class="headerlink" href="#when-uses-nonetype" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The advantages of using <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> might not be obvious at this stage</p></li>
+<li><p>But it will become clear as learn more about Python</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NoneType</span></code> is normally used as a return option of a function to indicate that the function already did what you asked, but it couldn’t find anything that makes sense</p></li>
+<li><p>Let’s consider an example</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a string</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;This is a dog&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now, suppose we want to check if some other string is contained in `s`</span>
+<span class="c1"># We can use re.search() function of module re</span>
+<span class="c1"># Thus, we need to import module re` to use its search function</span>
+<span class="kn">import</span> <span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can read the document for re.search for more details</span>
+<span class="o">?</span>re.search
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We try to search for &#39;cat&#39; is in s</span>
+<span class="n">found</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># Since &#39;cat&#39; is not in s, re.search returns None </span>
+<span class="c1"># to indicate that it couldn&#39;t find anything</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">found</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">found</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+&lt;class &#39;NoneType&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now, try to search for &#39;dog&#39; in s</span>
+<span class="n">found</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># Since &#39;dog&#39; is indeed in s</span>
+<span class="c1"># re.search returns something different from None</span>
+<span class="c1"># which is a re.Match object that contains the position of the match</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">found</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">found</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;re.Match object; span=(10, 13), match=&#39;dog&#39;&gt;
+&lt;class &#39;re.Match&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operations-on-nonetype">
+<h2><span class="section-number">7.5. </span>Operations on <code class="docutils literal notranslate"><span class="pre">NoneType</span></code><a class="headerlink" href="#operations-on-nonetype" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>There is not much we can do with <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> because it is so simple</p></li>
+<li><p>The most commonly used operation is to check if a variable is actually <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p>To do this, we perform a comparison using <code class="docutils literal notranslate"><span class="pre">is</span></code></p></li>
+</ul>
+<div class="section" id="ex-1-simple-examples">
+<h3><span class="section-number">7.5.1. </span>Ex 1: simple examples<a class="headerlink" href="#ex-1-simple-examples" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init two variables</span>
+<span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if x is None</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if y is None</span>
+<span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if x is NOT None</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if y is NOT None</span>
+<span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-more-interesting-examples">
+<h3><span class="section-number">7.5.2. </span>Ex 2: more interesting examples<a class="headerlink" href="#ex-2-more-interesting-examples" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a string</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;This is a dog&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Find ‘dog’ in s</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search for &#39;dog&#39;</span>
+<span class="n">substr</span> <span class="o">=</span> <span class="s2">&quot;dog&quot;</span>
+<span class="n">found</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">substr</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If found, print out the starting and ending indices</span>
+<span class="c1"># Otherwise, print not found</span>
+<span class="k">if</span> <span class="n">found</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">substr</span><span class="si">}</span><span class="s2">&#39; is not in s&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">found</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">found</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">substr</span><span class="si">}</span><span class="s2"> in s beginning at </span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2"> and ending at </span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found dog in s beginning at 10 and ending at 13
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Find ‘cat’ in s</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Same as above, but now we search for &#39;cat&#39;</span>
+<span class="n">substr</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>
+<span class="n">found</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">substr</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If found, print out the starting and ending indices</span>
+<span class="c1"># Otherwise, print not found</span>
+<span class="k">if</span> <span class="n">found</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">substr</span><span class="si">}</span><span class="s2">&#39; is not in s&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">found</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">found</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="n">substr</span><span class="si">}</span><span class="s2"> in s beginning at </span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2"> and ending at </span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;cat&#39; is not in s
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Remarks</strong>:</p>
+<ul class="simple">
+<li><p>We can also use <code class="docutils literal notranslate"><span class="pre">==</span></code> instead of <code class="docutils literal notranslate"><span class="pre">is</span></code> to check if a variable is <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p>But it is NOT recommended</p></li>
+<li><p>For a detailed explanation, read <a class="reference external" href="https://stackoverflow.com/questions/3257919/what-is-the-difference-between-is-none-and-none/3257957#3257957">here</a>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">7.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p><strong>Why <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?</strong></p>
+<ul class="simple">
+<li><p>Used to represent unknown or missing data</p></li>
+<li><p>Use as a returned value of a function to indicate something. Ex: not found, or the function just does something and doesn’t really return anything so it returns <code class="docutils literal notranslate"><span class="pre">None</span></code> by default</p></li>
+</ul>
+<p><strong>How get a <code class="docutils literal notranslate"><span class="pre">NoneType</span></code></strong></p>
+<ul class="simple">
+<li><p>From the <code class="docutils literal notranslate"><span class="pre">None</span></code> literal</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">None</span></code></p></li>
+</ul>
+</li>
+<li><p>From an expression that produces <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">re.search(&quot;cat&quot;,</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">dog&quot;)</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>When uses <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?</strong></p>
+<ul class="simple">
+<li><p>Used to represent unknown or missing data</p></li>
+<li><p>Use as a returned value of a function to indicate something</p></li>
+</ul>
+<p><strong>Operations on <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>?</strong></p>
+<ul class="simple">
+<li><p>Check if a variable is or is NOT <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<ul>
+<li><p>Ex 1: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">None</span></code></p></li>
+<li><p>Ex 2: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">None</span></code></p></li>
+</ul>
+</li>
+<li><p>We can use <code class="docutils literal notranslate"><span class="pre">==</span></code> instead of <code class="docutils literal notranslate"><span class="pre">is</span></code>, but this practice is NOT recommended</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./flat-dtypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../basics/naming.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Naming rules and conventions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bool-type.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Bool type</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tue Nguyen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

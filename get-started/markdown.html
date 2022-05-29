@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Introduction to Markdown &#8212; Python tutorials</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Python’s basic syntax" href="../basics/basic-syntax.html" />
+    <link rel="prev" title="2. Jupyter Lab" href="jupyter-lab.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python tutorials</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-lab.html">
+   2. Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Introduction to Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/basic-syntax.html">
+   4. Python’s basic syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/assignments-variables.html">
+   5. Variables and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
+   6. Naming rules and conventions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Flat data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/nonetype-type.html">
+   7. NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/bool-type.html">
+   8. Bool type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/int-type.html">
+   9. Int type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/float-type.html">
+   10. Float type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Collection data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/collection-types.html">
+   11. Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/list-type.html">
+   12. List type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/tuple-type.html">
+   13. Tuple type
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/get-started/markdown.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fget-started/markdown.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/get-started/markdown.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   3.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-markdown">
+   3.2. What is Markdown?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-use-markdown">
+   3.3. Why use Markdown?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#versatility">
+     3.3.1. Versatility
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimal-distraction">
+     3.3.2. Minimal distraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#portability">
+     3.3.3. Portability
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#easy-integration">
+     3.3.4. Easy integration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#easy-conversion">
+     3.3.5. Easy conversion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-markdown-syntax">
+   3.4. Basic Markdown syntax
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#headings">
+     3.4.1. Headings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paragraphs">
+     3.4.2. Paragraphs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     3.4.3. Lists
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#unordered-lists">
+       3.4.3.1. Unordered lists
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordered-list">
+       3.4.3.2. Ordered list
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#nested-lists">
+       3.4.3.3. Nested lists
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mixed-nested-lists">
+       3.4.3.4. Mixed nested lists
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emphasis">
+     3.4.4. Emphasis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-fences">
+     3.4.5. Code fences
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inline-code-fences">
+       3.4.5.1. Inline code fences
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#block-code-fences">
+       3.4.5.2. Block code fences
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#latex">
+     3.4.6. Latex
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inline-latex">
+       3.4.6.1. Inline Latex
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#block-latex">
+       3.4.6.2. Block Latex
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#links">
+     3.4.7. Links
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advice">
+     3.4.8. Advice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-markdown-syntax">
+   3.5. Advanced Markdown syntax
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blockquotes">
+     3.5.1. Blockquotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#images">
+     3.5.2. Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tables">
+     3.5.3. Tables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emails">
+     3.5.4. Emails
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html">
+     3.5.5. HTML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   3.6. Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to Markdown</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   3.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-markdown">
+   3.2. What is Markdown?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-use-markdown">
+   3.3. Why use Markdown?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#versatility">
+     3.3.1. Versatility
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimal-distraction">
+     3.3.2. Minimal distraction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#portability">
+     3.3.3. Portability
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#easy-integration">
+     3.3.4. Easy integration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#easy-conversion">
+     3.3.5. Easy conversion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-markdown-syntax">
+   3.4. Basic Markdown syntax
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#headings">
+     3.4.1. Headings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paragraphs">
+     3.4.2. Paragraphs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     3.4.3. Lists
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#unordered-lists">
+       3.4.3.1. Unordered lists
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ordered-list">
+       3.4.3.2. Ordered list
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#nested-lists">
+       3.4.3.3. Nested lists
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mixed-nested-lists">
+       3.4.3.4. Mixed nested lists
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emphasis">
+     3.4.4. Emphasis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-fences">
+     3.4.5. Code fences
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inline-code-fences">
+       3.4.5.1. Inline code fences
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#block-code-fences">
+       3.4.5.2. Block code fences
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#latex">
+     3.4.6. Latex
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inline-latex">
+       3.4.6.1. Inline Latex
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#block-latex">
+       3.4.6.2. Block Latex
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#links">
+     3.4.7. Links
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advice">
+     3.4.8. Advice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-markdown-syntax">
+   3.5. Advanced Markdown syntax
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blockquotes">
+     3.5.1. Blockquotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#images">
+     3.5.2. Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tables">
+     3.5.3. Tables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emails">
+     3.5.4. Emails
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html">
+     3.5.5. HTML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   3.6. Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-markdown">
+<h1><span class="section-number">3. </span>Introduction to Markdown<a class="headerlink" href="#introduction-to-markdown" title="Permalink to this headline">¶</a></h1>
+<p>Author: Tue Nguyen</p>
+<div class="section" id="overview">
+<h2><span class="section-number">3.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This lecture covers the following topics</p>
+<ul class="simple">
+<li><p>What is Markdown?</p></li>
+<li><p>Why use Markdown?</p></li>
+<li><p>Basic Markdown syntax</p>
+<ul>
+<li><p>Ex: headings, lists, emphasis, code fences, Latex, links</p></li>
+</ul>
+</li>
+<li><p>Advanced Markdown syntax</p>
+<ul>
+<li><p>Ex: blockquotes, images, tables, emails, html</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="what-is-markdown">
+<h2><span class="section-number">3.2. </span>What is Markdown?<a class="headerlink" href="#what-is-markdown" title="Permalink to this headline">¶</a></h2>
+<p>Markdown is a lightweight markup language that allows you to add formatting elements to plaintext such as</p>
+<ul class="simple">
+<li><p>Headings</p></li>
+<li><p>Bold, italic</p></li>
+<li><p>Ordered/unordered lists</p></li>
+<li><p>Links</p></li>
+<li><p>Images</p></li>
+</ul>
+</div>
+<div class="section" id="why-use-markdown">
+<h2><span class="section-number">3.3. </span>Why use Markdown?<a class="headerlink" href="#why-use-markdown" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="versatility">
+<h3><span class="section-number">3.3.1. </span>Versatility<a class="headerlink" href="#versatility" title="Permalink to this headline">¶</a></h3>
+<p>Markdown can be used for many purposes such as</p>
+<ul class="simple">
+<li><p>Technical documentation (as this tutorial)</p></li>
+<li><p>Notes and books</p></li>
+<li><p>Static web pages</p></li>
+</ul>
+</div>
+<div class="section" id="minimal-distraction">
+<h3><span class="section-number">3.3.2. </span>Minimal distraction<a class="headerlink" href="#minimal-distraction" title="Permalink to this headline">¶</a></h3>
+<p>Compared to rich-text text processors such as Microsoft Word, Markdown offers much fewer features. However, this turns out to be its main advantage. By restricting you to a small set of formatting options, Markdown forces you to</p>
+<ul class="simple">
+<li><p>Focus on writing good content</p></li>
+<li><p>Rather than spending time tweaking the appearances such as themes, fonts, colors, etc</p></li>
+</ul>
+</div>
+<div class="section" id="portability">
+<h3><span class="section-number">3.3.3. </span>Portability<a class="headerlink" href="#portability" title="Permalink to this headline">¶</a></h3>
+<p>Unlike a Word file (<code class="docutils literal notranslate"><span class="pre">.docx</span></code>), a Markdown file is just a simple plain text file. Thus,</p>
+<ul class="simple">
+<li><p>It can opened a many free text editors such as Notepad++, Sublime Text, Atom, or VS code</p></li>
+<li><p>You won’t have to worry when migrating your files to different operating systems or cloud services because you can always access their contents</p></li>
+</ul>
+</div>
+<div class="section" id="easy-integration">
+<h3><span class="section-number">3.3.4. </span>Easy integration<a class="headerlink" href="#easy-integration" title="Permalink to this headline">¶</a></h3>
+<p>If you plan to be a data analyst/scientist/researcher, technical documentation is part of your daily work. Markdown makes your life much easier by allowing you to mix your technical notes and executable code in the same place</p>
+</div>
+<div class="section" id="easy-conversion">
+<h3><span class="section-number">3.3.5. </span>Easy conversion<a class="headerlink" href="#easy-conversion" title="Permalink to this headline">¶</a></h3>
+<p>You can easily convert a Markdown file to different formats such as PDF and HTML</p>
+</div>
+</div>
+<div class="section" id="basic-markdown-syntax">
+<h2><span class="section-number">3.4. </span>Basic Markdown syntax<a class="headerlink" href="#basic-markdown-syntax" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="headings">
+<h3><span class="section-number">3.4.1. </span>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Headings are used to organize contents into sections</p></li>
+<li><p>There are 6 levels from <code class="docutils literal notranslate"><span class="pre">h1</span></code> to <code class="docutils literal notranslate"><span class="pre">h6</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">h1</span></code>: biggest</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h6</span></code>: smallest</p></li>
+</ul>
+</li>
+<li><p>There should be only one <code class="docutils literal notranslate"><span class="pre">h1</span></code> heading in your whole file, which is the title of the document</p></li>
+<li><p>Other sections will begin with a <code class="docutils literal notranslate"><span class="pre">h2</span></code> heading</p></li>
+<li><p>You should never use beyond <code class="docutils literal notranslate"><span class="pre">h3</span></code> because nesting your contents too deep make it hard to follow</p></li>
+<li><p>A heading starts with <code class="docutils literal notranslate"><span class="pre">#</span></code>, and the number of <code class="docutils literal notranslate"><span class="pre">#</span></code> indicates the heading level</p></li>
+</ul>
+<p>Try the following in your notebook</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 1</span>
+<span class="c1">## Level 2</span>
+<span class="c1">### Level 3</span>
+<span class="c1">#### Level 4</span>
+<span class="c1">##### Level 5</span>
+<span class="c1">###### Level 6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="paragraphs">
+<h3><span class="section-number">3.4.2. </span>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Two paragraphs are separated by a blank line</p></li>
+<li><p>One common mistake is just using <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and start writing the new paragraph</p></li>
+<li><p>It will not work, you must add a blank line between graphs</p></li>
+</ul>
+<p>Ex 1: wrong way to make a paragraph</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Paragraph</span> <span class="mi">1</span>
+<span class="n">Paragraph</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Ex 2: correct way to make a paragraph</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Paragraph</span> <span class="mi">1</span>
+
+<span class="n">Paragraph</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lists">
+<h3><span class="section-number">3.4.3. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>A list can be an unordered, ordered, or mixed list</p>
+<div class="section" id="unordered-lists">
+<h4><span class="section-number">3.4.3.1. </span>Unordered lists<a class="headerlink" href="#unordered-lists" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Items in an unordered list start with a bullet point</p></li>
+<li><p>To make an unordered list, place <code class="docutils literal notranslate"><span class="pre">-</span></code> followed by a space before each item of the list</p></li>
+</ul>
+<p>Ex</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">item</span> <span class="mi">1</span>
+<span class="o">-</span> <span class="n">item</span> <span class="mi">2</span>
+<span class="o">-</span> <span class="n">item</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>You will see something like this</p>
+<ul class="simple">
+<li><p>item 1</p></li>
+<li><p>item 2</p></li>
+<li><p>item 3</p></li>
+</ul>
+</div>
+<div class="section" id="ordered-list">
+<h4><span class="section-number">3.4.3.2. </span>Ordered list<a class="headerlink" href="#ordered-list" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>To make an ordered list, place <code class="docutils literal notranslate"><span class="pre">1.</span></code> followed by a space before each item of the list</p></li>
+<li><p>You don’t need to manually increase the number, it will be done automatically</p></li>
+<li><p>This is very convenient because you won’t have to update the numbering when inserting new items</p></li>
+</ul>
+<p>Ex</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">item</span> <span class="mi">1</span>
+<span class="mf">1.</span> <span class="n">item</span> <span class="mi">2</span>
+<span class="mf">1.</span> <span class="n">item</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>You will see</p>
+<ol class="simple">
+<li><p>item 1</p></li>
+<li><p>item 2</p></li>
+<li><p>item 3</p></li>
+</ol>
+</div>
+<div class="section" id="nested-lists">
+<h4><span class="section-number">3.4.3.3. </span>Nested lists<a class="headerlink" href="#nested-lists" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Lists can also be nested on multiple levels</p></li>
+<li><p>However, try to keep it shallow (no more than 3 levels)</p></li>
+</ul>
+<p>Ex 1: two-level unordered list</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">item</span> <span class="mi">1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.2</span>
+<span class="o">-</span> <span class="n">item</span> <span class="mi">2</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.2</span>
+</pre></div>
+</div>
+<p>Ex 2: two-level ordered list</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">item</span> <span class="mi">1</span>
+    <span class="mf">1.</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.1</span>
+    <span class="mf">1.</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.2</span>
+<span class="mf">1.</span> <span class="n">item</span> <span class="mi">2</span>
+    <span class="mf">1.</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.1</span>
+    <span class="mf">1.</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mixed-nested-lists">
+<h4><span class="section-number">3.4.3.4. </span>Mixed nested lists<a class="headerlink" href="#mixed-nested-lists" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>For nested lists, you can mix ordered and unordered styles together</p></li>
+<li><p>However, the items of the same level have the same type</p></li>
+</ul>
+<p>Try this in your notebook</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">item</span> <span class="mi">1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.2</span>
+<span class="mf">1.</span> <span class="n">item</span> <span class="mi">2</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="emphasis">
+<h3><span class="section-number">3.4.4. </span>Emphasis<a class="headerlink" href="#emphasis" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">**Make</span> <span class="pre">bold**</span></code> will <strong>Make bold</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*Make</span> <span class="pre">italic*</span></code> will <em>Make italic</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">***Make</span> <span class="pre">bold</span> <span class="pre">and</span> <span class="pre">italic***</span></code> will <em><strong>Make bold and italic</strong></em></p></li>
+</ul>
+</div>
+<div class="section" id="code-fences">
+<h3><span class="section-number">3.4.5. </span>Code fences<a class="headerlink" href="#code-fences" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Code fences are used to emphasize texts that should be understood as a coding element</p></li>
+<li><p>Ex: variable name, an expression, or a whole code block</p></li>
+<li><p>There are two types of code fences: inline and block.</p></li>
+</ul>
+<div class="section" id="inline-code-fences">
+<h4><span class="section-number">3.4.5.1. </span>Inline code fences<a class="headerlink" href="#inline-code-fences" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Inline code fences are used for <em>short elements</em></p></li>
+<li><p>Ex: a number, a variable name, or an expression</p></li>
+<li><p>These elements stay in the line with normal texts (thus the name <em>inline</em>)</p></li>
+<li><p>To use the inline code format, wrap your code in a pair of single backticks <code class="docutils literal notranslate"><span class="pre">`</span></code></p></li>
+</ul>
+<p>Ex</p>
+<ul class="simple">
+<li><p>Numbers: <code class="docutils literal notranslate"><span class="pre">`42`</span></code> renders <code class="docutils literal notranslate"><span class="pre">42</span></code></p></li>
+<li><p>Variable names: <code class="docutils literal notranslate"><span class="pre">`profit`</span></code> renders <code class="docutils literal notranslate"><span class="pre">profit</span></code></p></li>
+<li><p>Expressions: <code class="docutils literal notranslate"><span class="pre">`y</span> <span class="pre">=</span> <span class="pre">3*x</span> <span class="pre">+</span> <span class="pre">1`</span></code> renders <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">3*x</span> <span class="pre">+</span> <span class="pre">1</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="block-code-fences">
+<h4><span class="section-number">3.4.5.2. </span>Block code fences<a class="headerlink" href="#block-code-fences" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Block code fences are used for a block of code, which normally spans more than one line</p></li>
+<li><p>To use block style, wrap your code in a pair of triple backticks <code class="docutils literal notranslate"><span class="pre">```</span></code></p></li>
+<li><p>You can specify the language to take advantage of syntax highlighting</p></li>
+</ul>
+<p>Ex</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+def say_hi(name):
+    print(f&quot;Hello {name}&quot;)
+    print(&quot;Have a good day&quot;)
+```
+</pre></div>
+</div>
+<p>You will see</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Have a good day&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="latex">
+<h3><span class="section-number">3.4.6. </span>Latex<a class="headerlink" href="#latex" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Markdown supports Latex syntax so you can type math formulas easily</p></li>
+<li><p>Similar to code fences, there are inline (use <code class="docutils literal notranslate"><span class="pre">$</span></code>) and block (<code class="docutils literal notranslate"><span class="pre">$$</span></code>) math formulas</p></li>
+</ul>
+<div class="section" id="inline-latex">
+<h4><span class="section-number">3.4.6.1. </span>Inline Latex<a class="headerlink" href="#inline-latex" title="Permalink to this headline">¶</a></h4>
+<p>Try this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The probability mass function for a binomial distribution is given by $f(x) = {n \choose x} p^{x} (1-p)^{n-x}$ 
+</pre></div>
+</div>
+<p>You will see</p>
+<p>The probability mass function for a binomial distribution is given by <span class="math notranslate nohighlight">\(f(x) = {n \choose x} p^{x} (1-p)^{n-x}\)</span></p>
+</div>
+<div class="section" id="block-latex">
+<h4><span class="section-number">3.4.6.2. </span>Block Latex<a class="headerlink" href="#block-latex" title="Permalink to this headline">¶</a></h4>
+<p>Try this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$
+M = \begin{bmatrix}a_1 &amp; b_1\\
+a_2 &amp; b_2 \\
+a_3 &amp; b_3
+\end{bmatrix}
+$$
+</pre></div>
+</div>
+<p>You will see</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M = \begin{bmatrix}a_1 &amp; b_1\\
+a_2 &amp; b_2 \\
+a_3 &amp; b_3
+\end{bmatrix}
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="links">
+<h3><span class="section-number">3.4.7. </span>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<p>Try this</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>If something you don&#39;t not know, use [Google](https://www.google.com)
+</pre></div>
+</div>
+<p>You will see</p>
+<p>If some thing you don’t know, use <a class="reference external" href="https://www.google.com">Google</a></p>
+</div>
+<div class="section" id="advice">
+<h3><span class="section-number">3.4.8. </span>Advice<a class="headerlink" href="#advice" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The syntax introduced so far is enough for you to have a nice-looking notebook</p></li>
+<li><p>I rarely use any Markdown features beyond this level.</p></li>
+<li><p>Remember, the most important thing is the quality of your analysis</p></li>
+<li><p>Don’t bother too much with fancy formatting</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="advanced-markdown-syntax">
+<h2><span class="section-number">3.5. </span>Advanced Markdown syntax<a class="headerlink" href="#advanced-markdown-syntax" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="blockquotes">
+<h3><span class="section-number">3.5.1. </span>Blockquotes<a class="headerlink" href="#blockquotes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Block quotes are used for quotes or excerpts</p></li>
+<li><p>You start a blockquote with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></li>
+<li><p>For multi-paragraph block quotes, add a blank line between paragraphs and remember to start every line with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> as in the following example</p></li>
+</ul>
+<p>Ex 1: single paragraph quotes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; My advice to you is to get married: if you find a good wife you’ll be happy; if not, you’ll become a philosopher (Socrates)
+</pre></div>
+</div>
+<p>You will see</p>
+<blockquote>
+<div><p>My advice to you is to get married: if you find a good wife you’ll be happy; if not, you’ll become a philosopher (Socrates)</p>
+</div></blockquote>
+<p>Ex 2: multi-paragraph quotes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; My advice to you is to get married: if you find a good wife you’ll be happy; if not, you’ll become a philosopher (Socrates)
+&gt;
+&gt; Behind every great man is a woman rolling her eyes (Jim Carrey)
+</pre></div>
+</div>
+<p>You will see</p>
+<blockquote>
+<div><p>My advice to you is to get married: if you find a good wife you’ll be happy; if not, you’ll become a philosopher (Socrates)</p>
+<p>Behind every great man is a woman rolling her eyes (Jim Carrey)</p>
+</div></blockquote>
+</div>
+<div class="section" id="images">
+<h3><span class="section-number">3.5.2. </span>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>To insert an image, use the following syntax <code class="docutils literal notranslate"><span class="pre">![Caption](path_to_the_image)</span></code></p></li>
+<li><p>You can use an absolute or a relative path</p></li>
+</ul>
+<p>Ex</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![Python logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png)
+</pre></div>
+</div>
+<p>You will see
+<img alt="Python logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png" /></p>
+</div>
+<div class="section" id="tables">
+<h3><span class="section-number">3.5.3. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<p>Try this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="nb">id</span> <span class="o">|</span> <span class="n">name</span>       <span class="o">|</span> <span class="n">email</span>            <span class="o">|</span>
+<span class="o">|----|------------|------------------|</span>
+<span class="o">|</span> <span class="mi">1</span>  <span class="o">|</span> <span class="n">John</span> <span class="n">Doe</span>   <span class="o">|</span> <span class="n">john</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="mi">2</span>  <span class="o">|</span> <span class="n">Jane</span> <span class="n">Smith</span> <span class="o">|</span> <span class="n">jane</span><span class="nd">@hotmail</span><span class="o">.</span><span class="n">com</span> <span class="o">|</span>
+<span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span> <span class="n">Nam</span> <span class="n">Tran</span>   <span class="o">|</span> <span class="n">nam</span><span class="nd">@yahoo</span><span class="o">.</span><span class="n">com</span>    <span class="o">|</span>
+</pre></div>
+</div>
+<p>You will see</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>name</p></th>
+<th class="head"><p>email</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>John Doe</p></td>
+<td><p><a class="reference external" href="mailto:john&#37;&#52;&#48;gmail&#46;com">john<span>&#64;</span>gmail<span>&#46;</span>com</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Jane Smith</p></td>
+<td><p><a class="reference external" href="mailto:jane&#37;&#52;&#48;hotmail&#46;com">jane<span>&#64;</span>hotmail<span>&#46;</span>com</a></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Nam Nguyen</p></td>
+<td><p><a class="reference external" href="mailto:nam&#37;&#52;&#48;yahoo&#46;com">nam<span>&#64;</span>yahoo<span>&#46;</span>com</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>However, my advice is not to type tables by yourself. Go to some website that offers a free Markdown table generator such as this one <a class="reference external" href="https://www.tablesgenerator.com/markdown_tables">https://www.tablesgenerator.com/markdown_tables</a></p>
+</div>
+<div class="section" id="emails">
+<h3><span class="section-number">3.5.4. </span>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Put your email inside <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> to generate a like to your email</p></li>
+<li><p>When someone clicks on the link, the default email app will be launched</p></li>
+</ul>
+<p>Ex</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">pythonisfun</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+
+</pre></div>
+</div>
+<p>You will see</p>
+<p><a class="reference external" href="mailto:pythonisfun&#37;&#52;&#48;example&#46;com">mailto:pythonisfun<span>&#64;</span>example<span>&#46;</span>com</a></p>
+</div>
+<div class="section" id="html">
+<h3><span class="section-number">3.5.5. </span>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+<p>You can also use HTML tags inside a Markdown file, and they will be parsed according to HTML rules</p>
+<p>Ex</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a paragraph<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Next one will be an unordered list<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>item 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>item 2 in bold<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red;&quot;</span><span class="p">&gt;</span>item 3 in red<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>You will see</p>
+<div>
+    <p>This is a paragraph</p>
+    <p>Next one will be an unordered list</p>
+    <ul>
+        <li>item 1</li>
+        <li><b>item 2 in bold</b></li>
+        <li><span style="color: red;">item 3 in red</span></li>
+    </ul>
+</div></div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">3.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p><strong>Headings</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 1</span>
+<span class="c1">## Level 2</span>
+<span class="c1">### Level 3</span>
+<span class="c1">#### Level 4</span>
+<span class="c1">##### Level 5</span>
+<span class="c1">###### Level 6</span>
+</pre></div>
+</div>
+<p><strong>Emphasis</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bold</span><span class="p">:</span> <span class="o">**</span><span class="n">bold</span><span class="o">**</span>
+<span class="n">Italic</span><span class="p">:</span> <span class="o">*</span><span class="n">italic</span><span class="o">*</span>
+<span class="n">Bold</span> <span class="ow">and</span> <span class="n">italic</span><span class="p">:</span> <span class="o">***</span><span class="n">Bold</span> <span class="ow">and</span> <span class="n">italic</span><span class="o">***</span>
+<span class="n">Strike</span> <span class="n">through</span><span class="p">:</span> <span class="o">~~</span><span class="n">Strike</span> <span class="n">through</span><span class="o">~~</span>
+</pre></div>
+</div>
+<p><strong>Unordered lists</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">item</span> <span class="mi">1</span>
+<span class="o">-</span> <span class="n">item</span> <span class="mi">2</span>
+<span class="o">-</span> <span class="n">item</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p><strong>Ordered lists</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">item</span> <span class="mi">1</span>
+<span class="mf">1.</span> <span class="n">item</span> <span class="mi">2</span>
+<span class="mf">1.</span> <span class="n">item</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p><strong>Nested lists</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">item</span> <span class="mi">1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.2</span>
+<span class="o">-</span> <span class="n">item</span> <span class="mi">2</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.2</span>
+</pre></div>
+</div>
+<p><strong>Mixed nested lists</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">item</span> <span class="mi">1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">1.2</span>
+<span class="mf">1.</span> <span class="n">item</span> <span class="mi">2</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.1</span>
+    <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.2</span>
+</pre></div>
+</div>
+<p><strong>Inline code</strong></p>
+<ul class="simple">
+<li><p>Numbers: <code class="docutils literal notranslate"><span class="pre">`42`</span></code></p></li>
+<li><p>Variable names: <code class="docutils literal notranslate"><span class="pre">`profit`</span></code></p></li>
+<li><p>Expressions: <code class="docutils literal notranslate"><span class="pre">`y</span> <span class="pre">=</span> <span class="pre">3*x</span> <span class="pre">+</span> <span class="pre">1`</span></code></p></li>
+</ul>
+<p><strong>Block code</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+def say_hi(name):
+    print(f&quot;Hello {name}&quot;)
+    print(&quot;Have a good day&quot;)
+```
+</pre></div>
+</div>
+<p><strong>Inline Latex</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$E = mc^2$
+</pre></div>
+</div>
+<p><strong>Block Latex</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$
+M = \begin{bmatrix}a_1 &amp; b_1\\
+a_2 &amp; b_2 \\
+a_3 &amp; b_3
+\end{bmatrix}
+$$
+
+</pre></div>
+</div>
+<p><strong>Links</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Google</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Single-paragraph quotes</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">quote</span>
+</pre></div>
+</div>
+<p><strong>Multi-paragraph quotes</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">first</span> <span class="n">paragraph</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">second</span> <span class="n">paragraph</span>
+</pre></div>
+</div>
+<p><strong>Images</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![Caption](path_to_the_image)
+</pre></div>
+</div>
+<p><strong>Tables</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="nb">id</span> <span class="o">|</span> <span class="n">name</span>       <span class="o">|</span> <span class="n">email</span>            <span class="o">|</span>
+<span class="o">|----|------------|------------------|</span>
+<span class="o">|</span> <span class="mi">1</span>  <span class="o">|</span> <span class="n">John</span> <span class="n">Doe</span>   <span class="o">|</span> <span class="n">john</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="mi">2</span>  <span class="o">|</span> <span class="n">Jane</span> <span class="n">Smith</span> <span class="o">|</span> <span class="n">jane</span><span class="nd">@hotmail</span><span class="o">.</span><span class="n">com</span> <span class="o">|</span>
+<span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span> <span class="n">Nam</span> <span class="n">Tran</span>   <span class="o">|</span> <span class="n">nam</span><span class="nd">@yahoo</span><span class="o">.</span><span class="n">com</span>    <span class="o">|</span>
+</pre></div>
+</div>
+<p><strong>Emails</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">pythonisfun</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>HTML</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">paragraph</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Next</span> <span class="n">one</span> <span class="n">will</span> <span class="n">be</span> <span class="n">an</span> <span class="n">unordered</span> <span class="nb">list</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="n">item</span> <span class="mi">1</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">item</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">bold</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color: red;&quot;</span><span class="o">&gt;</span><span class="n">item</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">red</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./get-started"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="jupyter-lab.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Jupyter Lab</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../basics/basic-syntax.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Python’s basic syntax</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tue Nguyen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

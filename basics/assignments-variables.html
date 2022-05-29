@@ -1,0 +1,1470 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Variables and assignments &#8212; Python tutorials</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Naming rules and conventions" href="naming.html" />
+    <link rel="prev" title="4. Python’s basic syntax" href="basic-syntax.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python tutorials</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/jupyter-lab.html">
+   2. Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/markdown.html">
+   3. Introduction to Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basic-syntax.html">
+   4. Python’s basic syntax
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Variables and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naming.html">
+   6. Naming rules and conventions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Flat data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/nonetype-type.html">
+   7. NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/bool-type.html">
+   8. Bool type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/int-type.html">
+   9. Int type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/float-type.html">
+   10. Float type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Collection data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/collection-types.html">
+   11. Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/list-type.html">
+   12. List type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/tuple-type.html">
+   13. Tuple type
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/basics/assignments-variables.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fbasics/assignments-variables.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/basics/assignments-variables.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   5.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-assignments-objects-and-values">
+   5.2. Variables, assignments, objects, and values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equality-comparision">
+   5.3. Equality comparision
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-identity">
+   5.4. Object identity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-get-id">
+     5.4.1. Ex 1: get ID
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-two-assignments">
+     5.4.2. Ex 2: two assignments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-3-compare-identities">
+     5.4.3. Ex 3: compare identities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-4-garbage-collector">
+     5.4.4. Ex 4: garbage collector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-5-assignment-to-avariable">
+     5.4.5. Ex 5: assignment to avariable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-6-assignment-to-an-expression-involving-a-variable">
+     5.4.6. Ex 6: assignment to an expression involving a variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-7-garbage-collector-only-destroys-objects-with-no-reference">
+     5.4.7. Ex 7: garbage collector only destroys objects with no reference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-interning">
+   5.5. Python interning
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-test-with-integers">
+     5.5.1. Ex 1: test with integers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-test-with-strings">
+     5.5.2. Ex 2: test with strings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatted-printing">
+   5.6. Formatted printing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normal-printing">
+     5.6.1. Normal printing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     5.6.2. Formatted printing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ex-1-use-format">
+       5.6.2.1. Ex 1: use
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .format()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ex-2-use-string-interpolation">
+       5.6.2.2. Ex 2: use string interpolation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   5.7. Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Variables and assignments</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   5.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-assignments-objects-and-values">
+   5.2. Variables, assignments, objects, and values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equality-comparision">
+   5.3. Equality comparision
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-identity">
+   5.4. Object identity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-get-id">
+     5.4.1. Ex 1: get ID
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-two-assignments">
+     5.4.2. Ex 2: two assignments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-3-compare-identities">
+     5.4.3. Ex 3: compare identities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-4-garbage-collector">
+     5.4.4. Ex 4: garbage collector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-5-assignment-to-avariable">
+     5.4.5. Ex 5: assignment to avariable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-6-assignment-to-an-expression-involving-a-variable">
+     5.4.6. Ex 6: assignment to an expression involving a variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-7-garbage-collector-only-destroys-objects-with-no-reference">
+     5.4.7. Ex 7: garbage collector only destroys objects with no reference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-interning">
+   5.5. Python interning
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-test-with-integers">
+     5.5.1. Ex 1: test with integers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-test-with-strings">
+     5.5.2. Ex 2: test with strings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatted-printing">
+   5.6. Formatted printing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normal-printing">
+     5.6.1. Normal printing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     5.6.2. Formatted printing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ex-1-use-format">
+       5.6.2.1. Ex 1: use
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .format()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ex-2-use-string-interpolation">
+       5.6.2.2. Ex 2: use string interpolation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   5.7. Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="variables-and-assignments">
+<h1><span class="section-number">5. </span>Variables and assignments<a class="headerlink" href="#variables-and-assignments" title="Permalink to this headline">¶</a></h1>
+<p>Author: Tue Nguyen</p>
+<div class="section" id="overview">
+<h2><span class="section-number">5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This lecture covers the following topics</p>
+<ul class="simple">
+<li><p>Assignments, variables, objects, and values</p></li>
+<li><p>Equality comparison</p></li>
+<li><p>Object identities</p></li>
+<li><p>Python interning</p></li>
+<li><p>Formatted printing</p></li>
+</ul>
+</div>
+<div class="section" id="variables-assignments-objects-and-values">
+<h2><span class="section-number">5.2. </span>Variables, assignments, objects, and values<a class="headerlink" href="#variables-assignments-objects-and-values" title="Permalink to this headline">¶</a></h2>
+<p>Main points</p>
+<ul class="simple">
+<li><p>From last tutorial, we know a variable is created through an assignment</p></li>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">1000</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: variable name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1000</span></code>: value</p></li>
+</ul>
+</li>
+<li><p>Warning: many people think that <code class="docutils literal notranslate"><span class="pre">x</span></code> contains value <code class="docutils literal notranslate"><span class="pre">1000</span></code>. It’s NOT true</p></li>
+<li><p>Under the hood</p>
+<ul>
+<li><p>First, Python evaluates the right hand side (RHS) of the assignment and comes up with <strong>value</strong> <code class="docutils literal notranslate"><span class="pre">1000</span></code></p></li>
+<li><p>Python then creates an <strong>object</strong> in the memory to hold that value</p></li>
+<li><p>Finally, Python links the object to a variable named <code class="docutils literal notranslate"><span class="pre">x</span></code> on the left hand side (LHS)</p></li>
+</ul>
+</li>
+<li><p>You should think as follows</p>
+<ul>
+<li><p>Object = a box</p></li>
+<li><p>Value = what’s inside the box</p></li>
+<li><p>Variable = a label pasted on the box</p></li>
+<li><p>We use the label the retrieve the thing inside the box</p></li>
+</ul>
+</li>
+<li><p>Why use variables?</p>
+<ul>
+<li><p>It is extremely complicated for us, as human beings, to deal with objects directly</p></li>
+<li><p>Variables help</p>
+<ul>
+<li><p>Abstract away all unnecessary technical complications</p></li>
+<li><p>Allow us to focus on solving our main problem at a higher level</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="equality-comparision">
+<h2><span class="section-number">5.3. </span>Equality comparision<a class="headerlink" href="#equality-comparision" title="Permalink to this headline">¶</a></h2>
+<p>Main points</p>
+<ul class="simple">
+<li><p>In Python, <code class="docutils literal notranslate"><span class="pre">=</span></code> is used for assignment, not comparision</p></li>
+<li><p>To check if two things are equal (in terms of value), we use <code class="docutils literal notranslate"><span class="pre">==</span></code></p>
+<ul>
+<li><p>If they are indeed equal, <code class="docutils literal notranslate"><span class="pre">True</span></code> will be returned</p></li>
+<li><p>Otherwise, <code class="docutils literal notranslate"><span class="pre">False</span></code> will be returned</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a variable</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if x is equal to 1000</span>
+<span class="n">x</span> <span class="o">==</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if x is equal to 50</span>
+<span class="n">x</span> <span class="o">==</span> <span class="mi">50</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if x is equal to &quot;abc&quot;</span>
+<span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;abc&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="object-identity">
+<h2><span class="section-number">5.4. </span>Object identity<a class="headerlink" href="#object-identity" title="Permalink to this headline">¶</a></h2>
+<p>Main points</p>
+<ul class="simple">
+<li><p>In Python, everything is an <strong>object</strong></p></li>
+<li><p>Each object has an <strong>unique ID</strong> (like a person has an ID)</p></li>
+<li><p>We use <code class="docutils literal notranslate"><span class="pre">id(x)</span></code> to get the ID of the object that variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is pointing to</p></li>
+<li><p>We might say “ID of <code class="docutils literal notranslate"><span class="pre">x</span></code>” but the correct sentence should be “ID of the object associated with <code class="docutils literal notranslate"><span class="pre">x</span></code>”</p></li>
+</ul>
+<p>Some notes on saying</p>
+<ul class="simple">
+<li><p>We might say “ID of <code class="docutils literal notranslate"><span class="pre">x</span></code>” but the <strong>correct</strong> sentence should be “ID of the object associated with <code class="docutils literal notranslate"><span class="pre">x</span></code>”</p></li>
+<li><p>Suppose <code class="docutils literal notranslate"><span class="pre">id(x)</span></code> gives us <code class="docutils literal notranslate"><span class="pre">2350614735152</span></code>, then we say</p>
+<ul>
+<li><p>“<code class="docutils literal notranslate"><span class="pre">x</span></code> is <strong>pointing</strong> to the object with ID <code class="docutils literal notranslate"><span class="pre">2350614735152</span></code>”</p></li>
+<li><p>“<code class="docutils literal notranslate"><span class="pre">x</span></code> is <strong>referring</strong> to the object with ID <code class="docutils literal notranslate"><span class="pre">2350614735152</span></code>”</p></li>
+</ul>
+</li>
+<li><p>In the statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">1000</span></code>, we say</p>
+<ul>
+<li><p>“<code class="docutils literal notranslate"><span class="pre">x</span></code> is assigned value <code class="docutils literal notranslate"><span class="pre">1000</span></code>”</p></li>
+<li><p>“<code class="docutils literal notranslate"><span class="pre">1000</span></code> is assigned to <code class="docutils literal notranslate"><span class="pre">x</span></code>”</p></li>
+<li><p>NOT: “<code class="docutils literal notranslate"><span class="pre">x</span></code> is assigned to <code class="docutils literal notranslate"><span class="pre">1000</span></code>”</p></li>
+</ul>
+</li>
+<li><p>On the first assignment on <code class="docutils literal notranslate"><span class="pre">x</span></code> we use the word <strong>initialize</strong> (or <strong>init</strong> for short)</p></li>
+<li><p>On the next assignment on <code class="docutils literal notranslate"><span class="pre">x</span></code> we use the word <strong>assign</strong></p></li>
+<li></li>
+</ul>
+<div class="section" id="ex-1-get-id">
+<h3><span class="section-number">5.4.1. </span>Ex 1: get ID<a class="headerlink" href="#ex-1-get-id" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a variable</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View the value associated with x</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View ID of the object associated with x</span>
+<span class="c1"># Note: the value you see might differ between Python sessions</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140568012297104
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-two-assignments">
+<h3><span class="section-number">5.4.2. </span>Ex 2: two assignments<a class="headerlink" href="#ex-2-two-assignments" title="Permalink to this headline">¶</a></h3>
+<p>Two assignments are handled separately</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assignments</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+1000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View ID</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140568012297488
+140568012296240
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare values</span>
+<span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare IDs</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Why different ID?</strong></p>
+<ul class="simple">
+<li><p>First assignment</p>
+<ul>
+<li><p>Python evaluates RHS, comes up with value <code class="docutils literal notranslate"><span class="pre">1000</span></code>, and creates an object to hold that value</p></li>
+<li><p>Then Python links that object to variable <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+</li>
+<li><p>Second assignment</p>
+<ul>
+<li><p>Python evaluates RHS, also comes up with value <code class="docutils literal notranslate"><span class="pre">1000</span></code>, but it creates another different object to hold that value</p></li>
+<li><p>Then Python links that object to variable <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+</ul>
+</li>
+<li><p>Thus, different objects have different IDs</p></li>
+<li><p>Think of it this way: there are two boxes (objects) containing the same thing (values) and having two different labels (variables)</p></li>
+</ul>
+</div>
+<div class="section" id="ex-3-compare-identities">
+<h3><span class="section-number">5.4.3. </span>Ex 3: compare identities<a class="headerlink" href="#ex-3-compare-identities" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 1: we can check if x and y are pointing to the same object</span>
+<span class="c1"># using == as in the previous example</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 2: we can do the same thing using keyword is</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-4-garbage-collector">
+<h3><span class="section-number">5.4.4. </span>Ex 4: garbage collector<a class="headerlink" href="#ex-4-garbage-collector" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now re-assign y to 2000</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print value of y</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print ID of y</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140567978333008
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What just happened?</strong></p>
+<ul class="simple">
+<li><p>When we run <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">2000</span></code>, Python evaluates RHS, comes up with value <code class="docutils literal notranslate"><span class="pre">2000</span></code>, and creates an object with ID shown above to hold the value</p></li>
+<li><p>Python detect <code class="docutils literal notranslate"><span class="pre">y</span></code> is already linked to a different object, so it delete the current link, and re-link y to the new object</p></li>
+<li><p>That’s why when we print <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">id(x)</span></code> we get new values</p></li>
+</ul>
+<p><strong>What happened to the old object?</strong></p>
+<ul class="simple">
+<li><p>When Python detect an object with no variables referring to it, Python will summon the <strong>garbage collector</strong> to destroy that object and release memory to the system for future assignments</p></li>
+<li><p>How can we verify it? We can’t because we only have access to an object through its associated with it</p></li>
+</ul>
+</div>
+<div class="section" id="ex-5-assignment-to-avariable">
+<h3><span class="section-number">5.4.5. </span>Ex 5: assignment to avariable<a class="headerlink" href="#ex-5-assignment-to-avariable" title="Permalink to this headline">¶</a></h3>
+<p>An assignment to a variable will not create a new object</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now assign x to z</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># They will have the same value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+1000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># But they also pointing to the same underlying object</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140568012297488
+140568012297488
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What happened?</strong></p>
+<ul class="simple">
+<li><p>When the RHS of an assignment is just a variable name, no new object is created</p></li>
+<li><p>You can think of it as we have two labels pasted on the same box</p></li>
+<li><p>Either we use <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">z</span></code>, we get the same thing back</p></li>
+</ul>
+</div>
+<div class="section" id="ex-6-assignment-to-an-expression-involving-a-variable">
+<h3><span class="section-number">5.4.6. </span>Ex 6: assignment to an expression involving a variable<a class="headerlink" href="#ex-6-assignment-to-an-expression-involving-a-variable" title="Permalink to this headline">¶</a></h3>
+<p>If the RHS is an expression involving a variable, then a new object is created as usual</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign x + 500 to variable t</span>
+<span class="c1"># Python will evaluates the RHS to come up with 1500</span>
+<span class="c1"># then create an object to hold this value</span>
+<span class="c1"># and finally link this object to variable t</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">500</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+1500
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print IDs</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140568012297488
+140567978332656
+False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-7-garbage-collector-only-destroys-objects-with-no-reference">
+<h3><span class="section-number">5.4.7. </span>Ex 7: garbage collector only destroys objects with no reference<a class="headerlink" href="#ex-7-garbage-collector-only-destroys-objects-with-no-reference" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In Ex 5, we know x and z are pointing to the same object</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140568012297488
+140568012297488
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now re-assign 3000 to z</span>
+<span class="c1"># Python will delete the binding between z and the current object</span>
+<span class="c1"># and establish a new binding between z and the object holding 3000 </span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">3000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check ID of z</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># What happened to the old object that z was pointing to?</span>
+<span class="c1"># It still exists because x is still pointing to it</span>
+<span class="c1"># In short, only boxes without a label will be destroyed</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+140568012297488
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="python-interning">
+<h2><span class="section-number">5.5. </span>Python interning<a class="headerlink" href="#python-interning" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We already saw that the <strong>theory</strong> works for some large numbers such as <code class="docutils literal notranslate"><span class="pre">1000</span></code> and <code class="docutils literal notranslate"><span class="pre">2000</span></code></p></li>
+<li><p>But for the theory is NOT true for every case</p></li>
+<li><p>Consider the following example</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In principle, 2 assignmens below will create 2 different objects</span>
+<span class="c1"># Thus, x and y should be 2 labels pasted on 2 different boxes</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># It seems true when we compare the values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+10
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># But in fact, x and y are pointing to the same object</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140568097854016
+140568097854016
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What happened?</strong></p>
+<ul class="simple">
+<li><p>This weird behavior (called Python interning) is due to some optimization decision of the Python core team (which I will not discuss here)</p></li>
+<li><p>Basically, maintaining only one single copy helps save memory and make comparisons a lot faster</p></li>
+<li><p>And the core team accepted this language inconsistency in exchange for performance</p></li>
+<li><p>You can see Python interning behavior for small integers (normally from <code class="docutils literal notranslate"><span class="pre">-5</span></code> to <code class="docutils literal notranslate"><span class="pre">128</span></code>, but it depends on specific implementations) and for short strings</p></li>
+<li><p>Key take away: never compare identities for small integers and short strings</p></li>
+</ul>
+<div class="section" id="ex-1-test-with-integers">
+<h3><span class="section-number">5.5.1. </span>Ex 1: test with integers<a class="headerlink" href="#ex-1-test-with-integers" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test with -5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test with 128</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test with -10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span><span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">33</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span><span class="o">?</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test with 300</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-test-with-strings">
+<h3><span class="section-number">5.5.2. </span>Ex 2: test with strings<a class="headerlink" href="#ex-2-test-with-strings" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test with a short string</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test with a long string</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Hello. Nice to meet you.&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello. Nice to meet you.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Remarks</strong></p>
+<ul class="simple">
+<li><p>The theory is true <em>in general</em>, but be aware of Python interning behavior in some special cases</p></li>
+<li><p>Never compare identities of small integers and short strings</p></li>
+<li><p>In practice, you rarely compare identities, so it won’t matter much</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="formatted-printing">
+<h2><span class="section-number">5.6. </span>Formatted printing<a class="headerlink" href="#formatted-printing" title="Permalink to this headline">¶</a></h2>
+<p>Now, you already gained some more understanding of how Python works. It’s time to introduce some more useful tips for printing.</p>
+<div class="section" id="normal-printing">
+<h3><span class="section-number">5.6.1. </span>Normal printing<a class="headerlink" href="#normal-printing" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print strings</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print variables</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print expressions</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1500
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">5.6.2. </span>Formatted printing<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>A formatted string is a string having some <em>placeholders</em> that will be filled by the values of some variables</p>
+<div class="section" id="ex-1-use-format">
+<h4><span class="section-number">5.6.2.1. </span>Ex 1: use <code class="docutils literal notranslate"><span class="pre">.format()</span></code><a class="headerlink" href="#ex-1-use-format" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Thor&quot;</span>
+<span class="n">place</span> <span class="o">=</span> <span class="s2">&quot;Asgard&quot;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I am </span><span class="si">{}</span><span class="s2"> from </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">place</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am Thor from Asgard
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What happened?</strong></p>
+<ul class="simple">
+<li><p>Here, the string <code class="docutils literal notranslate"><span class="pre">s</span></code> has two placeholders in it (denoted by <code class="docutils literal notranslate"><span class="pre">{}</span></code>)</p></li>
+<li><p>Each placeholder will be filled with the values of <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">place</span></code> respectively</p></li>
+</ul>
+</div>
+<div class="section" id="ex-2-use-string-interpolation">
+<h4><span class="section-number">5.6.2.2. </span>Ex 2: use string interpolation<a class="headerlink" href="#ex-2-use-string-interpolation" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Avaiable for Python <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">3.6</span></code> only</p></li>
+<li><p>You place an <code class="docutils literal notranslate"><span class="pre">f</span></code> (meaning “formatted”) before the beginning quote and put the variable names inside the corresponding placeholders</p></li>
+<li><p>This behavior is called string interpolation</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Rob&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">. He is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is Rob. He is 20 years old
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">5.7. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p><strong>Assignments, variables, objects, and values</strong></p>
+<ul class="simple">
+<li><p>Syntax: <code class="docutils literal notranslate"><span class="pre">variable_name</span> <span class="pre">=</span> <span class="pre">value</span></code></p></li>
+<li><p>How an assignment works</p>
+<ul>
+<li><p>Python always evaluates the RHS first</p></li>
+<li><p>Comes up with a value</p></li>
+<li><p>Creates an object to hold the value</p></li>
+<li><p>And finally links the object to a variable name on the LHS</p></li>
+</ul>
+</li>
+<li><p>Variables are just symbolic names; they don’t contain values</p></li>
+<li><p>Only objects contain values</p></li>
+<li><p>We, as human beings, don’t manipulate object directly but through variables</p></li>
+</ul>
+<p><strong>The box model</strong></p>
+<ul class="simple">
+<li><p>Object = a box</p></li>
+<li><p>Value = what’s inside the box</p></li>
+<li><p>Variable = label pasted on the box</p></li>
+<li><p>At a given point in time</p>
+<ul>
+<li><p>A box can have multiple label pasted on it</p></li>
+<li><p>But a label can be pasted on one box only (because if not, when we use the variable, Python cannot decide know which box to open)</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Object identity</strong></p>
+<ul class="simple">
+<li><p>Everything that contains value or data is an object</p></li>
+<li><p>In Python, almost everything is an object</p></li>
+<li><p>An object have a unique ID</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">id(x)</span></code> to get ID of the object associated with <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+<p><strong>Equality comparision</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">=</span></code> for assignments</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">==</span></code> to compare values</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">is</span></code> to comapre identities</p></li>
+</ul>
+<p><strong>Various types of assignment</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">1000</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">1000</span></code> will creates two different objects although <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> have the same value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">x</span></code> will not create a new object: <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> now are referring to the same object</p></li>
+<li><p>When re-use a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> in a new assignment, Python will delete the binding between <code class="docutils literal notranslate"><span class="pre">x</span></code> and the old object and establish a new binding between <code class="docutils literal notranslate"><span class="pre">x</span></code> and the new object</p></li>
+</ul>
+<p><strong>Garbage collector</strong></p>
+<ul class="simple">
+<li><p>When Python notices a box without any label, it will immediately summon the garbage collector to destroy that box and return the memory to the system</p></li>
+<li><p>Only objects without references will be destroyed</p></li>
+</ul>
+<p><strong>Python interning</strong></p>
+<ul class="simple">
+<li><p>When assigning the same small integer or short string to two different variables <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, then it might be that only one object is created and both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are pointing to that object</p></li>
+<li><p>This is called Python interning behavior</p></li>
+<li><p>Python interning happens in assignment with</p>
+<ul>
+<li><p>Small integers (normally from <code class="docutils literal notranslate"><span class="pre">-5</span></code> to <code class="docutils literal notranslate"><span class="pre">128</span></code>)</p></li>
+<li><p>Short strings</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Formatted printing</strong></p>
+<ul class="simple">
+<li><p>When a print statement involve a formatted string, it is called formatted printing</p></li>
+<li><p>A formatted string has some placeholders in it that will be filled with values of some variables</p></li>
+<li><p>Two syntaxes</p>
+<ul>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">.format()</span></code>: <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">&quot;I</span> <span class="pre">am</span> <span class="pre">{}</span> <span class="pre">from</span> <span class="pre">{}&quot;.format(name,</span> <span class="pre">place)</span></code></p></li>
+<li><p>Use string interpolation: <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">f&quot;This</span> <span class="pre">is</span> <span class="pre">{name}.</span> <span class="pre">He</span> <span class="pre">is</span> <span class="pre">{age}</span> <span class="pre">years</span> <span class="pre">old&quot;</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Other notes</strong></p>
+<ul class="simple">
+<li><p>The theory on assignment is true in general</p></li>
+<li><p>Just be aware of Python interning behavior</p></li>
+<li><p>Never compare identity of small integers and short strings</p></li>
+<li><p>In practice, you rarely compare identities, so it won’t matter much</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./basics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="basic-syntax.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Python’s basic syntax</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naming.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Naming rules and conventions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tue Nguyen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

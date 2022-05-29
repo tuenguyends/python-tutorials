@@ -1,0 +1,1153 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10. Float type &#8212; Python tutorials</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Collection types" href="../collection-dtypes/collection-types.html" />
+    <link rel="prev" title="9. Int type" href="int-type.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python tutorials</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/jupyter-lab.html">
+   2. Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/markdown.html">
+   3. Introduction to Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/basic-syntax.html">
+   4. Python’s basic syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/assignments-variables.html">
+   5. Variables and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
+   6. Naming rules and conventions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Flat data types
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nonetype-type.html">
+   7. NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bool-type.html">
+   8. Bool type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="int-type.html">
+   9. Int type
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   10. Float type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Collection data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/collection-types.html">
+   11. Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/list-type.html">
+   12. List type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../collection-dtypes/tuple-type.html">
+   13. Tuple type
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/flat-dtypes/float-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fflat-dtypes/float-type.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/flat-dtypes/float-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   10.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-float-type">
+   10.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-the-name-float">
+   10.3. Why the name
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-an-float">
+   10.4. How to get an
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-float-literals">
+     10.4.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       float
+      </span>
+     </code>
+     literals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-a-float">
+     10.4.2. Ex 2: from an expression that produces a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       float
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-uses-float">
+   10.5. When uses
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-float">
+   10.6. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math-utilities">
+   10.7. Math utilities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   10.8. Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice">
+   10.9. Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     10.9.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     10.9.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     10.9.3. Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     10.9.4. Exercise 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Float type</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   10.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-float-type">
+   10.2. Why
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   type?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-the-name-float">
+   10.3. Why the name
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-an-float">
+   10.4. How to get an
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-1-from-float-literals">
+     10.4.1. Ex 1: from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       float
+      </span>
+     </code>
+     literals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex-2-from-an-expression-that-produces-a-float">
+     10.4.2. Ex 2: from an expression that produces a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       float
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-uses-float">
+   10.5. When uses
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-float">
+   10.6. Operations on
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math-utilities">
+   10.7. Math utilities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   10.8. Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice">
+   10.9. Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     10.9.1. Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     10.9.2. Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     10.9.3. Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     10.9.4. Exercise 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="float-type">
+<h1><span class="section-number">10. </span>Float type<a class="headerlink" href="#float-type" title="Permalink to this headline">¶</a></h1>
+<p>Author: Tue Nguyen</p>
+<div class="section" id="overview">
+<h2><span class="section-number">10.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This lecture covers the following topics</p>
+<ul class="simple">
+<li><p>Why <code class="docutils literal notranslate"><span class="pre">float</span></code> type?</p></li>
+<li><p>Why the name <code class="docutils literal notranslate"><span class="pre">float</span></code>?</p></li>
+<li><p>How to get a <code class="docutils literal notranslate"><span class="pre">float</span></code>?</p></li>
+<li><p>Conversion to <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+<li><p>When uses <code class="docutils literal notranslate"><span class="pre">float</span></code>?</p></li>
+<li><p>Operations on <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+<li><p>Math utilities</p></li>
+</ul>
+</div>
+<div class="section" id="why-float-type">
+<h2><span class="section-number">10.2. </span>Why <code class="docutils literal notranslate"><span class="pre">float</span></code> type?<a class="headerlink" href="#why-float-type" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Motivation:</strong> used to represent reald numbers</p></li>
+<li><p><strong>Real-life data:</strong> salary, temperature, distance, sales, profit, price</p></li>
+<li><p><strong>Python implementation:</strong></p>
+<ul>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+<li><p>Possible values: any real number</p></li>
+</ul>
+</li>
+<li><p>Note that <code class="docutils literal notranslate"><span class="pre">float</span></code> is just an approximation of the real line</p>
+<ul>
+<li><p>The set of real numbers is a continuum with no gap</p></li>
+<li><p>There’s no way machines can represent such a precision</p></li>
+<li><p>Thus, be aware of round the inherent rounding error when dealing with <code class="docutils literal notranslate"><span class="pre">float</span></code>s</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="why-the-name-float">
+<h2><span class="section-number">10.3. </span>Why the name <code class="docutils literal notranslate"><span class="pre">float</span></code>?<a class="headerlink" href="#why-the-name-float" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Python uses float to represent real numbers such as <code class="docutils literal notranslate"><span class="pre">1.5</span></code>, <code class="docutils literal notranslate"><span class="pre">3.14</span></code>, or <code class="docutils literal notranslate"><span class="pre">2.7</span></code></p></li>
+<li><p>The name <code class="docutils literal notranslate"><span class="pre">float</span></code> came from the fact that real numbers are represented in the floating point format in computers</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">3.14</span></code> can be represented as <code class="docutils literal notranslate"><span class="pre">3.14</span></code>, <code class="docutils literal notranslate"><span class="pre">0.314</span> <span class="pre">*</span> <span class="pre">10^1</span></code>, or <code class="docutils literal notranslate"><span class="pre">31.4</span> <span class="pre">*</span> <span class="pre">10^(-1)</span></code></p></li>
+<li><p>The decimal point can move around, thus the name <strong>floating point</strong></p></li>
+</ul>
+</li>
+<li><p>However, you can safely ignore this technical detail and think of a float just as a real number</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-get-an-float">
+<h2><span class="section-number">10.4. </span>How to get an <code class="docutils literal notranslate"><span class="pre">float</span></code>?<a class="headerlink" href="#how-to-get-an-float" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ex-1-from-float-literals">
+<h3><span class="section-number">10.4.1. </span>Ex 1: from <code class="docutils literal notranslate"><span class="pre">float</span></code> literals<a class="headerlink" href="#ex-1-from-float-literals" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normal float</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">10.5</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10.0 is float, not integer</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10. is short for 10.0</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">10.</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scientific notation, use e as 10^</span>
+<span class="c1"># Ex: 2 million</span>
+<span class="mf">2e6</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000000.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-2-from-an-expression-that-produces-a-float">
+<h3><span class="section-number">10.4.2. </span>Ex 2: from an expression that produces a <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#ex-2-from-an-expression-that-produces-a-float" title="Permalink to this headline">¶</a></h3>
+<p>Here are some examples of expressions producing <code class="docutils literal notranslate"><span class="pre">int</span></code>s</p>
+<ul class="simple">
+<li><p>Math operations between <code class="docutils literal notranslate"><span class="pre">float</span></code>s</p></li>
+<li><p>A call to a function that returns an <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+<li><p>Typecasting to <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+</ul>
+<p><strong>Math operations between <code class="docutils literal notranslate"><span class="pre">int</span></code>s</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add 2 floats -&gt; float</span>
+<span class="mf">10.5</span> <span class="o">+</span> <span class="mf">2.5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Float + int -&gt; float </span>
+<span class="c1"># Rule: result is promoted to the more general type</span>
+<span class="c1"># Here, float is more general than int</span>
+<span class="mf">10.0</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Real division always produces float</span>
+<span class="c1"># Even the result is an integer mathematically</span>
+<span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>A call to a function producing an <code class="docutils literal notranslate"><span class="pre">float</span></code></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.33
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Typecasting to <code class="docutils literal notranslate"><span class="pre">float</span></code></strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">float()</span></code> to convert a value to <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+<li><p>Conversion to <code class="docutils literal notranslate"><span class="pre">float</span></code> is NOT always</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From a bool to float</span>
+<span class="c1"># True -&gt; 1.0</span>
+<span class="c1"># False -&gt; 0.p</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From int to float</span>
+<span class="c1"># The value is the same, but the type is now float</span>
+<span class="nb">float</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From str to float</span>
+<span class="c1"># Only strings that look like floats can be converted</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;1.5&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;-1.5&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
+-1.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># White space at two ends are ignored</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;  -1.5      &quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;  -1.5     &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.5
+-1.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Leading and ending zero is also ignored</span>
+<span class="nb">float</span><span class="p">(</span><span class="s2">&quot;-01.50&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># However, &quot;50,000.2&quot; can not be converted to float</span>
+<span class="c1"># Try them to see the errors</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="when-uses-float">
+<h2><span class="section-number">10.5. </span>When uses <code class="docutils literal notranslate"><span class="pre">float</span></code>?<a class="headerlink" href="#when-uses-float" title="Permalink to this headline">¶</a></h2>
+<p>Any time we need a real number</p>
+</div>
+<div class="section" id="operations-on-float">
+<h2><span class="section-number">10.6. </span>Operations on <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#operations-on-float" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Math operations: <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">-,</span> <span class="pre">*,</span> <span class="pre">/,</span> <span class="pre">//,</span> <span class="pre">%,</span> <span class="pre">**</span></code></p></li>
+<li><p>Comparison operations: <code class="docutils literal notranslate"><span class="pre">==,</span> <span class="pre">!=,</span> <span class="pre">&gt;=,</span> <span class="pre">&lt;=,</span> <span class="pre">&gt;,</span> <span class="pre">&lt;,</span> <span class="pre">is,</span> <span class="pre">is</span> <span class="pre">not</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="math-utilities">
+<h2><span class="section-number">10.7. </span>Math utilities<a class="headerlink" href="#math-utilities" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The Python standard libraries come with a module named <code class="docutils literal notranslate"><span class="pre">math</span></code> containing utilities for dealing with numbers</p></li>
+<li><p>This section applies to numbers, thus to both <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+<li><p>You will learn more about modules later</p></li>
+<li><p>For now, just follow some simple examples</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To use math module, we need to import it</span>
+<span class="c1"># Then use the syntax math.&lt;name&gt; to </span>
+<span class="c1"># retrieve the constant or call the function we want to use</span>
+<span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Useful constants</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pi</span>
+<span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Euler number</span>
+<span class="n">math</span><span class="o">.</span><span class="n">e</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.718281828459045
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ceiling:</strong> round UP to the nearest integer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With positive input</span>
+<span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">3.333</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With negative input</span>
+<span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="o">-</span><span class="mf">3.333</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Floor:</strong> round DOWN to the nearest integer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With positive input</span>
+<span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mf">3.333</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With negative input</span>
+<span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="o">-</span><span class="mf">3.333</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Roots</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Square root</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Another way without using math</span>
+<span class="mi">25</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fifth root</span>
+<span class="mi">25</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9036539387158786
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Trig functions</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sine</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cosine</span>
+<span class="c1"># Now you see the rounding error</span>
+<span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.123233995736766e-17
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the full list of what you can do with math, visit its official documentation page at <a class="reference external" href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a></p>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">10.8. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p><strong>Why <code class="docutils literal notranslate"><span class="pre">float</span></code> type?</strong></p>
+<ul class="simple">
+<li><p>Used to represent real numbers</p></li>
+</ul>
+<p><strong>Why the name <code class="docutils literal notranslate"><span class="pre">float</span></code>?</strong></p>
+<ul class="simple">
+<li><p>Real numbers are represented in the floating-point format in computers</p></li>
+</ul>
+<p><strong>Conversion to <code class="docutils literal notranslate"><span class="pre">float</span></code></strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">float()</span></code></p></li>
+<li><p>Rules</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> to <code class="docutils literal notranslate"><span class="pre">float</span></code>: <code class="docutils literal notranslate"><span class="pre">True</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">0.0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> to <code class="docutils literal notranslate"><span class="pre">float</span></code>: <code class="docutils literal notranslate"><span class="pre">2</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">2.0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code> to <code class="docutils literal notranslate"><span class="pre">float</span></code>: the string must look like a real number</p>
+<ul>
+<li><p>Whitespaces at two ends will be ignored</p></li>
+<li><p>Leading and ending zeros will be ignored</p></li>
+</ul>
+</li>
+<li><p>Conversion to <code class="docutils literal notranslate"><span class="pre">float</span></code> is NOT ALWAYS possible</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>How to get an <code class="docutils literal notranslate"><span class="pre">float</span></code>?</strong></p>
+<ul class="simple">
+<li><p>From <code class="docutils literal notranslate"><span class="pre">float</span></code> literals: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10.5</span></code> or <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">2e3</span></code></p></li>
+<li><p>From an expression that produces a <code class="docutils literal notranslate"><span class="pre">float</span></code> such as</p>
+<ul>
+<li><p>Math operations between <code class="docutils literal notranslate"><span class="pre">float</span></code>s: <code class="docutils literal notranslate"><span class="pre">10.5</span> <span class="pre">+</span> <span class="pre">2.5</span></code></p></li>
+<li><p>Call a function that returns a <code class="docutils literal notranslate"><span class="pre">float</span></code>: <code class="docutils literal notranslate"><span class="pre">round(x,</span> <span class="pre">2)</span></code></p></li>
+<li><p>Typecasting: <code class="docutils literal notranslate"><span class="pre">float(x)</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>When uses <code class="docutils literal notranslate"><span class="pre">float</span></code>?</strong></p>
+<ul class="simple">
+<li><p>Any time we need a real number</p></li>
+</ul>
+<p><strong>Operations on <code class="docutils literal notranslate"><span class="pre">float</span></code></strong></p>
+<ul class="simple">
+<li><p>Math operations</p></li>
+<li><p>Comparison operations</p></li>
+</ul>
+<p><strong>Math utils</strong></p>
+<ul class="simple">
+<li><p>Import <code class="docutils literal notranslate"><span class="pre">math</span></code> module</p></li>
+</ul>
+</div>
+<div class="section" id="practice">
+<h2><span class="section-number">10.9. </span>Practice<a class="headerlink" href="#practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1">
+<h3><span class="section-number">10.9.1. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Create <code class="docutils literal notranslate"><span class="pre">float</span></code> variable <code class="docutils literal notranslate"><span class="pre">x</span></code> with value <code class="docutils literal notranslate"><span class="pre">100</span></code></p></li>
+<li><p>Show its value and type</p></li>
+</ul>
+</div>
+<div class="section" id="exercise-2">
+<h3><span class="section-number">10.9.2. </span>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<p>Do the following</p>
+<ul class="simple">
+<li><p>Create a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> from the division of <code class="docutils literal notranslate"><span class="pre">10</span></code> by <code class="docutils literal notranslate"><span class="pre">5</span></code></p></li>
+<li><p>Show the value and type of <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="exercise-3">
+<h3><span class="section-number">10.9.3. </span>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+<p>How to quickly create a value of <code class="docutils literal notranslate"><span class="pre">7.5</span></code> billion?</p>
+</div>
+<div class="section" id="exercise-4">
+<h3><span class="section-number">10.9.4. </span>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">math</span></code> module to compute</p>
+<ul class="simple">
+<li><p>The area of a circle with a radius <code class="docutils literal notranslate"><span class="pre">5</span></code></p></li>
+<li><p>The hypotenuse of a right triangle with <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">4</span></code> being the lengths of the two other sides</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./flat-dtypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="int-type.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Int type</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../collection-dtypes/collection-types.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Collection types</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tue Nguyen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

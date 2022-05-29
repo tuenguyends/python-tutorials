@@ -1,4 +1,0 @@
-# Integers
-
-```{tableofcontents}
-```

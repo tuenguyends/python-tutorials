@@ -1,4 +1,0 @@
-# Python typing system
-
-```{tableofcontents}
-```
