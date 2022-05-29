@@ -36,3 +36,4 @@ parts:
     - file: "collection-dtypes/collection-types"
     - file: "collection-dtypes/list-type"
     - file: "collection-dtypes/tuple-type"
+    - file: "collection-dtypes/range-type"
