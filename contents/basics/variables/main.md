@@ -1,4 +1,0 @@
-# Variables and assignments
-
-```{tableofcontents}
-```

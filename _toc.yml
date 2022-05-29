@@ -2,119 +2,37 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: "jb-book"
-root: "contents/intro"
+root: "preface"
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: True
 parts:
   - caption: "Getting started"
     numbered: true
     chapters:
-    - file: "contents/get-started/intro-python"
-    
-    # Setup
-    - file: "contents/get-started/setup/main"
-      sections:
-      - file: "contents/get-started/setup/anaconda"
-      - file: "contents/get-started/setup/git"
-      - file: "contents/get-started/setup/check"
-      - file: "contents/get-started/setup/workspace"
-    
-    # Jupyter lab
-    - file: "contents/get-started/jlab/main"
-      sections:
-      - file: "contents/get-started/jlab/overview"
-      - file: "contents/get-started/jlab/create-nb"
-      - file: "contents/get-started/jlab/work-with-nb"
-      - file: "contents/get-started/jlab/practice"
-    
-    # Markdown
-    - file: "contents/get-started/markdown/main"
-      sections:
-      - file: "contents/get-started/markdown/overview"
-      - file: "contents/get-started/markdown/basic"
-      - file: "contents/get-started/markdown/advanced"
-      - file: "contents/get-started/markdown/summary"
-      - file: "contents/get-started/markdown/practice"
+    - file: "get-started/intro"
+    - file: "get-started/jupyter-lab"
+    - file: "get-started/notebook"
+    - file: "get-started/markdown"
       
   - caption: "The basics"
     numbered: true
     chapters:
-    - file: "contents/basics/basic-syntax"
+    - file: "basics/basic-syntax"
+    - file: "basics/assignments-variables"
+    - file: "basics/naming"
+    - file: "basics/typing-sytem"
     
-    # Variables
-    - file: "contents/basics/variables/main"
-      sections:
-      - file: "contents/basics/variables/overview"
-      - file: "contents/basics/variables/var-in-action"
-      - file: "contents/basics/variables/interning"
-      - file: "contents/basics/variables/formatted-print"
-      - file: "contents/basics/variables/summary"
-      - file: "contents/basics/variables/practice"
-    - file: "contents/basics/naming"
-    
-  - caption: "Data types"
+  - caption: "Flat data types"
     numbered: true
     chapters:
-    
-    # Typing system
-    - file: "contents/dtypes/types/main"
-      sections:
-      - file: "contents/dtypes/types/overview"
-      - file: "contents/dtypes/types/brief-description"
-      - file: "contents/dtypes/types/check-types"
-    
-    # Flat & None
-    - file: "contents/dtypes/flat-dtypes"
-    - file: "contents/dtypes/nonetype"
-    
-    # Bool
-    - file: "contents/dtypes/bool/main"
-      sections:
-      - file: "contents/dtypes/bool/overview"
-      - file: "contents/dtypes/bool/typecast"
-      - file: "contents/dtypes/bool/operations"
-      - file: "contents/dtypes/bool/practice"
-    
-    # Int
-    - file: "contents/dtypes/int/main"
-      sections:
-      - file: "contents/dtypes/int/overview"
-      - file: "contents/dtypes/int/operations"
-      - file: "contents/dtypes/int/practice"
-    
-    # Float
-    - file: "contents/dtypes/float/main"
-      sections:
-      - file: "contents/dtypes/float/overview"
-      - file: "contents/dtypes/float/operations"
-      - file: "contents/dtypes/float/practice"
-    
-    # Collections
-    - file: "contents/dtypes/collection-dtypes"
-    
-    # List
-    - file: "contents/dtypes/list/main"
-      sections:
-      - file: "contents/dtypes/list/overview"
-      - file: "contents/dtypes/list/index"
-      - file: "contents/dtypes/list/slice"
-      - file: "contents/dtypes/list/iterate"
-      - file: "contents/dtypes/list/mutability"
-      - file: "contents/dtypes/list/copy"
-      - file: "contents/dtypes/list/operations"
-      - file: "contents/dtypes/list/unpack"
-      - file: "contents/dtypes/list/comprehensions"
-      - file: "contents/dtypes/list/practice"
-      
-    # Tuple
-    - file: "contents/dtypes/tuple"
-    - file: "contents/dtypes/range"
-    - file: "contents/dtypes/str"
-    - file: "contents/dtypes/dict"
-    - file: "contents/dtypes/set"
+    - file: "flat-dtypes/nonetype-type"
+    - file: "flat-dtypes/bool-type"
+    - file: "flat-dtypes/int-type"
+    - file: "flat-dtypes/float-type"
 
-  - caption: "Extra topics 1"
+  - caption: "Collection data types"
     numbered: true
     chapters:
-    - file: "contents/extra-1/basic-oop"
-    - file: "contents/extra-1/colection-util"
-    - file: "contents/extra-1/advanced-strings"
-    - file: "contents/extra-1/coding-styles"
+    - file: "collection-dtypes/collection-types"
+    - file: "collection-dtypes/list-type"
+    - file: "collection-dtypes/tuple-type"
