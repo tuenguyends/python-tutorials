@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dictionary type &#8212; Python tutorials</title>
+    <title>17. Dictionary type &#8212; Python tutorials</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,6 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="18. Set type" href="set-type.html" />
+    <link rel="prev" title="16. String type" href="string-type.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -177,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
   Collection data types
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="collection-types.html">
    12. Collection types
@@ -201,6 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="string-type.html">
    16. String type
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   17. Dictionary type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="set-type.html">
+   18. Set type
   </a>
  </li>
 </ul>
@@ -309,22 +321,22 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
-   Overview
+   17.1. Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-dictionary">
-   What is a dictionary?
+   17.2. What is a dictionary?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-dict">
-   Create a dict
+   17.3. Create a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use">
-     Use
+     17.3.1. Use
      <code class="docutils literal notranslate">
       <span class="pre">
        {}
@@ -334,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use-dict">
-     Use
+     17.3.2. Use
      <code class="docutils literal notranslate">
       <span class="pre">
        dict()
@@ -346,105 +358,105 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#elements-of-a-dict">
-   Elements of a dict
+   17.4. Elements of a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#keys-values-and-items">
-     Keys, values, and items
+     17.4.1. Keys, values, and items
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#get-values-by-keys">
-     Get values by keys
+     17.4.2. Get values by keys
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-and-update-elements">
-     Add and update elements
+     17.4.3. Add and update elements
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dict-keys">
-   Dict keys
+   17.5. Dict keys
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion-to-dicts">
-   Conversion to dicts
+   17.6. Conversion to dicts
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#iterate-through-a-dict">
-   Iterate through a dict
+   17.7. Iterate through a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterate-through-keys">
-     Iterate through keys
+     17.7.1. Iterate through keys
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterate-through-values">
-     Iterate through values
+     17.7.2. Iterate through values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterate-through-both-keys-and-values">
-     Iterate through both keys and values
+     17.7.3. Iterate through both keys and values
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mutablity">
-   Mutablity
+   17.8. Mutablity
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#copy-a-dict">
-   Copy a dict
+   17.9. Copy a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#shallow-copying">
-     Shallow copying
+     17.9.1. Shallow copying
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deep-copying">
-     Deep copying
+     17.9.2. Deep copying
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations-on-a-dict">
-   Operations on a dict
+   17.10. Operations on a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#regular-operations">
-     Regular operations
+     17.10.1. Regular operations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inplace-operations">
-     Inplace operations
+     17.10.2. Inplace operations
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dict-comprehensions">
-   Dict comprehensions
+   17.11. Dict comprehensions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
+   17.12. Summary
   </a>
  </li>
 </ul>
@@ -469,22 +481,22 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
-   Overview
+   17.1. Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-dictionary">
-   What is a dictionary?
+   17.2. What is a dictionary?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-dict">
-   Create a dict
+   17.3. Create a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use">
-     Use
+     17.3.1. Use
      <code class="docutils literal notranslate">
       <span class="pre">
        {}
@@ -494,7 +506,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use-dict">
-     Use
+     17.3.2. Use
      <code class="docutils literal notranslate">
       <span class="pre">
        dict()
@@ -506,105 +518,105 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#elements-of-a-dict">
-   Elements of a dict
+   17.4. Elements of a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#keys-values-and-items">
-     Keys, values, and items
+     17.4.1. Keys, values, and items
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#get-values-by-keys">
-     Get values by keys
+     17.4.2. Get values by keys
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-and-update-elements">
-     Add and update elements
+     17.4.3. Add and update elements
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dict-keys">
-   Dict keys
+   17.5. Dict keys
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion-to-dicts">
-   Conversion to dicts
+   17.6. Conversion to dicts
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#iterate-through-a-dict">
-   Iterate through a dict
+   17.7. Iterate through a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterate-through-keys">
-     Iterate through keys
+     17.7.1. Iterate through keys
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterate-through-values">
-     Iterate through values
+     17.7.2. Iterate through values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterate-through-both-keys-and-values">
-     Iterate through both keys and values
+     17.7.3. Iterate through both keys and values
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mutablity">
-   Mutablity
+   17.8. Mutablity
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#copy-a-dict">
-   Copy a dict
+   17.9. Copy a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#shallow-copying">
-     Shallow copying
+     17.9.1. Shallow copying
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deep-copying">
-     Deep copying
+     17.9.2. Deep copying
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations-on-a-dict">
-   Operations on a dict
+   17.10. Operations on a dict
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#regular-operations">
-     Regular operations
+     17.10.1. Regular operations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inplace-operations">
-     Inplace operations
+     17.10.2. Inplace operations
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dict-comprehensions">
-   Dict comprehensions
+   17.11. Dict comprehensions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
+   17.12. Summary
   </a>
  </li>
 </ul>
@@ -617,10 +629,10 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="dictionary-type">
-<h1>Dictionary type<a class="headerlink" href="#dictionary-type" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">17. </span>Dictionary type<a class="headerlink" href="#dictionary-type" title="Permalink to this headline">¶</a></h1>
 <p>Author: Tue Nguyen</p>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Topics covered in this lecture include</p>
 <ul class="simple">
 <li><p>What is a dictionary?</p></li>
@@ -633,7 +645,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="what-is-a-dictionary">
-<h2>What is a dictionary?<a class="headerlink" href="#what-is-a-dictionary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.2. </span>What is a dictionary?<a class="headerlink" href="#what-is-a-dictionary" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>A dictionary (or dict) is used to store data in the form of <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code> pairs</p></li>
 <li><p>Each element of a dict is has a <code class="docutils literal notranslate"><span class="pre">key</span></code> part and a <code class="docutils literal notranslate"><span class="pre">value</span></code> part</p></li>
@@ -646,9 +658,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="create-a-dict">
-<h2>Create a dict<a class="headerlink" href="#create-a-dict" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.3. </span>Create a dict<a class="headerlink" href="#create-a-dict" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="use">
-<h3>Use <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#use" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.3.1. </span>Use <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#use" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A dict with one element</span>
@@ -687,7 +699,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="use-dict">
-<h3>Use <code class="docutils literal notranslate"><span class="pre">dict()</span></code><a class="headerlink" href="#use-dict" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.3.2. </span>Use <code class="docutils literal notranslate"><span class="pre">dict()</span></code><a class="headerlink" href="#use-dict" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
@@ -709,9 +721,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="elements-of-a-dict">
-<h2>Elements of a dict<a class="headerlink" href="#elements-of-a-dict" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.4. </span>Elements of a dict<a class="headerlink" href="#elements-of-a-dict" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="keys-values-and-items">
-<h3>Keys, values, and items<a class="headerlink" href="#keys-values-and-items" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.4.1. </span>Keys, values, and items<a class="headerlink" href="#keys-values-and-items" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recall the dict</span>
@@ -768,7 +780,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="get-values-by-keys">
-<h3>Get values by keys<a class="headerlink" href="#get-values-by-keys" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.4.2. </span>Get values by keys<a class="headerlink" href="#get-values-by-keys" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get value associated with name</span>
@@ -797,7 +809,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="add-and-update-elements">
-<h3>Add and update elements<a class="headerlink" href="#add-and-update-elements" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.4.3. </span>Add and update elements<a class="headerlink" href="#add-and-update-elements" title="Permalink to this headline">¶</a></h3>
 <p>We use assignment to add a new elements or update the value for an exisiting element</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -844,7 +856,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="dict-keys">
-<h2>Dict keys<a class="headerlink" href="#dict-keys" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.5. </span>Dict keys<a class="headerlink" href="#dict-keys" title="Permalink to this headline">¶</a></h2>
 <p><strong>a) Dict keys must be of immutable types</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -924,7 +936,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="conversion-to-dicts">
-<h2>Conversion to dicts<a class="headerlink" href="#conversion-to-dicts" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.6. </span>Conversion to dicts<a class="headerlink" href="#conversion-to-dicts" title="Permalink to this headline">¶</a></h2>
 <p>We use <code class="docutils literal notranslate"><span class="pre">dict()</span></code> to convert an object to a dict</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -957,7 +969,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="iterate-through-a-dict">
-<h2>Iterate through a dict<a class="headerlink" href="#iterate-through-a-dict" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.7. </span>Iterate through a dict<a class="headerlink" href="#iterate-through-a-dict" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a dict</span>
@@ -973,7 +985,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="iterate-through-keys">
-<h3>Iterate through keys<a class="headerlink" href="#iterate-through-keys" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.7.1. </span>Iterate through keys<a class="headerlink" href="#iterate-through-keys" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 1</span>
@@ -1008,7 +1020,7 @@ educ
 </div>
 </div>
 <div class="section" id="iterate-through-values">
-<h3>Iterate through values<a class="headerlink" href="#iterate-through-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.7.2. </span>Iterate through values<a class="headerlink" href="#iterate-through-values" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
@@ -1026,7 +1038,7 @@ MSc
 </div>
 </div>
 <div class="section" id="iterate-through-both-keys-and-values">
-<h3>Iterate through both keys and values<a class="headerlink" href="#iterate-through-both-keys-and-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.7.3. </span>Iterate through both keys and values<a class="headerlink" href="#iterate-through-both-keys-and-values" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Naive way</span>
@@ -1068,17 +1080,17 @@ Key educ has value MSc
 </div>
 </div>
 <div class="section" id="mutablity">
-<h2>Mutablity<a class="headerlink" href="#mutablity" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.8. </span>Mutablity<a class="headerlink" href="#mutablity" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>A dict is <strong>mutable</strong></p></li>
 <li><p>We can add, update, or delete elements</p></li>
 </ul>
 </div>
 <div class="section" id="copy-a-dict">
-<h2>Copy a dict<a class="headerlink" href="#copy-a-dict" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.9. </span>Copy a dict<a class="headerlink" href="#copy-a-dict" title="Permalink to this headline">¶</a></h2>
 <p>Since the <code class="docutils literal notranslate"><span class="pre">dict</span></code> type is mutable, copying a dict has the same behavior as copying a list</p>
 <div class="section" id="shallow-copying">
-<h3>Shallow copying<a class="headerlink" href="#shallow-copying" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.9.1. </span>Shallow copying<a class="headerlink" href="#shallow-copying" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a dict</span>
@@ -1090,7 +1102,7 @@ Key educ has value MSc
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;John&#39;, &#39;degrees&#39;: [&#39;BSc&#39;, &#39;MSc&#39;]}
-139758142354560
+139809089207040
 </pre></div>
 </div>
 </div>
@@ -1130,8 +1142,8 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139758142354560
-139758107889856
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139809089207040
+139809089229568
 False
 </pre></div>
 </div>
@@ -1173,7 +1185,7 @@ False
 </div>
 </div>
 <div class="section" id="deep-copying">
-<h3>Deep copying<a class="headerlink" href="#deep-copying" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.9.2. </span>Deep copying<a class="headerlink" href="#deep-copying" title="Permalink to this headline">¶</a></h3>
 <p>Same as lists, we use <code class="docutils literal notranslate"><span class="pre">copy.deepcopy()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1224,14 +1236,14 @@ False
 </div>
 </div>
 <div class="section" id="operations-on-a-dict">
-<h2>Operations on a dict<a class="headerlink" href="#operations-on-a-dict" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.10. </span>Operations on a dict<a class="headerlink" href="#operations-on-a-dict" title="Permalink to this headline">¶</a></h2>
 <p>As a mutable type like lists, we also have two types of operations on dicts</p>
 <ul class="simple">
 <li><p>Regular operations</p></li>
 <li><p>Inplace operations</p></li>
 </ul>
 <div class="section" id="regular-operations">
-<h3>Regular operations<a class="headerlink" href="#regular-operations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.10.1. </span>Regular operations<a class="headerlink" href="#regular-operations" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a dict</span>
@@ -1345,7 +1357,7 @@ False
 </div>
 </div>
 <div class="section" id="inplace-operations">
-<h3>Inplace operations<a class="headerlink" href="#inplace-operations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">17.10.2. </span>Inplace operations<a class="headerlink" href="#inplace-operations" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a dict</span>
@@ -1526,7 +1538,7 @@ False
 </div>
 </div>
 <div class="section" id="dict-comprehensions">
-<h2>Dict comprehensions<a class="headerlink" href="#dict-comprehensions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.11. </span>Dict comprehensions<a class="headerlink" href="#dict-comprehensions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Dict comprehensions are similar to list comprehensions</p></li>
 <li><p>Used to quickly make a dict from an iterable</p></li>
@@ -1597,7 +1609,7 @@ False
 </div>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.12. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p><strong>What is a dictionary?</strong></p>
 <ul class="simple">
 <li><p>Mutable object storing data in the form of <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code> pairs</p></li>
@@ -1674,7 +1686,21 @@ False
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="string-type.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">16. </span>String type</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="set-type.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">18. </span>Set type</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
