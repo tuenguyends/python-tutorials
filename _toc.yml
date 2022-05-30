@@ -38,3 +38,5 @@ parts:
     - file: "collection-dtypes/tuple-type"
     - file: "collection-dtypes/range-type"
     - file: "collection-dtypes/string-type"
+    - file: "collection-dtypes/dict-type"
+    - file: "collection-dtypes/set-type"
