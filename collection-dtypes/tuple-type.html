@@ -377,13 +377,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enumerate">
+   14.12. Enumerate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tuple-comprehensions">
-   14.12. Tuple comprehensions
+   14.13. Tuple comprehensions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   14.13. Summary
+   14.14. Summary
   </a>
  </li>
 </ul>
@@ -474,13 +479,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enumerate">
+   14.12. Enumerate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tuple-comprehensions">
-   14.12. Tuple comprehensions
+   14.13. Tuple comprehensions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   14.13. Summary
+   14.14. Summary
   </a>
  </li>
 </ul>
@@ -503,7 +513,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Create a tuple</p></li>
 <li><p>Index a tuple</p></li>
 <li><p>Slice a tuple</p></li>
-<li><p>Nested tuple</p></li>
+<li><p>Nested tuples</p></li>
 <li><p>Iterate through a tuple</p></li>
 <li><p>Copy a tuple</p></li>
 <li><p>Operations on a tuple</p></li>
@@ -899,7 +909,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[140378596827424, 140378596827456, 140378460439296]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[140432033866016, 140432033866048, 140431880611392]
 </pre></div>
 </div>
 </div>
@@ -957,7 +967,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[140378596827424, 140378596827456, 140378460439296]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[140432033866016, 140432033866048, 140431880611392]
 </pre></div>
 </div>
 </div>
@@ -983,7 +993,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, [3, 4])
-140378511223168
+140431948415744
 </pre></div>
 </div>
 </div>
@@ -999,8 +1009,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140378511223168
-140378511223168
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140431948415744
+140431948415744
 True
 </pre></div>
 </div>
@@ -1017,8 +1027,8 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140378511223168
-140378511223168
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140431948415744
+140431948415744
 True
 </pre></div>
 </div>
@@ -1041,7 +1051,7 @@ True
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, [3, 4])
 &lt;class &#39;tuple&#39;&gt;
-140378460074304
+140431880728384
 </pre></div>
 </div>
 </div>
@@ -1087,8 +1097,8 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140378460074304
-140378460478592
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140431880728384
+140431880336704
 False
 </pre></div>
 </div>
@@ -1200,8 +1210,43 @@ False
 </div>
 </div>
 </div>
+<div class="section" id="enumerate">
+<h2><span class="section-number">14.12. </span>Enumerate<a class="headerlink" href="#enumerate" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>When iterating through a sequence, we might want to access not only the elements but also their indexes</p></li>
+<li><p>If so, we can use <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Element </span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2"> has value </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Element 1 has value 3
+Element 2 has value 0
+Element 3 has value -4
+Element 4 has value 5
+Element 5 has value -2
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What happened?</strong></p>
+<ul class="simple">
+<li><p>At each iteration <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> returns a 2-element tuple</p>
+<ul>
+<li><p>The first element is the index</p></li>
+<li><p>The second element is the value</p></li>
+</ul>
+</li>
+<li><p>When we write <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">v</span></code> as in the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement above, we are unpacking the tuple into <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code></p></li>
+</ul>
+</div>
 <div class="section" id="tuple-comprehensions">
-<h2><span class="section-number">14.12. </span>Tuple comprehensions<a class="headerlink" href="#tuple-comprehensions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.13. </span>Tuple comprehensions<a class="headerlink" href="#tuple-comprehensions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Same as list comprehensions</p></li>
 <li><p>But the result will be a generator (for better performance)</p></li>
@@ -1229,7 +1274,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fac68415510&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fb8d859e580&gt;
 </pre></div>
 </div>
 </div>
@@ -1275,7 +1320,7 @@ False
 </div>
 </div>
 <div class="section" id="summary">
-<h2><span class="section-number">14.13. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.14. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p><strong>What is a list?</strong></p>
 <ul class="simple">
 <li><p>An immutable sequence</p></li>
