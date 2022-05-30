@@ -1,0 +1,2275 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16. String type &#8212; Python tutorials</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="15. Range type" href="range-type.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python tutorials</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/jupyter-lab.html">
+   2. Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/markdown.html">
+   3. Introduction to Markdown
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/basic-syntax.html">
+   4. Python’s basic syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/assignments-variables.html">
+   5. Variables and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
+   6. Naming rules and conventions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/typing-system.html">
+   7. Python’s typing system
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Flat data types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/nonetype-type.html">
+   8. NoneType type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/bool-type.html">
+   9. Bool type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/int-type.html">
+   10. Int type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../flat-dtypes/float-type.html">
+   11. Float type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Collection data types
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="collection-types.html">
+   12. Collection types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="list-type.html">
+   13. List type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tuple-type.html">
+   14. Tuple type
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="range-type.html">
+   15. Range type
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   16. String type
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/collection-dtypes/string-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fcollection-dtypes/string-type.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/collection-dtypes/string-type.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   16.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-string">
+   16.2. What is a string?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-string">
+   16.3. Create a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#index-a-string">
+   16.4. Index a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slice-a-string">
+   16.5. Slice a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterate-through-a-string">
+   16.6. Iterate through a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-to-strings">
+   16.7. Conversion to strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mutablity">
+   16.8. Mutablity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copy-a-string">
+   16.9. Copy a string
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shallow-copying">
+     16.9.1. Shallow copying
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deep-copying">
+     16.9.2. Deep copying
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#order-of-characters">
+   16.10. Order of characters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-a-string">
+   16.11. Operations on a string
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regular-operations">
+     16.11.1. Regular operations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-string-operations">
+     16.11.2. Special string operations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-1-case-checking">
+       16.11.2.1. Group 1: case checking
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-2-case-transformations">
+       16.11.2.2. Group 2: case transformations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-3-substring-checking">
+       16.11.2.3. Group 3: substring checking
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-4-white-space-handling">
+       16.11.2.4. Group 4: white space handling
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-5-string-padding">
+       16.11.2.5. Group 5: string padding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-6-string-splitting-joining">
+       16.11.2.6. Group 6: string splitting &amp; joining
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-7-searching-and-replacing">
+       16.11.2.7. Group 7: searching and replacing
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatted-strings">
+   16.12. Formatted strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   16.13. Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>String type</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   16.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-string">
+   16.2. What is a string?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-string">
+   16.3. Create a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#index-a-string">
+   16.4. Index a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slice-a-string">
+   16.5. Slice a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterate-through-a-string">
+   16.6. Iterate through a string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-to-strings">
+   16.7. Conversion to strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mutablity">
+   16.8. Mutablity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copy-a-string">
+   16.9. Copy a string
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shallow-copying">
+     16.9.1. Shallow copying
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deep-copying">
+     16.9.2. Deep copying
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#order-of-characters">
+   16.10. Order of characters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations-on-a-string">
+   16.11. Operations on a string
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regular-operations">
+     16.11.1. Regular operations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-string-operations">
+     16.11.2. Special string operations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-1-case-checking">
+       16.11.2.1. Group 1: case checking
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-2-case-transformations">
+       16.11.2.2. Group 2: case transformations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-3-substring-checking">
+       16.11.2.3. Group 3: substring checking
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-4-white-space-handling">
+       16.11.2.4. Group 4: white space handling
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-5-string-padding">
+       16.11.2.5. Group 5: string padding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-6-string-splitting-joining">
+       16.11.2.6. Group 6: string splitting &amp; joining
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#group-7-searching-and-replacing">
+       16.11.2.7. Group 7: searching and replacing
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatted-strings">
+   16.12. Formatted strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   16.13. Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="string-type">
+<h1><span class="section-number">16. </span>String type<a class="headerlink" href="#string-type" title="Permalink to this headline">¶</a></h1>
+<p>Author: Tue Nguyen</p>
+<div class="section" id="overview">
+<h2><span class="section-number">16.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Topics covered in this lecture include</p>
+<ul class="simple">
+<li><p>What is a string?</p></li>
+<li><p>Create a string</p></li>
+<li><p>Index a string</p></li>
+<li><p>Slice a string</p></li>
+<li><p>Iterate through a string</p></li>
+<li><p>Conversion to string</p></li>
+<li><p>Mutability</p></li>
+<li><p>Operations on a string</p></li>
+</ul>
+</div>
+<div class="section" id="what-is-a-string">
+<h2><span class="section-number">16.2. </span>What is a string?<a class="headerlink" href="#what-is-a-string" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A string is an <strong>immutable</strong> sequence of Unicode characters</p></li>
+<li><p>Python does NOT distinguish between characters and strings</p>
+<ul>
+<li><p>There is only the string type, not character type</p></li>
+<li><p>A single character is a string of length 1</p></li>
+<li><p>Examples of strings: <code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Good</span> <span class="pre">morning&quot;</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="create-a-string">
+<h2><span class="section-number">16.3. </span>Create a string<a class="headerlink" href="#create-a-string" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We can create a string using <code class="docutils literal notranslate"><span class="pre">'</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p></li>
+<li><p>There’s no difference beween using <code class="docutils literal notranslate"><span class="pre">'</span></code> and using <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p></li>
+<li><p>When we want to preserve new-line characters, we can use triple quotes</p></li>
+</ul>
+<p><strong>Ex 1: using single quotes</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ex 2: using double quotes</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ex 3: single vs. double quotes</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use single quotes when your text contains double quotes</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;He said: &quot;I am handsome&quot;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>He said: &quot;I am handsome&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use double quotes when your text contains single quotes</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;I have a bachelor&#39;s degree&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I have a bachelor&#39;s degree
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ex 4: Python is case-sensitive</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello&quot;</span> <span class="o">==</span> <span class="s2">&quot;HELLO&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ex 5: triple quotes</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use triple double quotes when you want a multi-line text</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is the first line</span>
+<span class="s2">This is the second ine&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the first line
+This is the second ine
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Triple quote preserve any kinds of white spaces</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;   Line 1</span>
+<span class="s2">    Line 2</span>
+<span class="s2">Line 3&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Line 1
+    Line 2
+Line 3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can also use triple single quotes</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Line 1</span>
+<span class="s1">Line 2&#39;&#39;&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Line 1
+Line 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Triple quotes are very convenient when you write SQL queries</span>
+<span class="n">q</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">select</span>
+<span class="s2">    name,</span>
+<span class="s2">    address,</span>
+<span class="s2">    email</span>
+<span class="s2">    from employee</span>
+<span class="s2">where </span>
+<span class="s2">    (salary &gt;= 50000)</span>
+<span class="s2">    and (country = &#39;UK&#39;)</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>select
+    name,
+    address,
+    email
+    from employee
+where 
+    (salary &gt;= 50000)
+    and (country = &#39;UK&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ex 6: all quotes are the same</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span> <span class="o">==</span> <span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span> <span class="o">==</span> <span class="s1">&#39;&#39;&#39;hello&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span> <span class="o">==</span> <span class="s2">&quot;&quot;&quot;hello&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="index-a-string">
+<h2><span class="section-number">16.4. </span>Index a string<a class="headerlink" href="#index-a-string" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Same as lists and tuples</p></li>
+<li><p>Note that each character in the string is like an element of a tuple</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello world&quot;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello world&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First character</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;H&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Last character</span>
+<span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;d&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fifth character</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;o&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="slice-a-string">
+<h2><span class="section-number">16.5. </span>Slice a string<a class="headerlink" href="#slice-a-string" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Same as lists and tuple</p></li>
+<li><p>However, there is one exception</p>
+<ul>
+<li><p>For a list, a slice containing a single element is a list and it is different from that element</p></li>
+<li><p>For a string, a slice containing a single character is the same as that character</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For a list</span>
+<span class="c1"># A slice containing a single element != that element</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+[1]
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For a string</span>
+<span class="c1"># A slice containing a single character == that character</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H
+H
+True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterate-through-a-string">
+<h2><span class="section-number">16.6. </span>Iterate through a string<a class="headerlink" href="#iterate-through-a-string" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Same as lists and tuples</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate through each character and print it out</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span>  <span class="n">s</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H
+e
+l
+l
+o
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conversion-to-strings">
+<h2><span class="section-number">16.7. </span>Conversion to strings<a class="headerlink" href="#conversion-to-strings" title="Permalink to this headline">¶</a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">str()</span></code> to cast an object to a string</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bool to str</span>
+<span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;True&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Int to str</span>
+<span class="nb">str</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;100&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Float to str</span>
+<span class="nb">str</span><span class="p">(</span><span class="mf">123.45</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;123.45&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List to str</span>
+<span class="nb">str</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[1, 2, 3]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuple to string</span>
+<span class="nb">str</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;(1, 2, 3)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mutablity">
+<h2><span class="section-number">16.8. </span>Mutablity<a class="headerlink" href="#mutablity" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A string is <strong>immutable</strong>, meaning that we cannot change it</p></li>
+<li><p>Try <code class="docutils literal notranslate"><span class="pre">s[0]</span> <span class="pre">=</span> <span class="pre">&quot;A&quot;</span></code> to see the error</p></li>
+</ul>
+</div>
+<div class="section" id="copy-a-string">
+<h2><span class="section-number">16.9. </span>Copy a string<a class="headerlink" href="#copy-a-string" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shallow-copying">
+<h3><span class="section-number">16.9.1. </span>Shallow copying<a class="headerlink" href="#shallow-copying" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Same as tuples, there is no way to make a shallow copy of a string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">s[:]</span></code> will result to an aliasing</p></li>
+<li><p>To make a copy of a string <code class="docutils literal notranslate"><span class="pre">s</span></code>, Simply use <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">s</span></code></p></li>
+<li><p>Although <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code> are pointing to the same object, we will not have to worry that changing <code class="docutils literal notranslate"><span class="pre">s</span></code> might change <code class="docutils literal notranslate"><span class="pre">t</span></code> because it’s impposible to change the string or its elements once created</p></li>
+</ul>
+</div>
+<div class="section" id="deep-copying">
+<h3><span class="section-number">16.9.2. </span>Deep copying<a class="headerlink" href="#deep-copying" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Deepcopying for string are unnecessary</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="order-of-characters">
+<h2><span class="section-number">16.10. </span>Order of characters<a class="headerlink" href="#order-of-characters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Each character is encoded by one integer</p></li>
+<li><p>So comparing characters are in fact comparing their underlying integer codes</p></li>
+<li><p>This might cause some confusion for beginners</p>
+<ul>
+<li><p>Letters <code class="docutils literal notranslate"><span class="pre">A-Z</span></code> are encoded with integers from <code class="docutils literal notranslate"><span class="pre">65-90</span></code></p></li>
+<li><p>Letters <code class="docutils literal notranslate"><span class="pre">a-Z</span></code> are encoded with integers from <code class="docutils literal notranslate"><span class="pre">97-122</span></code></p></li>
+<li><p>Thus <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&lt;</span> <span class="pre">B</span></code> but <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">B</span></code></p></li>
+<li><p>Therefore, when comparing strings, we first need to convert them to the same case (lower or upper)</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the underlying code using ord()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">))</span> <span class="c1"># 65</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">))</span> <span class="c1"># 90</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span> <span class="c1"># 97</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">))</span> <span class="c1"># 122</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65
+90
+97
+122
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare strings</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BOB&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;BILL&quot;</span><span class="p">)</span> <span class="c1"># False because O &gt; I</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MARK&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;MARY&quot;</span><span class="p">)</span> <span class="c1"># True because K &lt; Y</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Happy&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;beautiful&quot;</span><span class="p">)</span> <span class="c1"># Because H &lt; b (not B)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can use chr() to get the Unicode character for a given integer</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">))</span> <span class="c1"># Letter A</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">80</span><span class="p">))</span> <span class="c1"># Letter P</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">2000</span><span class="p">))</span> <span class="c1"># Some weird character</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A
+P
+ߐ
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operations-on-a-string">
+<h2><span class="section-number">16.11. </span>Operations on a string<a class="headerlink" href="#operations-on-a-string" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We have all regular operations for an immutable sequence like for a tuple</p></li>
+<li><p>Besides, we will have special operations for Unicode strings</p></li>
+</ul>
+<div class="section" id="regular-operations">
+<h3><span class="section-number">16.11.1. </span>Regular operations<a class="headerlink" href="#regular-operations" title="Permalink to this headline">¶</a></h3>
+<p>I will not repeat all but just some examples</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count numer of characters</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if &#39;h&#39; in s (remember Python is case-sensitive)</span>
+<span class="s1">&#39;h&#39;</span> <span class="ow">in</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if &quot;H&quot; in s</span>
+<span class="s2">&quot;H&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count number of occurrences of &quot;l&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;l&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Concat 2 strings</span>
+<span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="s2">&quot;world&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello world&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sort a string with sorted()</span>
+<span class="c1"># Note that sorted takes an iterable and returns a list</span>
+<span class="c1"># no matter the input is a list, tuple, or string</span>
+<span class="c1"># Thus, you always get a list back</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="s2">&quot;world&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;W&#39;, &#39;d&#39;, &#39;l&#39;, &#39;o&#39;, &#39;r&#39;]
+[&#39;d&#39;, &#39;l&#39;, &#39;o&#39;, &#39;r&#39;, &#39;w&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="special-string-operations">
+<h3><span class="section-number">16.11.2. </span>Special string operations<a class="headerlink" href="#special-string-operations" title="Permalink to this headline">¶</a></h3>
+<p>We can divide special string operations into the following groups</p>
+<ul class="simple">
+<li><p>Group 1: case checking</p></li>
+<li><p>Group 2: case transformations</p></li>
+<li><p>Group 3: substring checking</p></li>
+<li><p>Group 4: white space handling</p></li>
+<li><p>Group 5: string padding</p></li>
+<li><p>Group 6: string splitting &amp; joining</p></li>
+<li><p>Group 7: searching and replacing</p></li>
+</ul>
+<p>Further readings</p>
+<ul class="simple">
+<li><p>For the full reference, visit <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</a></p></li>
+<li><p>For advanced string processing, check <code class="docutils literal notranslate"><span class="pre">re</span></code> module <a class="reference external" href="https://docs.python.org/3/library/re.html">https://docs.python.org/3/library/re.html</a></p></li>
+</ul>
+<div class="section" id="group-1-case-checking">
+<h4><span class="section-number">16.11.2.1. </span>Group 1: case checking<a class="headerlink" href="#group-1-case-checking" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>First we need to distinguish between <strong>cased</strong> and <strong>non-cased</strong> characters</p></li>
+<li><p>Cased characters</p>
+<ul>
+<li><p>They are letters in a language such as English, Vietnamese, or Italian</p></li>
+<li><p>They have uppercase and lowercase forms. Ex: <code class="docutils literal notranslate"><span class="pre">o-O</span></code>, <code class="docutils literal notranslate"><span class="pre">a-A</span></code>, <code class="docutils literal notranslate"><span class="pre">ê-Ê</span></code></p></li>
+</ul>
+</li>
+<li><p>Non-cased characters</p>
+<ul>
+<li><p>They are the rest</p></li>
+<li><p>And they have only form. Ex: <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>a) Check if ALL cased-characters in a string is in lowercase</strong></p>
+<ul class="simple">
+<li><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if there is at least one cased chatacter and all cased characters are in lowercase</p></li>
+<li><p>Return <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p></li>
+<li><p>You can read the documentation using <code class="docutils literal notranslate"><span class="pre">?str.islower</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the documentation</span>
+<span class="o">?</span>str.islower
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;hello!&quot;</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello&quot;</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1"># False because of H</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;012!@&quot;</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1"># False because there is no cased-character</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Check if ALL cased-characters in a string is in uppercase</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;HELLO&quot;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;HELLO!@&quot;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;HELLo&quot;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1"># False because of o</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;012!@&quot;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1"># False because there is no cased character</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>c) Check if the first character of each word is in uppercase and the rest is lowercase</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Mr. John&quot;</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;MR. John&quot;</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span> <span class="c1"># False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>d) Check if all characters are letters</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello&quot;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Chào&quot;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="c1"># True (all are Vietnamese letters)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello world&quot;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="c1"># False because of the space</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;No1&quot;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="c1"># Because of 1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>e) Check if all characters are digits <code class="docutils literal notranslate"><span class="pre">0-9</span></code></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;1234&quot;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;012-345&quot;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="c1"># False because of the hyphen</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>f) Check if all characters are letters and/or digits (alpha numeric)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Number1&quot;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Number 1&quot;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="c1"># False because of the space</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>g) Check if all characters are white spaces</strong></p>
+<p>Note that white spaces include space (<code class="docutils literal notranslate"> </code>), tab (<code class="docutils literal notranslate"><span class="pre">\t</span></code>), and new line character (<code class="docutils literal notranslate"><span class="pre">\n</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;    &quot;</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; </span><span class="se">\t\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">text</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span> <span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>h) More interesting examples</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a string</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;The word WTO is short for World Trade Organization&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ex 1: count the number of capital letters</span>
+<span class="n">num_caps</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+        <span class="n">num_caps</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">num_caps</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ex 2: count the number of spaces</span>
+<span class="n">num_spaces</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isspace</span><span class="p">():</span>
+        <span class="n">num_spaces</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">num_spaces</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="group-2-case-transformations">
+<h4><span class="section-number">16.11.2.2. </span>Group 2: case transformations<a class="headerlink" href="#group-2-case-transformations" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Python is fUn.&quot;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python is fUn.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make uppercase</span>
+<span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;PYTHON IS FUN.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make lowercase</span>
+<span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;python is fun.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a title </span>
+<span class="n">s</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python Is Fun.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a scntence (Capitalize the first word only)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python is fun.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Swap case (lower -&gt; upper, upper -&gt; lower)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">swapcase</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;pYTHON IS FuN.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="group-3-substring-checking">
+<h4><span class="section-number">16.11.2.3. </span>Group 3: substring checking<a class="headerlink" href="#group-3-substring-checking" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Python is fUn.&quot;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python is fUn.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>a) Contains</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if &quot;Python&quot; is in s</span>
+<span class="s2">&quot;Python&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if &quot;python&quot; is in s</span>
+<span class="s2">&quot;python&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Starts with</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if s starts with &quot;Py&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Py&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if s starts with &quot;py&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;py&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>c) Ends with</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if s ends with &quot;.&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if s ends with &quot;!&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="group-4-white-space-handling">
+<h4><span class="section-number">16.11.2.4. </span>Group 4: white space handling<a class="headerlink" href="#group-4-white-space-handling" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a s tring</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">   Hello</span><span class="se">\t</span><span class="s2">&quot;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\t   Hello\t&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove leading white spaces (left strip)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello\t&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove trailing white spaces (right strip)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\t   Hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove spaces at both ends (strip)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="group-5-string-padding">
+<h4><span class="section-number">16.11.2.5. </span>Group 5: string padding<a class="headerlink" href="#group-5-string-padding" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Padding a string <code class="docutils literal notranslate"><span class="pre">s</span></code> is adding a fill character to the left or the right of <code class="docutils literal notranslate"><span class="pre">s</span></code></p></li>
+<li><p>Normally we want <code class="docutils literal notranslate"><span class="pre">s</span></code> to have a fixed length</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">s</span></code> has not reach that fixed lenth, we want to fill in some character to achieve that goal</p></li>
+<li><p>Ex: we want <code class="docutils literal notranslate"><span class="pre">'01'</span></code>, <code class="docutils literal notranslate"><span class="pre">'02'</span></code>, …, <code class="docutils literal notranslate"><span class="pre">'11'</span></code>, <code class="docutils literal notranslate"><span class="pre">'12'</span></code> but the original data are <code class="docutils literal notranslate"><span class="pre">'1'</span></code>, <code class="docutils literal notranslate"><span class="pre">'2'</span></code>, …, <code class="docutils literal notranslate"><span class="pre">'11'</span></code>, <code class="docutils literal notranslate"><span class="pre">'12'</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a string</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the document for justification</span>
+<span class="o">?</span>str.rjust
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pad 0&#39;s to the LEFT of s (right just) to get a string of length 3</span>
+<span class="n">s</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;00A&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pad 0&#39;s to the RIGHT of s (left just) to get a string of length 3</span>
+<span class="n">s</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A00&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Since filling leading zeros is a common action</span>
+<span class="c1"># Python string has a method .zfill()</span>
+<span class="c1"># Ex: fill leading zeros to make a string of length 3</span>
+<span class="n">s</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;00A&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print out &#39;month_01&#39;, &#39;month_02&#39;, ..., `month_12`</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">):</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;month_&quot;</span> <span class="o">+</span> <span class="n">month</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>month_01
+month_02
+month_03
+month_04
+month_05
+month_06
+month_07
+month_08
+month_09
+month_10
+month_11
+month_12
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="group-6-string-splitting-joining">
+<h4><span class="section-number">16.11.2.6. </span>Group 6: string splitting &amp; joining<a class="headerlink" href="#group-6-string-splitting-joining" title="Permalink to this headline">¶</a></h4>
+<p><strong>a) Split a string based on a given token</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split a string by white spaces</span>
+<span class="s2">&quot;How are you?</span><span class="se">\n</span><span class="s2">I am fine&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;How&#39;, &#39;are&#39;, &#39;you?&#39;, &#39;I&#39;, &#39;am&#39;, &#39;fine&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split a string by hyphens</span>
+<span class="s2">&quot;2022-01-01&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;2022&#39;, &#39;01&#39;, &#39;01&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split a string by a token</span>
+<span class="s2">&quot;John Doe||john@example.com||UK&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;||&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;John Doe&#39;, &#39;john@example.com&#39;, &#39;UK&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Split a string into partitions</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suppose s is &quot;Math:90&quot;</span>
+<span class="c1"># We want to split s into 3 parts based on the separator `:`</span>
+<span class="s2">&quot;Math:90&quot;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Math&#39;, &#39;:&#39;, &#39;90&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>c) Join a list of string</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a list of fruits</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;Banana&quot;</span><span class="p">,</span> <span class="s2">&quot;Guava&quot;</span><span class="p">,</span> <span class="s2">&quot;Watermelon&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Join fruits using ,</span>
+<span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Apple,Banana,Guava,Watermelon&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Join fruits using a space</span>
+<span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Apple Banana Guava Watermelon&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Join fruits using --</span>
+<span class="s2">&quot;--&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Apple--Banana--Guava--Watermelon&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="group-7-searching-and-replacing">
+<h4><span class="section-number">16.11.2.7. </span>Group 7: searching and replacing<a class="headerlink" href="#group-7-searching-and-replacing" title="Permalink to this headline">¶</a></h4>
+<p><strong>a) Find a token in a string</strong></p>
+<ul class="simple">
+<li><p>Since a string is a sequence, we can use <code class="docutils literal notranslate"><span class="pre">.index()</span></code></p></li>
+<li><p>However, <code class="docutils literal notranslate"><span class="pre">.index()</span></code> will raise an error if the token is not in the string</p></li>
+<li><p>A safter way is to use <code class="docutils literal notranslate"><span class="pre">.find()</span></code></p></li>
+<li><p>It worsk the same way as <code class="docutils literal notranslate"><span class="pre">.index()</span></code> does, but if the token is not in the string, it will return <code class="docutils literal notranslate"><span class="pre">-1</span></code> instead of raising an error</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.find()</span></code> is available for strings only</p></li>
+<li><p>To find from the right, use <code class="docutils literal notranslate"><span class="pre">.rfind()</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a string</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;He is a good man from a good family&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find &#39;good &#39; from the left </span>
+<span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;good&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find &#39;good &#39; from the right </span>
+<span class="n">s</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;good&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Replace a pattern in a string</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace &#39;good&#39; by &#39;BAD&#39;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;good&quot;</span><span class="p">,</span> <span class="s2">&quot;BAD&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;He is a BAD man from a BAD family&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="formatted-strings">
+<h2><span class="section-number">16.12. </span>Formatted strings<a class="headerlink" href="#formatted-strings" title="Permalink to this headline">¶</a></h2>
+<p>We already learn about this</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init variables</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jack&quot;</span>
+<span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;New York&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use .format()</span>
+<span class="c1"># This works with every version of Python</span>
+<span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is from </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">city</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Jack is from New York&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use string interpolation</span>
+<span class="c1"># This works with Python &gt;= 3.6 only</span>
+<span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is from </span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Jack is from New York&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>For more advanced string formatting, check <a class="reference external" href="https://pyformat.info">https://pyformat.info</a></p>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">16.13. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p><strong>What is a string?</strong></p>
+<ul class="simple">
+<li><p>An <strong>immutable</strong> sequence of Unicode characters</p></li>
+<li><p>Python does NOT distinguish between characters and strings</p>
+<ul>
+<li><p>There is only the string type, there’s no character type</p></li>
+<li><p>A single character is a string of length 1</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Create a string</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">'</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">'''</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> (they are all the same)</p></li>
+<li><p>Triple quotes preserve new-line characters (thus, good for multi-line strings)</p></li>
+</ul>
+<p><strong>Index &amp; slicing</strong></p>
+<ul class="simple">
+<li><p>Same as lists and tuples</p></li>
+<li><p>One exception</p>
+<ul>
+<li><p>Slice of length 1 in the <code class="docutils literal notranslate"><span class="pre">list</span></code> type is a list and is different from the element it contains</p></li>
+<li><p>Slice of length 1 in <code class="docutils literal notranslate"><span class="pre">str</span></code> type is the same as the single character contained in that slice</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Iterate through a string</strong></p>
+<ul class="simple">
+<li><p>Same as lists and tuples</p></li>
+</ul>
+<p><strong>Conversion to strings</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">str()</span></code> to convert an object to a string</p></li>
+</ul>
+<p><strong>Copying</strong></p>
+<ul class="simple">
+<li><p>There’s no shallow copying</p></li>
+<li><p>Deep copying is not necessary because both the string and its elements are immutable</p></li>
+<li><p>Thus make a copy of <code class="docutils literal notranslate"><span class="pre">s</span></code>, just use an assignment <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">s</span></code></p></li>
+</ul>
+<p><strong>Order of characters</strong></p>
+<ul class="simple">
+<li><p>Each character is encoded by an integer</p></li>
+<li><p>Comparing characters is in fact comparing their integer codes</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">ord()</span></code> to get the integer code of a character</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">chr()</span></code> to get the character that an integer represents</p></li>
+<li><p>Note that <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&lt;</span> <span class="pre">Z</span></code> but <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">Z</span></code></p></li>
+</ul>
+<p><strong>Operations on strings</strong></p>
+<ul class="simple">
+<li><p>Regular operations: same as tuples</p></li>
+<li><p>Special string operations</p>
+<ul>
+<li><p>Group 1: case checking</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">s.islower()</span></code>, <code class="docutils literal notranslate"><span class="pre">s.isupper()</span></code>, <code class="docutils literal notranslate"><span class="pre">s.isalnum()</span></code></p></li>
+</ul>
+</li>
+<li><p>Group 2: case transformations</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">s.upper()</span></code>, <code class="docutils literal notranslate"><span class="pre">s.lower()</span></code></p></li>
+</ul>
+</li>
+<li><p>Group 3: substring checking</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span> <span class="pre">in</span> <span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">s.startswith(&quot;A&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">s.endswith(&quot;A&quot;)</span></code></p></li>
+</ul>
+</li>
+<li><p>Group 4: white space handling</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">s.lstrip()</span></code>, <code class="docutils literal notranslate"><span class="pre">s.rstrip()</span></code>, <code class="docutils literal notranslate"><span class="pre">s.strip()</span></code></p></li>
+</ul>
+</li>
+<li><p>Group 5: string padding</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">s.ljust(2,</span> <span class="pre">&quot;0&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">s.rjust(2,</span> <span class="pre">&quot;0&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">s.zfill(2)</span></code></p></li>
+</ul>
+</li>
+<li><p>Group 6: string splitting &amp; joining</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">s.split()</span></code>, <code class="docutils literal notranslate"><span class="pre">s.partition(&quot;:&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;,&quot;.joint(a_list)</span></code></p></li>
+</ul>
+</li>
+<li><p>Group 7: searching and replacing</p>
+<ul>
+<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">s.find(&quot;A&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">s.rfind(&quot;A&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">s.replace(&quot;old&quot;,</span> <span class="pre">&quot;new&quot;)</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Other notes</p>
+<ul>
+<li><p>Cased characters: letters in a language. Ex: <code class="docutils literal notranslate"><span class="pre">o-O</span></code>, <code class="docutils literal notranslate"><span class="pre">a-A</span></code>, <code class="docutils literal notranslate"><span class="pre">ê-Ê</span></code></p></li>
+<li><p>Non-cased characters: the rest. Ex: <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
+<li><p>For advanced string processing, check <code class="docutils literal notranslate"><span class="pre">re</span></code> module</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Formatted strings</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.format()</span></code> can be used for all version of Python</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f&quot;&quot;</span></code> can be used for Python <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">3.6</span></code> only</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./collection-dtypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="range-type.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">15. </span>Range type</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tue Nguyen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
