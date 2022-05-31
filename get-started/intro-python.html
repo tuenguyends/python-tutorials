@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Naming rules and conventions &#8212; Python tutorials</title>
+    <title>1. Introduction to Python &#8212; Python tutorials</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Python’s typing system" href="typing-system.html" />
-    <link rel="prev" title="6. Variables and assignments" href="assignments-variables.html" />
+    <link rel="next" title="2. Setup your enviroment" href="setup.html" />
+    <link rel="prev" title="Preface" href="../preface.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,24 +103,24 @@ const thebe_selector_output = ".output, .cell_output"
   Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../get-started/intro-python.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    1. Introduction to Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../get-started/setup.html">
+  <a class="reference internal" href="setup.html">
    2. Setup your enviroment
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../get-started/jupyter-lab.html">
+  <a class="reference internal" href="jupyter-lab.html">
    3. Jupyter Lab
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../get-started/markdown.html">
+  <a class="reference internal" href="markdown.html">
    4. Introduction to Markdown
   </a>
  </li>
@@ -130,24 +130,24 @@ const thebe_selector_output = ".output, .cell_output"
   The basics
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="basic-syntax.html">
+  <a class="reference internal" href="../basics/basic-syntax.html">
    5. Python’s basic syntax
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="assignments-variables.html">
+  <a class="reference internal" href="../basics/assignments-variables.html">
    6. Variables and assignments
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
    7. Naming rules and conventions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="typing-system.html">
+  <a class="reference internal" href="../basics/typing-system.html">
    8. Python’s typing system
   </a>
  </li>
@@ -283,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/basics/naming.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/get-started/intro-python.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -303,7 +303,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fbasics/naming.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fget-started/intro-python.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -324,7 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/basics/naming.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/get-started/intro-python.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -347,23 +347,33 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   7.1. Overview
+  <a class="reference internal nav-link" href="#outline">
+   1.1. Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-rules">
-   7.2. Naming rules
+  <a class="reference internal nav-link" href="#what-is-python">
+   1.2. What is Python?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-convention">
-   7.3. Naming convention
+  <a class="reference internal nav-link" href="#history-of-python">
+   1.3. History of Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-uses-python">
+   1.4. Who uses Python?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-2-or-3">
+   1.5. Python 2 or 3?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   7.4. Summary
+   1.6. Summary
   </a>
  </li>
 </ul>
@@ -376,7 +386,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Naming rules and conventions</h1>
+                <h1>Introduction to Python</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -387,23 +397,33 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   7.1. Overview
+  <a class="reference internal nav-link" href="#outline">
+   1.1. Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-rules">
-   7.2. Naming rules
+  <a class="reference internal nav-link" href="#what-is-python">
+   1.2. What is Python?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-convention">
-   7.3. Naming convention
+  <a class="reference internal nav-link" href="#history-of-python">
+   1.3. History of Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-uses-python">
+   1.4. Who uses Python?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-2-or-3">
+   1.5. Python 2 or 3?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   7.4. Summary
+   1.6. Summary
   </a>
  </li>
 </ul>
@@ -415,145 +435,72 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="naming-rules-and-conventions">
-<h1><span class="section-number">7. </span>Naming rules and conventions<a class="headerlink" href="#naming-rules-and-conventions" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-python">
+<h1><span class="section-number">1. </span>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h1>
 <p>Author: Tue Nguyen</p>
-<blockquote>
-<div><p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>
-<p>(Phil Karlton)</p>
-</div></blockquote>
-<div class="section" id="overview">
-<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="outline">
+<h2><span class="section-number">1.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>When writing a program, we often have to give names to many things</p></li>
-<li><p>Ex: variables, functions, classes, and modules</p></li>
-<li><p>Thus, it is crucial to learn the rules and conventions</p>
-<ul>
-<li><p><strong>Rules</strong> are specifications that we MUST follow</p></li>
-<li><p><strong>Conventions</strong> are more like <em>suggestions</em> of best practices by experienced programmers and are widely accepted by the community. Thus, we are not required to follow, but we SHOULD.</p></li>
-</ul>
-</li>
-<li><p>For now, we only focus on variable names. Naming for other things is similar</p></li>
+<li><p>What is Python?</p></li>
+<li><p>History of Python</p></li>
+<li><p>Who uses Python?</p></li>
+<li><p>Python 2 vs. 3</p></li>
 </ul>
 </div>
-<div class="section" id="naming-rules">
-<h2><span class="section-number">7.2. </span>Naming rules<a class="headerlink" href="#naming-rules" title="Permalink to this headline">¶</a></h2>
-<p>There are 3 rules when naming a variable</p>
+<div class="section" id="what-is-python">
+<h2><span class="section-number">1.2. </span>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">¶</a></h2>
+<p>Python is a general-purpose programming language. General-purpose simply means it can do a lot of stuff in many different fields. Here are some examples</p>
 <ul class="simple">
-<li><p>Can consist characters from 3 following groups only</p>
-<ul>
-<li><p>Digits (<code class="docutils literal notranslate"><span class="pre">0-9</span></code>)</p></li>
-<li><p>Latin letters (<code class="docutils literal notranslate"><span class="pre">a-z</span></code> and <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>)</p></li>
-<li><p>Underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
+<li><p>Data science</p></li>
+<li><p>Scientific computing</p></li>
+<li><p>Software development</p></li>
+<li><p>Web development</p></li>
+<li><p>Game development</p></li>
+<li><p>Graphical User Interface (GUI)</p></li>
+<li><p>Embedded systems</p></li>
+<li><p>And many more</p></li>
 </ul>
-</li>
-<li><p>Cannot start with a digit</p></li>
-<li><p>Cannot coincide with one of Python’s reserved words</p></li>
-</ul>
-<p>Reserved words or keywords are words that have special meaning to Python (see the list below)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>       <span class="k">class</span>       <span class="nc">finally</span>     <span class="ow">is</span>          <span class="k">return</span>
-<span class="kc">None</span>        <span class="k">continue</span>    <span class="k">for</span>         <span class="k">lambda</span>      <span class="k">try</span>
-<span class="kc">True</span>        <span class="k">def</span>         <span class="nf">from</span>        <span class="k">nonlocal</span>    <span class="k">while</span>
-<span class="ow">and</span>         <span class="k">del</span>         <span class="k">global</span>      <span class="ow">not</span>         <span class="k">with</span>
-<span class="k">as</span>          <span class="k">elif</span>        <span class="k">if</span>          <span class="ow">or</span>          <span class="k">yield</span>
-<span class="k">assert</span>      <span class="k">else</span>        <span class="kn">import</span>      <span class="nn">pass</span>     
-<span class="k">break</span>       <span class="k">except</span>      <span class="ow">in</span>          <span class="k">raise</span>
-</pre></div>
 </div>
-<p>Notes</p>
+<div class="section" id="history-of-python">
+<h2><span class="section-number">1.3. </span>History of Python<a class="headerlink" href="#history-of-python" title="Permalink to this headline">¶</a></h2>
+<p>Here is a very brief history of Python</p>
 <ul class="simple">
-<li><p>For now, you don’t have to remember all of these keywords. You will remember them as you progress</p></li>
-<li><p>Python is case-sensitive, meaning that it distinguishes between lowercase and uppercase. Thus, <code class="docutils literal notranslate"><span class="pre">firstname</span></code>, <code class="docutils literal notranslate"><span class="pre">FirstName</span></code>, and <code class="docutils literal notranslate"><span class="pre">FIRSTNAME</span></code> are different</p></li>
+<li><p>Python was created by Guido van Rossum in 1989 as a toy probject</p></li>
+<li><p>Guido then used Python in a project at his workplace</p></li>
+<li><p>Python was received good feedback from Guido’s colleagues</p></li>
+<li><p>Thus, he decided to make Python open source</p></li>
+<li><p>First released in 1991</p></li>
+<li><p>Since then Python has grown consistently and become one of the most popular programming languages</p></li>
+<li><p>As of May 2022, it is the most popular programming language according to the <a class="reference external" href="https://www.tiobe.com/tiobe-index/">TIOBE</a></p></li>
 </ul>
-<p><strong>a) Ex 1: valid names</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span>
-<span class="n">num_jobs</span>
-<span class="n">file_name</span>
-<span class="n">_xyz</span>
-</pre></div>
 </div>
-<p><strong>b) Ex2: invalid name</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>warnings! # contains a special character !
-4oceans # starts with a digit
-break # coincides with break keyword
-</pre></div>
-</div>
-</div>
-<div class="section" id="naming-convention">
-<h2><span class="section-number">7.3. </span>Naming convention<a class="headerlink" href="#naming-convention" title="Permalink to this headline">¶</a></h2>
-<p>Here are some best practices to follow when naming</p>
+<div class="section" id="who-uses-python">
+<h2><span class="section-number">1.4. </span>Who uses Python?<a class="headerlink" href="#who-uses-python" title="Permalink to this headline">¶</a></h2>
+<p>A lot!</p>
 <ul class="simple">
-<li><p>Use all lowercase</p>
-<ul>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">name</span></code> instead of <code class="docutils literal notranslate"><span class="pre">Name</span></code> or <code class="docutils literal notranslate"><span class="pre">NAME</span></code></p></li>
+<li><p><strong>Individiuals:</strong> programmers, engineers, economists, analysts, or social sciences students/researchers</p></li>
+<li><p><strong>Organizations:</strong> tech companies, investment banks, universities, and research institutes</p></li>
 </ul>
-</li>
-<li><p>Follow <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> convention</p>
-<ul>
-<li><p>Word are separated by <code class="docutils literal notranslate"><span class="pre">_</span></code> so that the name looks like a snake</p></li>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">gross_profit</span></code>, <code class="docutils literal notranslate"><span class="pre">first_name</span></code>, <code class="docutils literal notranslate"><span class="pre">top_score</span></code></p></li>
-</ul>
-</li>
-<li><p>One exception: class names should follow <code class="docutils literal notranslate"><span class="pre">CamelCase</span></code></p>
-<ul>
-<li><p>Start each word in the name with a capital letter followed by lower letter so that the name looks like a camel with humps</p></li>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">Person</span></code>, <code class="docutils literal notranslate"><span class="pre">BankAccount</span></code></p></li>
-</ul>
-</li>
-<li><p>Should be meaningful and easy to remember</p>
-<ul>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">interest_rate</span></code> instead of <code class="docutils literal notranslate"><span class="pre">r</span></code> or <code class="docutils literal notranslate"><span class="pre">ir</span></code></p></li>
-</ul>
-</li>
-<li><p>Should have a reasonable length</p>
-<ul>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">sales_apr</span></code> instead of <code class="docutils literal notranslate"><span class="pre">sales_data_for_april</span></code></p></li>
-</ul>
-</li>
-<li><p>Avoid names of popular functions and modules</p>
-<ul>
-<li><p>Ex: avoid <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">math</span></code>, or <code class="docutils literal notranslate"><span class="pre">collections</span></code></p></li>
-</ul>
-</li>
-</ul>
-<p><strong>a) Ex 1: names having good styles</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span>
-<span class="n">cum_gpa</span>
-<span class="n">class_rank</span>
-</pre></div>
 </div>
-<p><strong>b) Example 2: names having bad styles</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="c1"># ambiguous</span>
-<span class="n">FirstName</span> <span class="c1"># not snake case</span>
-<span class="nb">print</span> <span class="c1"># name of a popular function</span>
-<span class="n">os</span> <span class="c1"># name of a popular module</span>
-<span class="n">sys</span> <span class="c1"># name of a popular module</span>
-<span class="n">salary_data_of_10000_households</span> <span class="c1"># too long</span>
-</pre></div>
-</div>
+<div class="section" id="python-2-or-3">
+<h2><span class="section-number">1.5. </span>Python 2 or 3?<a class="headerlink" href="#python-2-or-3" title="Permalink to this headline">¶</a></h2>
+<p>The quick answer is Python 3</p>
+<ul class="simple">
+<li><p>Python 2 has some serious issues (which I will not discuss here)</p></li>
+<li><p>Thus the Python core team just started a completely new version - Python 3</p></li>
+<li><p>Code written in Python 2 might not work with Python 3 and vice versa</p></li>
+<li><p>Python 2 was officially sunset on 1/1/2020 (no more improvement)</p></li>
+<li><p>In short, Python 2 is almost dead now, so use Python 3</p></li>
+</ul>
 </div>
 <div class="section" id="summary">
-<h2><span class="section-number">7.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p><strong>Naming rules</strong></p>
+<h2><span class="section-number">1.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Can consist characters from 3 following groups only</p>
-<ul>
-<li><p>Digits (<code class="docutils literal notranslate"><span class="pre">0-9</span></code>)</p></li>
-<li><p>Latin letters (<code class="docutils literal notranslate"><span class="pre">a-z</span></code> and <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>)</p></li>
-<li><p>Underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
-</ul>
-</li>
-<li><p>Cannot start with a digit</p></li>
-<li><p>Cannot coincide with one of Python’s reserved words</p></li>
-</ul>
-<p><strong>Naming convention</strong></p>
-<ul class="simple">
-<li><p>Use all lowercase</p></li>
-<li><p>Follow <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> convention</p></li>
-<li><p>One exception: class names should follow <code class="docutils literal notranslate"><span class="pre">CamelCase</span></code></p></li>
-<li><p>Should be meaningful and easy to remember</p></li>
-<li><p>Should have a reasonable length</p></li>
-<li><p>Avoid names of popular functions and modules</p></li>
+<li><p>Python is a general-purpose programming language that can handle many classes of problems such as data science, software dev, web dev, etc.</p></li>
+<li><p>Python was created by Guido van Rossum in 1989 and was first released in 1991</p></li>
+<li><p>As of May 2022, Python is the most popular language according to TIOBE</p></li>
+<li><p>Python is used by many professionals and organizations</p></li>
+<li><p>Python 2 is outdated, use Python 3</p></li>
 </ul>
 </div>
 </div>
@@ -571,7 +518,7 @@ break # coincides with break keyword
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./basics"
+            path: "./get-started"
         },
         predefinedOutput: true
     }
@@ -583,17 +530,17 @@ break # coincides with break keyword
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="assignments-variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../preface.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Variables and assignments</p>
+            <p class="prev-next-title">Preface</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="typing-system.html" title="next page">
+    <a class='right-next' id="next-link" href="setup.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Python’s typing system</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Setup your enviroment</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Python’s basic syntax &#8212; Python tutorials</title>
+    <title>5. Python’s basic syntax &#8212; Python tutorials</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Variables and assignments" href="assignments-variables.html" />
-    <link rel="prev" title="3. Introduction to Markdown" href="../get-started/markdown.html" />
+    <link rel="next" title="6. Variables and assignments" href="assignments-variables.html" />
+    <link rel="prev" title="4. Introduction to Markdown" href="../get-started/markdown.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -105,18 +105,23 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../get-started/intro.html">
-   1. Introduction
+  <a class="reference internal" href="../get-started/intro-python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../get-started/setup.html">
+   2. Setup your enviroment
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../get-started/jupyter-lab.html">
-   2. Jupyter Lab
+   3. Jupyter Lab
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../get-started/markdown.html">
-   3. Introduction to Markdown
+   4. Introduction to Markdown
   </a>
  </li>
 </ul>
@@ -128,22 +133,22 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. Python’s basic syntax
+   5. Python’s basic syntax
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="assignments-variables.html">
-   5. Variables and assignments
+   6. Variables and assignments
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="naming.html">
-   6. Naming rules and conventions
+   7. Naming rules and conventions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="typing-system.html">
-   7. Python’s typing system
+   8. Python’s typing system
   </a>
  </li>
 </ul>
@@ -155,22 +160,22 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../flat-dtypes/nonetype-type.html">
-   8. NoneType type
+   9. NoneType type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../flat-dtypes/bool-type.html">
-   9. Bool type
+   10. Bool type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../flat-dtypes/int-type.html">
-   10. Int type
+   11. Int type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../flat-dtypes/float-type.html">
-   11. Float type
+   12. Float type
   </a>
  </li>
 </ul>
@@ -181,38 +186,60 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../collection-dtypes/collection-types.html">
-   12. Collection types
+  <a class="reference internal" href="../collection-dtypes/intro-collection-types.html">
+   13. Introduction to collection types
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../collection-dtypes/list-type.html">
-   13. List type
+   14. List type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../collection-dtypes/tuple-type.html">
-   14. Tuple type
+   15. Tuple type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../collection-dtypes/range-type.html">
-   15. Range type
+   16. Range type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../collection-dtypes/string-type.html">
-   16. String type
+   17. String type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../collection-dtypes/dict-type.html">
-   17. Dictionary type
+   18. Dictionary type
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../collection-dtypes/set-type.html">
-   18. Set type
+   19. Set type
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Control flows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-flows/intro-control-flows.html">
+   20. Introduction to control flows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-flows/branching.html">
+   21. Branching
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-flows/looping.html">
+   22. Looping
   </a>
  </li>
 </ul>
@@ -320,68 +347,73 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   5.1. Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
-   4.1. Overview
+   5.2. Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#math">
-   4.2. Math
+   5.3. Math
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#assignments">
-   4.3. Assignments
+   5.4. Assignments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#literals">
-   4.4. Literals
+   5.5. Literals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expressions">
-   4.5. Expressions
+   5.6. Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comments">
-   4.6. Comments
+   5.7. Comments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#printing">
-   4.7. Printing
+   5.8. Printing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#statements">
-   4.8. Statements
+   5.9. Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#line-continuation">
-   4.9. Line continuation
+   5.10. Line continuation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#white-spaces">
-   4.10. White spaces
+   5.11. White spaces
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#indentation">
-   4.11. Indentation
+   5.12. Indentation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#getting-help">
-   4.12. Getting help
+   5.13. Getting help
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   4.13. Summary
+   5.14. Summary
   </a>
  </li>
 </ul>
@@ -405,68 +437,73 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   5.1. Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
-   4.1. Overview
+   5.2. Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#math">
-   4.2. Math
+   5.3. Math
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#assignments">
-   4.3. Assignments
+   5.4. Assignments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#literals">
-   4.4. Literals
+   5.5. Literals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#expressions">
-   4.5. Expressions
+   5.6. Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comments">
-   4.6. Comments
+   5.7. Comments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#printing">
-   4.7. Printing
+   5.8. Printing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#statements">
-   4.8. Statements
+   5.9. Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#line-continuation">
-   4.9. Line continuation
+   5.10. Line continuation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#white-spaces">
-   4.10. White spaces
+   5.11. White spaces
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#indentation">
-   4.11. Indentation
+   5.12. Indentation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#getting-help">
-   4.12. Getting help
+   5.13. Getting help
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   4.13. Summary
+   5.14. Summary
   </a>
  </li>
 </ul>
@@ -479,19 +516,10 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="python-s-basic-syntax">
-<h1><span class="section-number">4. </span>Python’s basic syntax<a class="headerlink" href="#python-s-basic-syntax" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Python’s basic syntax<a class="headerlink" href="#python-s-basic-syntax" title="Permalink to this headline">¶</a></h1>
 <p>Author: Tue Nguyen</p>
-<div class="section" id="overview">
-<h2><span class="section-number">4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial aims to provide just some very basic syntax so that you can get started immediately</p>
-<p>It’s like when you first learn a new language</p>
-<ul class="simple">
-<li><p>You don’t dive into learning grammar right away</p></li>
-<li><p>Instead, you learn some basic vocabulary and simple sentences</p></li>
-<li><p>This lecture serves such a purpose</p></li>
-</ul>
-<p>In the next lectures, you will learn Python in a more systematic way</p>
-<p>This lecture covers the following topics</p>
+<div class="section" id="outline">
+<h2><span class="section-number">5.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Math operations</p></li>
 <li><p>Assignments</p></li>
@@ -506,9 +534,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Get help</p></li>
 </ul>
 </div>
+<div class="section" id="overview">
+<h2><span class="section-number">5.2. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial aims to provide just some very basic syntax so that you can get started immediately</p>
+<p>It’s like when you first learn a new language</p>
+<ul class="simple">
+<li><p>You don’t dive into learning grammar right away</p></li>
+<li><p>Instead, you learn some basic vocabulary and simple sentences</p></li>
+<li><p>This lecture serves such a purpose</p></li>
+</ul>
+<p>In the next lectures, you will learn Python in a more systematic way</p>
+</div>
 <div class="section" id="math">
-<h2><span class="section-number">4.2. </span>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.3. </span>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>You can use Python as a calculator to compute math expressions</p></li>
 <li><p>Math operations are intuitive. Ex: ``+, -, *, /`</p></li>
@@ -620,8 +658,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="assignments">
-<h2><span class="section-number">4.3. </span>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.4. </span>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>An assignment assigns a value to a variable (will learn in detail later)</p></li>
 <li><p>We use <code class="docutils literal notranslate"><span class="pre">=</span></code> to make an assignment</p></li>
@@ -650,8 +687,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="literals">
-<h2><span class="section-number">4.4. </span>Literals<a class="headerlink" href="#literals" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.5. </span>Literals<a class="headerlink" href="#literals" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>A literal is a fixed or constant value</p></li>
 <li><p>When you see it, it is <em>literally</em> the value it represents</p></li>
@@ -698,8 +734,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="expressions">
-<h2><span class="section-number">4.5. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.6. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>An expression is anything that can be evaluated as a value</p></li>
 <li><p>It can be a combination of literals and variables, for example</p></li>
@@ -745,8 +780,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="comments">
-<h2><span class="section-number">4.6. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.7. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Comments are used to document your code</p></li>
 <li><p>Why? To help other people can understand what you are doing (if your code is not so obvious)</p></li>
@@ -772,8 +806,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="printing">
-<h2><span class="section-number">4.7. </span>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.8. </span>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>You can use <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to print out values associated with a literal, a variable, or an expression</p></li>
 <li><p>Roughly speaking, a function (will learn in detail later)</p>
@@ -852,8 +885,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="statements">
-<h2><span class="section-number">4.8. </span>Statements<a class="headerlink" href="#statements" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.9. </span>Statements<a class="headerlink" href="#statements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>A statement is a complete instruction that Python can execute</p></li>
 <li><p>It is like a full-sentence in English, for example</p></li>
@@ -960,8 +992,7 @@ Good morning
 </div>
 </div>
 <div class="section" id="line-continuation">
-<h2><span class="section-number">4.9. </span>Line continuation<a class="headerlink" href="#line-continuation" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.10. </span>Line continuation<a class="headerlink" href="#line-continuation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>On some occasions, you might have to write a complex statement</p></li>
 <li><p>And keeping everything in one line make it very ugly and hard to read.</p></li>
@@ -1008,8 +1039,7 @@ Good morning
 </div>
 </div>
 <div class="section" id="white-spaces">
-<h2><span class="section-number">4.10. </span>White spaces<a class="headerlink" href="#white-spaces" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.11. </span>White spaces<a class="headerlink" href="#white-spaces" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>White spaces include spaces, tabs, newlines, and blank lines</p></li>
 <li><p>Often, whitespaces are ignored by Python’s interpreter</p></li>
@@ -1077,8 +1107,7 @@ Good morning
 </ul>
 </div>
 <div class="section" id="indentation">
-<h2><span class="section-number">4.11. </span>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.12. </span>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Indentation means the spaces at the beginning of each line</p></li>
 <li><p>You use</p>
@@ -1105,14 +1134,14 @@ Good morning
 </ul>
 </li>
 </ul>
-<p>Ex 1: try the following code (no error)</p>
+<p><strong>a) Ex 1: try the following code (no error)</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
 
 <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">21</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congrats! You can buy vodka&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Ex 2: try the following code (error)</p>
+<p><strong>b) Ex 2: try the following code (error)</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
 
 <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">21</span><span class="p">:</span>
@@ -1121,8 +1150,7 @@ Good morning
 </div>
 </div>
 <div class="section" id="getting-help">
-<h2><span class="section-number">4.12. </span>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
-<p>Main points</p>
+<h2><span class="section-number">5.13. </span>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>You need help when you face things that</p>
 <ul>
@@ -1137,7 +1165,7 @@ Good morning
 </ul>
 </li>
 </ul>
-<p>Ex 1: get internal help using <code class="docutils literal notranslate"><span class="pre">?</span></code></p>
+<p><strong>a) Ex 1: get internal help using <code class="docutils literal notranslate"><span class="pre">?</span></code></strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get help for print</span>
@@ -1160,14 +1188,15 @@ Good morning
 </div>
 </div>
 </div>
-<p>Ex 2: get help using Google by trying the following queries</p>
+<p><strong>b) Ex 2: get help using Google</strong></p>
+<p>Try the following queries</p>
 <ul class="simple">
 <li><p>Python compute absolute value stackoverflow</p></li>
 <li><p>Python sort a list stackoverflow</p></li>
 </ul>
 </div>
 <div class="section" id="summary">
-<h2><span class="section-number">4.13. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.14. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p><strong>Math</strong></p>
 <ul class="simple">
 <li><p>Basic: <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">-,</span> <span class="pre">*</span> <span class="pre">/</span></code></p></li>
@@ -1280,13 +1309,13 @@ Good morning
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Introduction to Markdown</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Introduction to Markdown</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="assignments-variables.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Variables and assignments</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Variables and assignments</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
