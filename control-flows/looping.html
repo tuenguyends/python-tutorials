@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="21. Branching" href="branching.html" />
@@ -340,6 +342,70 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   22.1. Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-about-looping">
+   22.2. Overview about looping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   22.3.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   loops
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-for-loops">
+     22.3.1. Basic
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loops
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-for-loops">
+     22.3.2. Nested
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops">
+   22.4.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   loops
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -352,6 +418,70 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   22.1. Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-about-looping">
+   22.2. Overview about looping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   22.3.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   loops
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-for-loops">
+     22.3.1. Basic
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loops
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-for-loops">
+     22.3.2. Nested
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops">
+   22.4.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   loops
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -361,7 +491,381 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="looping">
 <h1><span class="section-number">22. </span>Looping<a class="headerlink" href="#looping" title="Permalink to this headline">¶</a></h1>
 <p>Author: Tue Nguyen</p>
+<div class="section" id="outline">
+<h2><span class="section-number">22.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Overview about looping</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loops</p></li>
+<li><p>Control loops with <code class="docutils literal notranslate"><span class="pre">next</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code></p></li>
+<li><p>Comprehensions</p></li>
+</ul>
+</div>
+<div class="section" id="overview-about-looping">
+<h2><span class="section-number">22.2. </span>Overview about looping<a class="headerlink" href="#overview-about-looping" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We often write programs to automate repetitive tasks</p></li>
+<li><p>The benefits are</p>
+<ul>
+<li><p>We write a small chunk of code but can repeat it as many times as we want</p></li>
+<li><p>If we want to change something to the code logic, we only have to modify in one place</p></li>
+<li><p>This reduces the workload and make it less prone to errors</p></li>
+</ul>
+</li>
+<li><p>This repetition is called looping</p></li>
+<li><p>In Python, we can do looping using <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="for-loops">
+<h2><span class="section-number">22.3. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-for-loops">
+<h3><span class="section-number">22.3.1. </span>Basic <code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#basic-for-loops" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>You are already familiar with the basic use of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
+<li><p>In this section, we will learn about it in more detail through more interesting examples</p></li>
+<li><p>The template for the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is as follows</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+<p><strong>a) Ex 1: say hello</strong></p>
+<p>Say hello to a list of people</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a list of people</span>
+<span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Mary&quot;</span><span class="p">]</span>
+
+<span class="c1"># Write code to say hello to as many people as we want</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">people</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello John
+Hello Bob
+Hello Mary
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Ex 2: looping with <code class="docutils literal notranslate"><span class="pre">enumerate</span></code></strong></p>
+<ul class="simple">
+<li><p>When iterating through an sequence, you might want to access both the value and the index of an element</p></li>
+<li><p>You can do this with <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></p></li>
+<li><p>In each iteration, <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> returns a tuple of 2 entries</p>
+<ul>
+<li><p>First one is the index (counting from <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
+<li><p>Second one is the current element of the sequence</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a list of players with higher-ranked ones first</span>
+<span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bill&quot;</span><span class="p">,</span> <span class="s2">&quot;Peter&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony&quot;</span><span class="p">]</span>
+
+<span class="c1"># Print players with ranking</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">players</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2"> is ranked </span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bill is ranked 1
+Peter is ranked 2
+Tony is ranked 3
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>c) Ex 3: cumulative sum</strong></p>
+<p>Compute the sum of elements from a list of numbers</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a list of numbers</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="c1"># Compute the sum of elements in numbers</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">n</span>
+
+<span class="c1"># Print the result</span>
+<span class="n">total</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can double check out result using sum() function</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41.5
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>d) Ex 4: see what happens in each iteration</strong></p>
+<ul class="simple">
+<li><p>In Ex 3, we only see the final result</p></li>
+<li><p>However, we can write a program to see what happen under the hood by moving the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement inside the loop</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Loop and print the state of total at each iteration</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">n</span><span class="p">;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+3
+0.5
+30.5
+34.5
+41.5
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>e) Ex 5: compute factorial</strong></p>
+<p>Compute the factorial for a positive integer</p>
+<ul class="simple">
+<li><p>Recall that the factorial of a positive number <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(n! = 1\times 2\times \dots \times n\)</span></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(n = 0\)</span> then <span class="math notranslate nohighlight">\(n! = 1\)</span></p></li>
+<li><p>For simplicity, in this example, we write code for <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> only</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a number n</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="c1"># Init a variable to for the factorial with value 1</span>
+<span class="n">fact</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Loop through a range of ints from 1 to n</span>
+<span class="c1"># In each iteration, MULTIPLY the current element with fact</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">fact</span> <span class="o">*=</span> <span class="n">i</span>
+    
+<span class="c1"># Check the result</span>
+<span class="n">fact</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>720
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>f) Ex 6: count the number of character of each type</strong></p>
+<p>Given a sentence in English, count the number of consonants, vowels, and non-cased (non-letter) characters</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a string</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hi. How are you?&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Snippet 1: use nested if</span>
+<span class="c1"># Init three counter variables</span>
+<span class="n">n_consonants</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n_vowels</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n_non_letters</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Iterate through the lowercase version of s</span>
+<span class="c1"># and update the counters accordingly</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;ueoai&quot;</span><span class="p">:</span>
+            <span class="n">n_vowels</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">n_consonants</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n_non_letters</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="c1"># Print results</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n_vowels</span><span class="si">}</span><span class="s2"> vowels&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n_consonants</span><span class="si">}</span><span class="s2"> consonants&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n_non_letters</span><span class="si">}</span><span class="s2"> non-letter characters&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6 vowels
+5 consonants
+5 non-letter characters
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Snippet 2: use if elif to avoid nested if</span>
+<span class="c1"># Init three counter variables</span>
+<span class="n">n_consonants</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n_vowels</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n_non_letters</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Iterate through the lowercase version of s</span>
+<span class="c1"># and update the counters accordingly</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="n">n_non_letters</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;ueoai&quot;</span><span class="p">:</span>
+        <span class="n">n_vowels</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n_consonants</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="c1"># Print results</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n_vowels</span><span class="si">}</span><span class="s2"> vowels&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n_consonants</span><span class="si">}</span><span class="s2"> consonants&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n_non_letters</span><span class="si">}</span><span class="s2"> non-letter characters&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6 vowels
+5 consonants
+5 non-letter characters
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>g) Ex 7: extract numbers of each types</strong></p>
+<p>From a list of numbers, extract positive, negative, and zero elements into three lists</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a list of numbers</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.5</span><span class="p">]</span>
+
+<span class="c1"># Init 3 variables to hold extracted elements</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">neg</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">zeros</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Extract elements</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">pos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">e</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">neg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">zeros</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        
+<span class="c1"># Print the result</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Positive numbers: </span><span class="si">{</span><span class="n">pos</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Negative numbers: </span><span class="si">{</span><span class="n">neg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zeros numbers: </span><span class="si">{</span><span class="n">zeros</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Positive numbers: [1, 2, 7, 9.5, 3.4]
+Negative numbers: [-1.5, -10, -5.5]
+Zeros numbers: [0, 0]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nested-for-loops">
+<h3><span class="section-number">22.3.2. </span>Nested <code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#nested-for-loops" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We can write a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop inside another <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
+<li><p>This is called a nested <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
+<li><p>However, be careful that computation can explodes very quickly if your program involves nested <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</p></li>
+<li><p>Ex: if the outer loop has <span class="math notranslate nohighlight">\(1,000\)</span> iterations and the inner loop has <span class="math notranslate nohighlight">\(2,000\)</span> iterations, then your program has to perform <span class="math notranslate nohighlight">\(2,000,000\)</span> iterations in total</p></li>
+</ul>
+<p><strong>a) Ex 1: compute factorial for each integer in a list</strong></p>
+<p>Loop through a list of positive integers and at each iteration, print the factorial for that integer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a list of positive integers</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">fact</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">fact</span> <span class="o">*=</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">! = </span><span class="si">{</span><span class="n">fact</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1! = 1
+3! = 6
+4! = 24
+6! = 720
+7! = 5040
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Ex 2: print a triangle</strong></p>
+<p>Print out the following triangle</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4 5 6 7 8 9 
+1 2 3 4 5 6 7 8 9 
+2 3 4 5 6 7 8 9 
+3 4 5 6 7 8 9 
+4 5 6 7 8 9 
+5 6 7 8 9 
+6 7 8 9 
+7 8 9 
+8 9 
+9 
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4 5 6 7 8 9 
+1 2 3 4 5 6 7 8 9 
+2 3 4 5 6 7 8 9 
+3 4 5 6 7 8 9 
+4 5 6 7 8 9 
+5 6 7 8 9 
+6 7 8 9 
+7 8 9 
+8 9 
+9 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="while-loops">
+<h2><span class="section-number">22.4. </span><code class="docutils literal notranslate"><span class="pre">while</span></code> loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
 <p>To be updated</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
