@@ -9,7 +9,8 @@ parts:
   - caption: "Getting started"
     numbered: true
     chapters:
-    - file: "get-started/intro"
+    - file: "get-started/intro-python"
+    - file: "get-started/setup"
     - file: "get-started/jupyter-lab"
     - file: "get-started/notebook"
     - file: "get-started/markdown"
@@ -33,10 +34,17 @@ parts:
   - caption: "Collection data types"
     numbered: true
     chapters:
-    - file: "collection-dtypes/collection-types"
+    - file: "collection-dtypes/intro-collection-types"
     - file: "collection-dtypes/list-type"
     - file: "collection-dtypes/tuple-type"
     - file: "collection-dtypes/range-type"
     - file: "collection-dtypes/string-type"
     - file: "collection-dtypes/dict-type"
     - file: "collection-dtypes/set-type"
+    
+  - caption: "Control flows"
+    numbered: true
+    chapters:
+    - file: "control-flows/intro-control-flows"
+    - file: "control-flows/branching"
+    - file: "control-flows/looping"
