@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>23. Introduction to functions &#8212; Python tutorials</title>
+    <title>23. Function - basics &#8212; Python tutorials</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="24. Functions - advanced" href="functions-advanced.html" />
     <link rel="prev" title="22. Looping" href="../control-flows/looping.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -265,7 +266,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   23. Introduction to functions
+   23. Function - basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions-advanced.html">
+   24. Functions - advanced
   </a>
  </li>
 </ul>
@@ -327,7 +333,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/functions/intro-functions.ipynb"
+        <a href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/functions/functions-basics.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -387,7 +393,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Ffunctions/intro-functions.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Ffunctions/functions-basics.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -415,7 +421,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/functions/intro-functions.ipynb"
+        <a href="../_sources/functions/functions-basics.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -504,31 +510,21 @@ title="Print to PDF"
      23.3.3. Has params, has return
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#params-vs-arguments">
-     23.3.4. Params vs. arguments
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#anonymous-functions">
-   23.4. Anonymous functions
+  <a class="reference internal nav-link" href="#params-vs-arguments">
+   23.4. Params vs. arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scope">
-   23.5. Scope
+  <a class="reference internal nav-link" href="#default-arguments">
+   23.5. Default arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flexible-arguments">
-   23.6. Flexible arguments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#documentation">
-   23.7. Documentation
+  <a class="reference internal nav-link" href="#summary">
+   23.6. Summary
   </a>
  </li>
 </ul>
@@ -540,7 +536,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction to functions</h1>
+                <h1>Function - basics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -580,31 +576,21 @@ title="Print to PDF"
      23.3.3. Has params, has return
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#params-vs-arguments">
-     23.3.4. Params vs. arguments
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#anonymous-functions">
-   23.4. Anonymous functions
+  <a class="reference internal nav-link" href="#params-vs-arguments">
+   23.4. Params vs. arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scope">
-   23.5. Scope
+  <a class="reference internal nav-link" href="#default-arguments">
+   23.5. Default arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flexible-arguments">
-   23.6. Flexible arguments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#documentation">
-   23.7. Documentation
+  <a class="reference internal nav-link" href="#summary">
+   23.6. Summary
   </a>
  </li>
 </ul>
@@ -617,20 +603,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-functions">
-<h1><span class="section-number">23. </span>Introduction to functions<a class="headerlink" href="#introduction-to-functions" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="function-basics">
+<h1><span class="section-number">23. </span>Function - basics<a class="headerlink" href="#function-basics" title="Permalink to this headline">#</a></h1>
 <p>Author: Tue Nguyen</p>
 <section id="outline">
 <h2><span class="section-number">23.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Overview</p></li>
 <li><p>Define and call a function</p></li>
-<li><p>Params vs. arguments</p></li>
-<li><p>Default parameters</p></li>
-<li><p>Anonymous functions</p></li>
-<li><p>Scope</p></li>
-<li><p>Flexible arguments with <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></p></li>
-<li><p>Documentation</p></li>
+<li><p>Parameters vs. arguments</p></li>
+<li><p>Default arguments</p></li>
 </ul>
 </section>
 <section id="overview">
@@ -640,7 +622,7 @@ title="Print to PDF"
 <li><p>Benefits</p>
 <ul>
 <li><p>We define the logic once and reuse it as many times as we want</p></li>
-<li><p>Easier to maintain and improve because the logic is at a single place</p></li>
+<li><p>Easier to maintain and improve because the logic is in a single place</p></li>
 <li><p>All lower-level details are abstracted away, making code more succinct and readable</p></li>
 </ul>
 </li>
@@ -658,7 +640,7 @@ title="Print to PDF"
 <h2><span class="section-number">23.3. </span>Define and call a function<a class="headerlink" href="#define-and-call-a-function" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p>A function must be defined before being used</p></li>
-<li><p>We use <code class="docutils literal notranslate"><span class="pre">def</span></code>  to defined a function as follows</p>
+<li><p>We use <code class="docutils literal notranslate"><span class="pre">def</span></code>  to define a function as follows</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
   <span class="c1"># Function body here</span>
 </pre></div>
@@ -979,26 +961,340 @@ title="Print to PDF"
 </div>
 </div>
 </section>
+</section>
 <section id="params-vs-arguments">
-<h3><span class="section-number">23.3.4. </span>Params vs. arguments<a class="headerlink" href="#params-vs-arguments" title="Permalink to this headline">#</a></h3>
-<p>To be updated</p>
+<h2><span class="section-number">23.4. </span>Params vs. arguments<a class="headerlink" href="#params-vs-arguments" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Params are named variables appearing in the function’s signature when we define a function</p>
+<ul>
+<li><p>They specify inputs that the function expects to receive when it is actually called</p></li>
+<li><p>The function uses the params inside its body as regular variables</p></li>
+</ul>
+</li>
+<li><p>Arguments are actual values that are passed to the function when we call it</p>
+<ul>
+<li><p>The order in which we pass the arguments must match that of the params</p></li>
+<li><p>When we call a function and supply arguments, Python will assign the value of the arguments to the corresponding parameters and use those values to perform the logic inside the function body</p></li>
+</ul>
+</li>
+<li><p>For now, if a function has <code class="docutils literal notranslate"><span class="pre">N</span></code> params, we must supply <code class="docutils literal notranslate"><span class="pre">N</span></code> arguments when calling it</p></li>
+</ul>
+<p><strong>a) Ex 1: params</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a funtion</span>
+<span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hi </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comments</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> function has 2 params <code class="docutils literal notranslate"><span class="pre">first_name</span></code> and <code class="docutils literal notranslate"><span class="pre">last_name</span></code></p></li>
+<li><p>These two params are used in the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement inside the function body</p></li>
+</ul>
+<p><strong>b) Ex 2: argument</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 1</span>
+<span class="n">first</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
+<span class="n">last</span> <span class="o">=</span> <span class="s2">&quot;Doe&quot;</span>
+<span class="n">say_hi</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi John Doe
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comments</p>
+<ul class="simple">
+<li><p>In the above function call, we pass two variables as the arguments to <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> function</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> as the first argument</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> as the second argument</p></li>
+</ul>
+</li>
+<li><p>Based on the order in the function’s signature in Ex 1, Python does the following</p>
+<ul>
+<li><p>assign the value of <code class="docutils literal notranslate"><span class="pre">first</span></code> (which is <code class="docutils literal notranslate"><span class="pre">&quot;John&quot;</span></code>) to param <code class="docutils literal notranslate"><span class="pre">first_name</span></code></p></li>
+<li><p>assign the value of <code class="docutils literal notranslate"><span class="pre">last</span></code> (which is <code class="docutils literal notranslate"><span class="pre">&quot;Doe&quot;</span></code>) to param <code class="docutils literal notranslate"><span class="pre">last_name</span></code></p></li>
+<li><p>then execute the body using those values</p></li>
+<li><p>and we see <code class="docutils literal notranslate"><span class="pre">&quot;Hi</span> <span class="pre">John</span> <span class="pre">Doe&quot;</span></code> printed out</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 2</span>
+<span class="n">say_hi</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Doe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi John Doe
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comments</p>
+<ul class="simple">
+<li><p>Similar to Call 1, here we pass <code class="docutils literal notranslate"><span class="pre">&quot;John&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;Doe&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> directly</p></li>
+<li><p>The function uses those values inside its body and we see the same result printed out</p></li>
+</ul>
+<p><strong>c) Ex 3: not enough arguments</strong></p>
+<ul class="simple">
+<li><p>Try to <code class="docutils literal notranslate"><span class="pre">say_hi(&quot;John&quot;)</span></code> or <code class="docutils literal notranslate"><span class="pre">say_hi(&quot;Doe&quot;)</span></code> and you will get an error</p></li>
+<li><p>The error looks like this <code class="docutils literal notranslate"><span class="pre">say_hi()</span> <span class="pre">missing</span> <span class="pre">1</span> <span class="pre">required</span> <span class="pre">positional</span> <span class="pre">argument:</span> <span class="pre">'last_name'</span></code></p></li>
+<li><p>This means that</p>
+<ul>
+<li><p>The function <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> expects 2 arguments, but you supplied only one</p></li>
+<li><p>Based on the order, this one will goes to the first param (<code class="docutils literal notranslate"><span class="pre">first_name</span></code>)</p></li>
+<li><p>Thus, you missed the argument for the second param (<code class="docutils literal notranslate"><span class="pre">last_name</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 </section>
+<section id="default-arguments">
+<h2><span class="section-number">23.5. </span>Default arguments<a class="headerlink" href="#default-arguments" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Parameters allow us to customize the behavior of a function</p></li>
+<li><p>The more params, the more flexible we have</p></li>
+<li><p>However, more parameters also cause more problems</p>
+<ul>
+<li><p>Suppose the function has 10 params, then we have to supply 10 arguments in every call</p></li>
+<li><p>We also have to remember the correct order when passing the arguments</p></li>
+</ul>
+</li>
+<li><p>One solution is to use default values for some parameters to avoid passing too many arguments in each call</p>
+<ul>
+<li><p>The default values are set when we define the function</p></li>
+<li><p>In a function call, if we don’t supply the corresponding argument, then the default values will be used instead</p></li>
+<li><p>These default values are called <strong>default arguments</strong></p></li>
+<li><p>Note that all parameters that have default values must be specified to the rightmost of the param list in the function’s signature</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>a) Ex 1: greeting</strong></p>
+<ul class="simple">
+<li><p>Suppose we want to say hi to a user using his/her username</p></li>
+<li><p>If the user has logged in, then we want to print out <code class="docutils literal notranslate"><span class="pre">&quot;Hi</span> <span class="pre">{username}&quot;</span></code></p></li>
+<li><p>However, if the user has not logged in (we do not know the user name), then we want to print out <code class="docutils literal notranslate"><span class="pre">&quot;Hi</span> <span class="pre">user&quot;</span></code></p></li>
+<li><p>A good convention: unlike in assignments, there is no space around <code class="docutils literal notranslate"><span class="pre">=</span></code> in the function signature</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the function</span>
+<span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hi </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 1: if we don&#39;t supply the argument for the username</span>
+<span class="c1"># then say_hi will use the value &quot;user&quot;</span>
+<span class="c1"># We will not get an error</span>
+<span class="n">say_hi</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi user
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 1: if we do supply the argument for username</span>
+<span class="c1"># then say_hi will use the value we provided</span>
+<span class="n">say_hi</span><span class="p">(</span><span class="s2">&quot;Tom&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi Tom
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Ex 2: make a student record</strong></p>
+<ul class="simple">
+<li><p>Suppose we want to write a function that take the following information from a student</p>
+<ul>
+<li><p>Name</p></li>
+<li><p>ID</p></li>
+<li><p>Level (BS, MS, or PhD)</p></li>
+<li><p>Country (Italy, US, …)</p></li>
+</ul>
+</li>
+<li><p>The function will return those in a dictionary of 4 elements</p></li>
+<li><p>Suppose that for some reason, most of the students are undergraduates (<code class="docutils literal notranslate"><span class="pre">level=&quot;BS&quot;</span></code>) and from Italy (<code class="docutils literal notranslate"><span class="pre">country=&quot;Italy&quot;</span></code>)</p></li>
+<li><p>Thus, we can set default arguments for <code class="docutils literal notranslate"><span class="pre">level</span></code> and <code class="docutils literal notranslate"><span class="pre">country</span></code> to reduce unnecessary manual work</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the function</span>
+<span class="k">def</span> <span class="nf">get_student_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">std_id</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;BS&quot;</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s2">&quot;Italy&quot;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> 
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">std_id</span><span class="p">,</span> 
+        <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="n">level</span><span class="p">,</span> 
+        <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="n">country</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 1: Alessandro with ID 220001 from Italy studying BS</span>
+<span class="n">get_student_info</span><span class="p">(</span><span class="s2">&quot;Alessandro&quot;</span><span class="p">,</span> <span class="mi">220001</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Alessandro&#39;, &#39;id&#39;: 220001, &#39;level&#39;: &#39;BS&#39;, &#39;country&#39;: &#39;Italy&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 2: Giovanni with ID 220002 from Italy studying MS</span>
+<span class="n">get_student_info</span><span class="p">(</span><span class="s2">&quot;Alessandro&quot;</span><span class="p">,</span> <span class="mi">220002</span><span class="p">,</span> <span class="s2">&quot;MS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Alessandro&#39;, &#39;id&#39;: 220002, &#39;level&#39;: &#39;MS&#39;, &#39;country&#39;: &#39;Italy&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 3: John with ID 220003 from US studying BS</span>
+<span class="c1"># This time, since country is specified after level,</span>
+<span class="c1"># you have to pass &quot;US&quot; as a keyword argument using country=&quot;BS&quot;</span>
+<span class="c1"># If you pass (&quot;Alessandro&quot;, 220001, &quot;US&quot;) </span>
+<span class="c1"># then Python will understand &quot;US&quot; is the value passed to level</span>
+<span class="n">get_student_info</span><span class="p">(</span><span class="s2">&quot;Alessandro&quot;</span><span class="p">,</span> <span class="mi">22003</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Alessandro&#39;, &#39;id&#39;: 22003, &#39;level&#39;: &#39;BS&#39;, &#39;country&#39;: &#39;US&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 4: Tue with ID 220004 from Vietnam studying MS</span>
+<span class="n">get_student_info</span><span class="p">(</span><span class="s2">&quot;Tue&quot;</span><span class="p">,</span> <span class="mi">22004</span><span class="p">,</span> <span class="s2">&quot;MS&quot;</span><span class="p">,</span> <span class="s2">&quot;Vietnam&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Tue&#39;, &#39;id&#39;: 22004, &#39;level&#39;: &#39;MS&#39;, &#39;country&#39;: &#39;Vietnam&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call 5: if using keyword arguments</span>
+<span class="c1"># you can swap the order of default arguments</span>
+<span class="n">get_student_info</span><span class="p">(</span><span class="s2">&quot;Tue&quot;</span><span class="p">,</span> <span class="mi">22004</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s2">&quot;Vietnam&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;MS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Tue&#39;, &#39;id&#39;: 22004, &#39;level&#39;: &#39;MS&#39;, &#39;country&#39;: &#39;Vietnam&#39;}
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="anonymous-functions">
-<h2><span class="section-number">23.4. </span>Anonymous functions<a class="headerlink" href="#anonymous-functions" title="Permalink to this headline">#</a></h2>
-<p>To be updated</p>
-</section>
-<section id="scope">
-<h2><span class="section-number">23.5. </span>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">#</a></h2>
-<p>To be updated</p>
-</section>
-<section id="flexible-arguments">
-<h2><span class="section-number">23.6. </span>Flexible arguments<a class="headerlink" href="#flexible-arguments" title="Permalink to this headline">#</a></h2>
-<p>To be updated</p>
-</section>
-<section id="documentation">
-<h2><span class="section-number">23.7. </span>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h2>
-<p>To be updated</p>
+<section id="summary">
+<h2><span class="section-number">23.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<p><strong>Overview</strong></p>
+<ul class="simple">
+<li><p>Roughly speaking, a function takes some inputs, does something with them, and spits out an output</p></li>
+<li><p>Benefits</p>
+<ul>
+<li><p>We define the logic once and reuse it as many times as we want</p></li>
+<li><p>Easier to maintain and improve because the logic is in a single place</p></li>
+<li><p>All lower-level details are abstracted away, making code more succinct and readable</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Define and call a function</strong></p>
+<ul>
+<li><p>A function must be defined before being used</p></li>
+<li><p>We use <code class="docutils literal notranslate"><span class="pre">def</span></code>  to define a function as follows</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
+  <span class="c1"># Function body here</span>
+</pre></div>
+</div>
+</li>
+<li><p>Parameters (or params) are the inputs to the function</p></li>
+<li><p>Parameters are optional (a function might have no parameter)</p></li>
+<li><p>The function name follows the rules and conventions introduced in the earlier lessons</p></li>
+<li><p>The function body contains statements that handle some logic</p></li>
+<li><p>A function might explicitly return a value to where it is called using the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
+<li><p>Otherwise, <code class="docutils literal notranslate"><span class="pre">None</span></code> will be returned by default</p></li>
+<li><p><strong>Defining</strong> a function means writing code that specify</p>
+<ul class="simple">
+<li><p>its name</p></li>
+<li><p>parameters that it possibly take</p></li>
+<li><p>what it does to the parameters</p></li>
+<li><p>what value it returns</p></li>
+</ul>
+</li>
+<li><p><strong>Calling</strong> a function means evoking the function to do something</p></li>
+<li><p>Defining vs. calling</p>
+<ul class="simple">
+<li><p>We define a function only once, but we can call it as many times as we want</p></li>
+<li><p>We use <code class="docutils literal notranslate"><span class="pre">def</span></code> when define a function, but not when we call it</p></li>
+<li><p>We cannot call a function that has not been defined yet</p></li>
+<li><p>When defining a function, the inputs in the parentheses are called <strong>parameters</strong></p></li>
+<li><p>When calling a function, the inputs are called <strong>arguments</strong></p></li>
+</ul>
+</li>
+<li><p>A function can</p>
+<ul class="simple">
+<li><p>take no param, one param, or many params</p></li>
+<li><p>explicitly return a value using return or implicitly return <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Params vs. arguments</strong></p>
+<ul class="simple">
+<li><p>Params are named variables appearing in the function’s signature when we define a function</p></li>
+<li><p>Arguments are actual values that are passed to the function when we call it</p></li>
+<li><p>When passing arguments and the number of arguments and the order they are passed must match that of parameters</p></li>
+</ul>
+<p><strong>Default arguments</strong></p>
+<ul>
+<li><p>We can set default values to some parameters to avoid passing unnecessary information</p></li>
+<li><p>Syntax</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="o">....</span><span class="p">,</span> <span class="n">b1</span><span class="o">=</span><span class="n">v1</span><span class="p">,</span> <span class="n">b2</span><span class="o">=</span><span class="n">v2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+    <span class="c1"># Body</span>
+</pre></div>
+</div>
+</li>
+<li><p>Params with default values must be specified to the rightmost of the param list</p></li>
+<li><p>A good convention: there is no space around <code class="docutils literal notranslate"><span class="pre">=</span></code> in the function signature</p></li>
+<li><p>You can use keyword arguments to skip passing arguments for <code class="docutils literal notranslate"><span class="pre">b1</span></code>. Ex <code class="docutils literal notranslate"><span class="pre">f(a1,</span> <span class="pre">a2,</span> <span class="pre">...,</span> <span class="pre">b2=v2)</span></code></p></li>
+<li><p>When passing arguments using keyword arguments, you can swap the order of default arguments. Ex: <code class="docutils literal notranslate"><span class="pre">f(a1,</span> <span class="pre">a2,</span> <span class="pre">...,</span> <span class="pre">b2=v2,</span> <span class="pre">b1=v1)</span></code></p></li>
+</ul>
 </section>
 </section>
 
@@ -1035,6 +1331,13 @@ title="Print to PDF"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">22. </span>Looping</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="functions-advanced.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">24. </span>Functions - advanced</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

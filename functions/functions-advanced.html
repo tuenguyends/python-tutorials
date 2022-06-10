@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>20. Introduction to control flows &#8212; Python tutorials</title>
+    <title>24. Functions - advanced &#8212; Python tutorials</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="21. Branching" href="branching.html" />
-    <link rel="prev" title="19. Set type" href="../collection-dtypes/set-type.html" />
+    <link rel="prev" title="23. Function - basics" href="functions-basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -241,19 +242,19 @@ const thebe_selector_output = ".output, .cell_output"
   Control flows
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-flows/intro-control-flows.html">
    20. Introduction to control flows
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="branching.html">
+  <a class="reference internal" href="../control-flows/branching.html">
    21. Branching
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="looping.html">
+  <a class="reference internal" href="../control-flows/looping.html">
    22. Looping
   </a>
  </li>
@@ -263,14 +264,14 @@ const thebe_selector_output = ".output, .cell_output"
   Functions
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../functions/functions-basics.html">
+  <a class="reference internal" href="functions-basics.html">
    23. Function - basics
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../functions/functions-advanced.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    24. Functions - advanced
   </a>
  </li>
@@ -333,7 +334,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/control-flows/intro-control-flows.ipynb"
+        <a href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/functions/functions-advanced.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -393,7 +394,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fcontrol-flows/intro-control-flows.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Ffunctions/functions-advanced.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -421,7 +422,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/control-flows/intro-control-flows.ipynb"
+        <a href="../_sources/functions/functions-advanced.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -482,32 +483,39 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outline">
-   20.1. Outline
+   24.1. Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-a-control-flow">
-   20.2. What is a control flow
+  <a class="reference internal nav-link" href="#lambda-functions">
+   24.2. Lambda functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#named-lambda-functions">
+     24.2.1. Named lambda functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anonymous-lambda-function">
+     24.2.2. Anonymous lambda function
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope-of-variables">
+   24.3. Scope of variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sequential-flows">
-   20.3. Sequential flows
+  <a class="reference internal nav-link" href="#flexible-arguments">
+   24.4. Flexible arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#branching-flows">
-   20.4. Branching flows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#looping-flows">
-   20.5. Looping flows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   20.6. Summary
+  <a class="reference internal nav-link" href="#document-a-function">
+   24.5. Document a function
   </a>
  </li>
 </ul>
@@ -519,7 +527,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction to control flows</h1>
+                <h1>Functions - advanced</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -531,32 +539,39 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outline">
-   20.1. Outline
+   24.1. Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-a-control-flow">
-   20.2. What is a control flow
+  <a class="reference internal nav-link" href="#lambda-functions">
+   24.2. Lambda functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#named-lambda-functions">
+     24.2.1. Named lambda functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anonymous-lambda-function">
+     24.2.2. Anonymous lambda function
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope-of-variables">
+   24.3. Scope of variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sequential-flows">
-   20.3. Sequential flows
+  <a class="reference internal nav-link" href="#flexible-arguments">
+   24.4. Flexible arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#branching-flows">
-   20.4. Branching flows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#looping-flows">
-   20.5. Looping flows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   20.6. Summary
+  <a class="reference internal nav-link" href="#document-a-function">
+   24.5. Document a function
   </a>
  </li>
 </ul>
@@ -569,218 +584,237 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-control-flows">
-<h1><span class="section-number">20. </span>Introduction to control flows<a class="headerlink" href="#introduction-to-control-flows" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="functions-advanced">
+<h1><span class="section-number">24. </span>Functions - advanced<a class="headerlink" href="#functions-advanced" title="Permalink to this headline">#</a></h1>
 <p>Author: Tue Nguyen</p>
 <section id="outline">
-<h2><span class="section-number">20.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>What is a control flow?</p></li>
-<li><p>Types of control flows in Python</p></li>
-<li><p>Sequential flows</p></li>
-<li><p>Branching flows</p></li>
-<li><p>Looping flows</p></li>
+<li><p>Lambda functions</p></li>
+<li><p>Scope of variables</p></li>
+<li><p>Flexible arguments</p></li>
+<li><p>Document a function</p></li>
 </ul>
 </section>
-<section id="what-is-a-control-flow">
-<h2><span class="section-number">20.2. </span>What is a control flow<a class="headerlink" href="#what-is-a-control-flow" title="Permalink to this headline">#</a></h2>
+<section id="lambda-functions">
+<h2><span class="section-number">24.2. </span>Lambda functions<a class="headerlink" href="#lambda-functions" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>In programming, a control flow is the order in which the program’s code executes</p></li>
-<li><p>In Python, there are 3 types of control flows</p>
+<li><p>We use <code class="docutils literal notranslate"><span class="pre">def</span></code> to define regular functions</p></li>
+<li><p>We use <code class="docutils literal notranslate"><span class="pre">lambda</span></code> quickly define simple functions (normally in one line)</p></li>
+<li><p>Sometimes, we want to quickly define a function without a name (thinking of a name may be time-consuming)</p>
 <ul>
-<li><p><strong>Sequential:</strong> execute linearly (top-down)</p></li>
-<li><p><strong>Branching:</strong> check a condition and decide which action (branch) to execute</p></li>
-<li><p><strong>Looping:</strong> repeat a block of code until some condition is met</p></li>
+<li><p>They are called anonymous functions</p></li>
+<li><p>We define anonymous functions using <code class="docutils literal notranslate"><span class="pre">lambda</span></code></p></li>
+<li><p>Anonymous functions are used to support other operations such as sorting and filtering</p></li>
 </ul>
 </li>
-<li><p>We will learn each type of control flows in detail in the next lectures</p></li>
 </ul>
-</section>
-<section id="sequential-flows">
-<h2><span class="section-number">20.3. </span>Sequential flows<a class="headerlink" href="#sequential-flows" title="Permalink to this headline">#</a></h2>
+<section id="named-lambda-functions">
+<h3><span class="section-number">24.2.1. </span>Named lambda functions<a class="headerlink" href="#named-lambda-functions" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p>This is the default mode when you write Python code</p></li>
-<li><p>The statements that are written first will be executed first</p></li>
+<li><p>Syntax: <code class="docutils literal notranslate"><span class="pre">func_name</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">params:</span> <span class="pre">code</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code> can be a statement or an expression</p></li>
+<li><p>No need to use <code class="docutils literal notranslate"><span class="pre">return</span></code> because Python will return the value of the expression</p></li>
 </ul>
+<p><strong>a) Ex 1: greeting</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Statements will be run in the order they are written</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This will run first&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This will run second&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the function</span>
+<span class="n">say_hi</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hi </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call</span>
+<span class="n">say_hi</span><span class="p">(</span><span class="s2">&quot;Tom&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This will run first
-This will run second
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi Tom
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="branching-flows">
-<h2><span class="section-number">20.4. </span>Branching flows<a class="headerlink" href="#branching-flows" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>A branching statement involves checking some condition and based on the checking result, Python will choose appropriate action (branch) to proceed</p></li>
-<li><p>Branching in Python is implemented using the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement which you are already familiar with</p></li>
-<li><p>Python <code class="docutils literal notranslate"><span class="pre">3.10+</span></code> introduces another way to implement branching through the <code class="docutils literal notranslate"><span class="pre">match</span></code> statement</p></li>
-<li><p>Let’s consider some simple examples</p></li>
-</ul>
-<p><strong>a) Ex 1: print <code class="docutils literal notranslate"><span class="pre">&quot;positive&quot;</span></code> if a number is positive</strong></p>
+<p><strong>b) Ex 2: add 2 numbers</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Case 1: condition is True</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;positive&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define</span>
+<span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>positive
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ex 3: <span class="math notranslate nohighlight">\(f(x) = x^2 + 2x + 5\)</span></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define</span>
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Case 2: condition is False</span>
-<span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
-<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;positive&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>b) Ex 2: print <code class="docutils literal notranslate"><span class="pre">&quot;odd&quot;</span></code> if an integer is odd; otherwise, print <code class="docutils literal notranslate"><span class="pre">&quot;even&quot;</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Case 1: condition is True</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;odd&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>odd
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ex 4: <span class="math notranslate nohighlight">\(g(x, y) = x^2 + 2xy + 3y^2\)</span></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define</span>
+<span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Case 2: condition is False</span>
-<span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
-<span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;odd&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;even&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call</span>
+<span class="n">g</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>even
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="looping-flows">
-<h2><span class="section-number">20.5. </span>Looping flows<a class="headerlink" href="#looping-flows" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>A loop statement repeats a block of code until some condition is met</p></li>
-<li><p>In Python, we can write loops using <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
-<li><p>We will learn them in detail in the next lectures</p></li>
-<li><p>For now, just consider some simple examples with <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init a list of numbers</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">numbers</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 5, -3, -7, 0, 2]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ex 1: print all element</span>
-<span class="c1"># In this example, the print statement is repeated 6 times</span>
-<span class="c1"># The loop only ends when it reach the end of the list (the condition)</span>
-<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-5
--3
--7
-0
-2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ex 2: print out only positive numbers</span>
-<span class="c1"># In this example, we only see three elements being printed out</span>
-<span class="c1"># But the code block under for is still exectued 6 times</span>
-<span class="c1"># Python compare each element of numbers with 0 in each iteration</span>
-<span class="c1"># But only 3 times the condition for if is True</span>
-<span class="c1"># Thus, we only see three positive elements being printed out</span>
-<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">e</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-5
-2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="summary">
-<h2><span class="section-number">20.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<section id="anonymous-lambda-function">
+<h3><span class="section-number">24.2.2. </span>Anonymous lambda function<a class="headerlink" href="#anonymous-lambda-function" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p>A control flow is the order in which the program’s code executes</p></li>
-<li><p>Python has 3 types of control flows</p>
+<li><p>Syntax: <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">params:</span> <span class="pre">code</span></code></p></li>
+<li><p>An anonymous function cannot stand on its own but must be used in another operation such as sorting or filter</p></li>
+</ul>
+<p><strong>a) Ex 1: sorting</strong></p>
+<ul class="simple">
+<li><p>Suppose we have a list of students</p>
 <ul>
-<li><p>Sequential</p>
-<ul>
-<li><p>Default mode</p></li>
-<li><p>Code executes linearly (top-down)</p></li>
+<li><p>Each element of this list is a tuple of 2 entries</p></li>
+<li><p>The first entry is the student’s name</p></li>
+<li><p>The second entry is the student grade</p></li>
 </ul>
 </li>
-<li><p>Branching</p>
+<li><p>We might want to sort the student by name or grade</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Init the list of students</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Peter&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)]</span>
+<span class="n">students</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;John&#39;, 6), (&#39;Alex&#39;, 5.5), (&#39;Jane&#39;, 9), (&#39;Peter&#39;, 8)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Case 1: Sort by name (ascending order)</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;Alex&#39;, 5.5), (&#39;Jane&#39;, 9), (&#39;John&#39;, 6), (&#39;Peter&#39;, 8)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comments</p>
+<ul class="simple">
+<li><p>The function <code class="docutils literal notranslate"><span class="pre">sorted</span></code> will sort the list <code class="docutils literal notranslate"><span class="pre">students</span></code> by <code class="docutils literal notranslate"><span class="pre">key</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> expects a function that does something to each element of the list and returns a value for that element</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sorted</span></code> will then sort <code class="docutils literal notranslate"><span class="pre">students</span></code> based on those returned values</p></li>
+<li><p>In the above example, <code class="docutils literal notranslate"><span class="pre">key=lambda</span> <span class="pre">x:</span> <span class="pre">x[0]</span></code> means that</p>
 <ul>
-<li><p>Check a condition and decide which action (branch) to execute</p></li>
-<li><p>Implement branching using <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">match</span></code></p></li>
+<li><p>Iterate through each element of the list <code class="docutils literal notranslate"><span class="pre">students</span></code> using variable <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>At each element, return the first entry of <code class="docutils literal notranslate"><span class="pre">x</span></code> (or <code class="docutils literal notranslate"><span class="pre">x[0]</span></code>)</p></li>
+<li><p>Then sort the list <code class="docutils literal notranslate"><span class="pre">students</span></code> by those first entries</p></li>
 </ul>
 </li>
-<li><p>Loop</p>
+<li><p>As a result, you can see the list <code class="docutils literal notranslate"><span class="pre">students</span></code> is sorted by name in the ascending order</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Case 2: Sort by name (descendin order)</span>
+<span class="c1"># Just pass reverse=True</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;Peter&#39;, 8), (&#39;John&#39;, 6), (&#39;Jane&#39;, 9), (&#39;Alex&#39;, 5.5)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Case 3: Sort by grade (ascending order)</span>
+<span class="c1"># Very similar to Case 1</span>
+<span class="c1"># Just need to change the expression to x[1]</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;Alex&#39;, 5.5), (&#39;John&#39;, 6), (&#39;Peter&#39;, 8), (&#39;Jane&#39;, 9)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Remarks</strong></p>
+<ul class="simple">
+<li><p>For now, the use of lambda functions is very limited including</p>
 <ul>
-<li><p>Repeat a block of code until some condition is met</p></li>
-<li><p>Implementing loops using <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li><p>Quickly define short and simple functions</p></li>
+<li><p>Define anonymous function to use in <code class="docutils literal notranslate"><span class="pre">sorted</span></code></p></li>
 </ul>
 </li>
+<li><p>However, anonymous lambda functions will be very convenient for real-life data manipulation when used with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (which will be discussed in a separate series)</p></li>
 </ul>
-</li>
-</ul>
+</section>
+</section>
+<section id="scope-of-variables">
+<h2><span class="section-number">24.3. </span>Scope of variables<a class="headerlink" href="#scope-of-variables" title="Permalink to this headline">#</a></h2>
+<p>To be updated</p>
+</section>
+<section id="flexible-arguments">
+<h2><span class="section-number">24.4. </span>Flexible arguments<a class="headerlink" href="#flexible-arguments" title="Permalink to this headline">#</a></h2>
+<p>To be updated</p>
+</section>
+<section id="document-a-function">
+<h2><span class="section-number">24.5. </span>Document a function<a class="headerlink" href="#document-a-function" title="Permalink to this headline">#</a></h2>
+<p>To be updated</p>
 </section>
 </section>
 
@@ -797,7 +831,7 @@ This will run second
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./control-flows"
+            path: "./functions"
         },
         predefinedOutput: true
     }
@@ -811,19 +845,12 @@ This will run second
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../collection-dtypes/set-type.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="functions-basics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">19. </span>Set type</p>
+            <p class="prev-next-title"><span class="section-number">23. </span>Function - basics</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="branching.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">21. </span>Branching</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
