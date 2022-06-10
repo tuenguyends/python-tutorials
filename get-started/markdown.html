@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>4. Introduction to Markdown &#8212; Python tutorials</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -64,7 +63,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +86,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -93,14 +107,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../preface.html">
-   Preface
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../preface.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting started
  </span>
@@ -247,107 +262,209 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/get-started/markdown.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/tuenguyends/python-tutorials"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fget-started/markdown.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/get-started/markdown.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/get-started/markdown.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/tuenguyends/python-tutorials"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fget-started/markdown.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/get-started/markdown.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outline">
    4.1. Outline
@@ -476,12 +593,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Introduction to Markdown</h1>
@@ -626,23 +742,24 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-markdown">
-<h1><span class="section-number">4. </span>Introduction to Markdown<a class="headerlink" href="#introduction-to-markdown" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-markdown">
+<h1><span class="section-number">4. </span>Introduction to Markdown<a class="headerlink" href="#introduction-to-markdown" title="Permalink to this headline">#</a></h1>
 <p>Author: Tue Nguyen</p>
-<div class="section" id="outline">
-<h2><span class="section-number">4.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<section id="outline">
+<h2><span class="section-number">4.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>What is Markdown?</p></li>
 <li><p>Why use Markdown?</p></li>
 <li><p>Basic Markdown syntax</p></li>
 <li><p>Advanced Markdown syntax</p></li>
 </ul>
-</div>
-<div class="section" id="what-is-markdown">
-<h2><span class="section-number">4.2. </span>What is Markdown?<a class="headerlink" href="#what-is-markdown" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="what-is-markdown">
+<h2><span class="section-number">4.2. </span>What is Markdown?<a class="headerlink" href="#what-is-markdown" title="Permalink to this headline">#</a></h2>
 <p>Markdown is a lightweight markup language that allows you to add formatting elements to plaintext such as</p>
 <ul class="simple">
 <li><p>Headings</p></li>
@@ -651,47 +768,47 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Links</p></li>
 <li><p>Images</p></li>
 </ul>
-</div>
-<div class="section" id="why-use-markdown">
-<h2><span class="section-number">4.3. </span>Why use Markdown?<a class="headerlink" href="#why-use-markdown" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="versatility">
-<h3><span class="section-number">4.3.1. </span>Versatility<a class="headerlink" href="#versatility" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="why-use-markdown">
+<h2><span class="section-number">4.3. </span>Why use Markdown?<a class="headerlink" href="#why-use-markdown" title="Permalink to this headline">#</a></h2>
+<section id="versatility">
+<h3><span class="section-number">4.3.1. </span>Versatility<a class="headerlink" href="#versatility" title="Permalink to this headline">#</a></h3>
 <p>Markdown can be used for many purposes such as</p>
 <ul class="simple">
 <li><p>Technical documentation (as this tutorial)</p></li>
 <li><p>Notes and books</p></li>
 <li><p>Static web pages</p></li>
 </ul>
-</div>
-<div class="section" id="minimal-distraction">
-<h3><span class="section-number">4.3.2. </span>Minimal distraction<a class="headerlink" href="#minimal-distraction" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="minimal-distraction">
+<h3><span class="section-number">4.3.2. </span>Minimal distraction<a class="headerlink" href="#minimal-distraction" title="Permalink to this headline">#</a></h3>
 <p>Compared to rich-text text processors such as Microsoft Word, Markdown offers much fewer features. However, this turns out to be its main advantage. By restricting you to a small set of formatting options, Markdown forces you to</p>
 <ul class="simple">
 <li><p>Focus on writing good content</p></li>
 <li><p>Rather than spending time tweaking the appearances such as themes, fonts, colors, etc</p></li>
 </ul>
-</div>
-<div class="section" id="portability">
-<h3><span class="section-number">4.3.3. </span>Portability<a class="headerlink" href="#portability" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="portability">
+<h3><span class="section-number">4.3.3. </span>Portability<a class="headerlink" href="#portability" title="Permalink to this headline">#</a></h3>
 <p>Unlike a Word file (<code class="docutils literal notranslate"><span class="pre">.docx</span></code>), a Markdown file is just a simple plain text file. Thus,</p>
 <ul class="simple">
 <li><p>It can opened a many free text editors such as Notepad++, Sublime Text, Atom, or VS code</p></li>
 <li><p>You won’t have to worry when migrating your files to different operating systems or cloud services because you can always access their contents</p></li>
 </ul>
-</div>
-<div class="section" id="easy-integration">
-<h3><span class="section-number">4.3.4. </span>Easy integration<a class="headerlink" href="#easy-integration" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="easy-integration">
+<h3><span class="section-number">4.3.4. </span>Easy integration<a class="headerlink" href="#easy-integration" title="Permalink to this headline">#</a></h3>
 <p>If you plan to be a data analyst/scientist/researcher, technical documentation is part of your daily work. Markdown makes your life much easier by allowing you to mix your technical notes and executable code in the same place</p>
-</div>
-<div class="section" id="easy-conversion">
-<h3><span class="section-number">4.3.5. </span>Easy conversion<a class="headerlink" href="#easy-conversion" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="easy-conversion">
+<h3><span class="section-number">4.3.5. </span>Easy conversion<a class="headerlink" href="#easy-conversion" title="Permalink to this headline">#</a></h3>
 <p>You can easily convert a Markdown file to different formats such as PDF and HTML</p>
-</div>
-</div>
-<div class="section" id="basic-markdown-syntax">
-<h2><span class="section-number">4.4. </span>Basic Markdown syntax<a class="headerlink" href="#basic-markdown-syntax" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="headings">
-<h3><span class="section-number">4.4.1. </span>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="basic-markdown-syntax">
+<h2><span class="section-number">4.4. </span>Basic Markdown syntax<a class="headerlink" href="#basic-markdown-syntax" title="Permalink to this headline">#</a></h2>
+<section id="headings">
+<h3><span class="section-number">4.4.1. </span>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Headings are used to organize contents into sections</p></li>
 <li><p>There are 6 levels from <code class="docutils literal notranslate"><span class="pre">h1</span></code> to <code class="docutils literal notranslate"><span class="pre">h6</span></code></p>
@@ -714,9 +831,9 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="c1">###### Level 6</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="paragraphs">
-<h3><span class="section-number">4.4.2. </span>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="paragraphs">
+<h3><span class="section-number">4.4.2. </span>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Two paragraphs are separated by a blank line</p></li>
 <li><p>One common mistake is just using <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and start writing the new paragraph</p></li>
@@ -733,9 +850,9 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">Paragraph</span> <span class="mi">2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="lists">
-<h3><span class="section-number">4.4.3. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lists">
+<h3><span class="section-number">4.4.3. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h3>
 <p>A list can be an unordered, ordered, or mixed list</p>
 <p><strong>a) Unordered lists</strong></p>
 <ul class="simple">
@@ -809,17 +926,17 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="o">-</span> <span class="n">sub</span><span class="o">-</span><span class="n">item</span> <span class="mf">2.2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="emphasis">
-<h3><span class="section-number">4.4.4. </span>Emphasis<a class="headerlink" href="#emphasis" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="emphasis">
+<h3><span class="section-number">4.4.4. </span>Emphasis<a class="headerlink" href="#emphasis" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">**Make</span> <span class="pre">bold**</span></code> will <strong>Make bold</strong></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*Make</span> <span class="pre">italic*</span></code> will <em>Make italic</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">***Make</span> <span class="pre">bold</span> <span class="pre">and</span> <span class="pre">italic***</span></code> will <em><strong>Make bold and italic</strong></em></p></li>
 </ul>
-</div>
-<div class="section" id="code-fences">
-<h3><span class="section-number">4.4.5. </span>Code fences<a class="headerlink" href="#code-fences" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="code-fences">
+<h3><span class="section-number">4.4.5. </span>Code fences<a class="headerlink" href="#code-fences" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Code fences are used to emphasize texts that should be understood as a coding element</p></li>
 <li><p>Ex: variable name, an expression, or a whole code block</p></li>
@@ -858,9 +975,9 @@ def say_hi(name):
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Have a good day&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="latex">
-<h3><span class="section-number">4.4.6. </span>Latex<a class="headerlink" href="#latex" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="latex">
+<h3><span class="section-number">4.4.6. </span>Latex<a class="headerlink" href="#latex" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Markdown supports Latex syntax so you can type math formulas easily</p></li>
 <li><p>Similar to code fences, there are inline (use <code class="docutils literal notranslate"><span class="pre">$</span></code>) and block (<code class="docutils literal notranslate"><span class="pre">$$</span></code>) math formulas</p></li>
@@ -890,30 +1007,30 @@ a_2 &amp; b_2 \\
 a_3 &amp; b_3
 \end{bmatrix}
 \end{split}\]</div>
-</div>
-<div class="section" id="links">
-<h3><span class="section-number">4.4.7. </span>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="links">
+<h3><span class="section-number">4.4.7. </span>Links<a class="headerlink" href="#links" title="Permalink to this headline">#</a></h3>
 <p>Try this</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>If something you don&#39;t not know, use [Google](https://www.google.com)
 </pre></div>
 </div>
 <p>You will see</p>
 <p>If some thing you don’t know, use <a class="reference external" href="https://www.google.com">Google</a></p>
-</div>
-<div class="section" id="advice">
-<h3><span class="section-number">4.4.8. </span>Advice<a class="headerlink" href="#advice" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="advice">
+<h3><span class="section-number">4.4.8. </span>Advice<a class="headerlink" href="#advice" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>The syntax introduced so far is enough for you to have a nice-looking notebook</p></li>
 <li><p>I rarely use any Markdown features beyond this level.</p></li>
 <li><p>Remember, the most important thing is the quality of your analysis</p></li>
 <li><p>Don’t bother too much with fancy formatting</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="advanced-markdown-syntax">
-<h2><span class="section-number">4.5. </span>Advanced Markdown syntax<a class="headerlink" href="#advanced-markdown-syntax" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="blockquotes">
-<h3><span class="section-number">4.5.1. </span>Blockquotes<a class="headerlink" href="#blockquotes" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="advanced-markdown-syntax">
+<h2><span class="section-number">4.5. </span>Advanced Markdown syntax<a class="headerlink" href="#advanced-markdown-syntax" title="Permalink to this headline">#</a></h2>
+<section id="blockquotes">
+<h3><span class="section-number">4.5.1. </span>Blockquotes<a class="headerlink" href="#blockquotes" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Block quotes are used for quotes or excerpts</p></li>
 <li><p>You start a blockquote with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></li>
@@ -938,9 +1055,9 @@ a_3 &amp; b_3
 <div><p>My advice to you is to get married: if you find a good wife you’ll be happy; if not, you’ll become a philosopher (Socrates)</p>
 <p>Behind every great man is a woman rolling her eyes (Jim Carrey)</p>
 </div></blockquote>
-</div>
-<div class="section" id="images">
-<h3><span class="section-number">4.5.2. </span>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="images">
+<h3><span class="section-number">4.5.2. </span>Images<a class="headerlink" href="#images" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>To insert an image, use the following syntax <code class="docutils literal notranslate"><span class="pre">![Caption](path_to_the_image)</span></code></p></li>
 <li><p>You can use an absolute or a relative path</p></li>
@@ -951,9 +1068,9 @@ a_3 &amp; b_3
 </div>
 <p>You will see
 <img alt="Python logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png" /></p>
-</div>
-<div class="section" id="tables">
-<h3><span class="section-number">4.5.3. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tables">
+<h3><span class="section-number">4.5.3. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">#</a></h3>
 <p>Try this</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="nb">id</span> <span class="o">|</span> <span class="n">name</span>       <span class="o">|</span> <span class="n">email</span>            <span class="o">|</span>
 <span class="o">|----|------------|------------------|</span>
@@ -986,9 +1103,9 @@ a_3 &amp; b_3
 </tbody>
 </table>
 <p>However, my advice is not to type tables by yourself. Go to some website that offers a free Markdown table generator such as this one <a class="reference external" href="https://www.tablesgenerator.com/markdown_tables">https://www.tablesgenerator.com/markdown_tables</a></p>
-</div>
-<div class="section" id="emails">
-<h3><span class="section-number">4.5.4. </span>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="emails">
+<h3><span class="section-number">4.5.4. </span>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Put your email inside <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> to generate a like to your email</p></li>
 <li><p>When someone clicks on the link, the default email app will be launched</p></li>
@@ -1000,9 +1117,9 @@ a_3 &amp; b_3
 </div>
 <p>You will see</p>
 <p><a class="reference external" href="mailto:pythonisfun&#37;&#52;&#48;example&#46;com">mailto:pythonisfun<span>&#64;</span>example<span>&#46;</span>com</a></p>
-</div>
-<div class="section" id="html">
-<h3><span class="section-number">4.5.5. </span>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="html">
+<h3><span class="section-number">4.5.5. </span>HTML<a class="headerlink" href="#html" title="Permalink to this headline">#</a></h3>
 <p>You can also use HTML tags inside a Markdown file, and they will be parsed according to HTML rules</p>
 <p>Ex</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1025,10 +1142,10 @@ a_3 &amp; b_3
         <li><b>item 2 in bold</b></li>
         <li><span style="color: red;">item 3 in red</span></li>
     </ul>
-</div></div>
-</div>
-<div class="section" id="summary">
-<h2><span class="section-number">4.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</div></section>
+</section>
+<section id="summary">
+<h2><span class="section-number">4.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
 <p><strong>Headings</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Level 1</span>
 <span class="c1">## Level 2</span>
@@ -1145,8 +1262,8 @@ $$
 <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1170,9 +1287,11 @@ $$
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="jupyter-lab.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1188,24 +1307,28 @@ $$
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Tue Nguyen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Tue Nguyen<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
