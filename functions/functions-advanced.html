@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>23. Functions - advanced &#8212; Python tutorials</title>
+    <title>24. Functions - advanced &#8212; Python tutorials</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="functions-basics.html" />
+    <link rel="prev" title="23. Functions - basics" href="functions-basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -265,9 +265,14 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions-basics.html">
+   23. Functions - basics
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   23. Functions - advanced
+   24. Functions - advanced
   </a>
  </li>
 </ul>
@@ -478,39 +483,39 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outline">
-   23.1. Outline
+   24.1. Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lambda-functions">
-   23.2. Lambda functions
+   24.2. Lambda functions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#named-lambda-functions">
-     23.2.1. Named lambda functions
+     24.2.1. Named lambda functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#anonymous-lambda-function">
-     23.2.2. Anonymous lambda function
+     24.2.2. Anonymous lambda function
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scope-of-variables">
-   23.3. Scope of variables
+   24.3. Scope of variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#flexible-arguments">
-   23.4. Flexible arguments
+   24.4. Flexible arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#document-a-function">
-   23.5. Document a function
+   24.5. Document a function
   </a>
  </li>
 </ul>
@@ -534,39 +539,39 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outline">
-   23.1. Outline
+   24.1. Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lambda-functions">
-   23.2. Lambda functions
+   24.2. Lambda functions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#named-lambda-functions">
-     23.2.1. Named lambda functions
+     24.2.1. Named lambda functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#anonymous-lambda-function">
-     23.2.2. Anonymous lambda function
+     24.2.2. Anonymous lambda function
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scope-of-variables">
-   23.3. Scope of variables
+   24.3. Scope of variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#flexible-arguments">
-   23.4. Flexible arguments
+   24.4. Flexible arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#document-a-function">
-   23.5. Document a function
+   24.5. Document a function
   </a>
  </li>
 </ul>
@@ -580,10 +585,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="functions-advanced">
-<h1><span class="section-number">23. </span>Functions - advanced<a class="headerlink" href="#functions-advanced" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">24. </span>Functions - advanced<a class="headerlink" href="#functions-advanced" title="Permalink to this headline">#</a></h1>
 <p>Author: Tue Nguyen</p>
 <section id="outline">
-<h2><span class="section-number">23.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Lambda functions</p></li>
 <li><p>Scope of variables</p></li>
@@ -592,7 +597,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="lambda-functions">
-<h2><span class="section-number">23.2. </span>Lambda functions<a class="headerlink" href="#lambda-functions" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.2. </span>Lambda functions<a class="headerlink" href="#lambda-functions" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>We use <code class="docutils literal notranslate"><span class="pre">def</span></code> to define regular functions</p></li>
 <li><p>We use <code class="docutils literal notranslate"><span class="pre">lambda</span></code> quickly define simple functions (normally in one line)</p></li>
@@ -605,7 +610,7 @@ title="Print to PDF"
 </li>
 </ul>
 <section id="named-lambda-functions">
-<h3><span class="section-number">23.2.1. </span>Named lambda functions<a class="headerlink" href="#named-lambda-functions" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.2.1. </span>Named lambda functions<a class="headerlink" href="#named-lambda-functions" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Syntax: <code class="docutils literal notranslate"><span class="pre">func_name</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">params:</span> <span class="pre">code</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">code</span></code> can be a statement or an expression</p></li>
@@ -701,7 +706,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="anonymous-lambda-function">
-<h3><span class="section-number">23.2.2. </span>Anonymous lambda function<a class="headerlink" href="#anonymous-lambda-function" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.2.2. </span>Anonymous lambda function<a class="headerlink" href="#anonymous-lambda-function" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Syntax: <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">params:</span> <span class="pre">code</span></code></p></li>
 <li><p>An anonymous function cannot stand on its own but must be used in another operation such as sorting or filter</p></li>
@@ -800,15 +805,15 @@ title="Print to PDF"
 </section>
 </section>
 <section id="scope-of-variables">
-<h2><span class="section-number">23.3. </span>Scope of variables<a class="headerlink" href="#scope-of-variables" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.3. </span>Scope of variables<a class="headerlink" href="#scope-of-variables" title="Permalink to this headline">#</a></h2>
 <p>To be updated</p>
 </section>
 <section id="flexible-arguments">
-<h2><span class="section-number">23.4. </span>Flexible arguments<a class="headerlink" href="#flexible-arguments" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.4. </span>Flexible arguments<a class="headerlink" href="#flexible-arguments" title="Permalink to this headline">#</a></h2>
 <p>To be updated</p>
 </section>
 <section id="document-a-function">
-<h2><span class="section-number">23.5. </span>Document a function<a class="headerlink" href="#document-a-function" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.5. </span>Document a function<a class="headerlink" href="#document-a-function" title="Permalink to this headline">#</a></h2>
 <p>To be updated</p>
 </section>
 </section>
@@ -844,7 +849,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title"><span class="section-number">23. </span>Functions - basics</p>
         </div>
     </a>
 </div>
