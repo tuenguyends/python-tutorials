@@ -48,3 +48,8 @@ parts:
     - file: "control-flows/intro-control-flows"
     - file: "control-flows/branching"
     - file: "control-flows/looping"
+    
+  - caption: "Functions"
+    numbered: true
+    chapters:
+    - file: "functions/intro-functions"
