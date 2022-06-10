@@ -52,4 +52,5 @@ parts:
   - caption: "Functions"
     numbered: true
     chapters:
-    - file: "functions/intro-functions"
+    - file: "functions/functions-basics"
+    - file: "functions/functions-advanced"
