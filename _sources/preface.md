@@ -1,7 +1,8 @@
 # Preface
 
 ```{note}
-This book is unfinished. New content will be updated regularly.
+This book is unfinished. New content will be updated regularly.  
+Current status: finishing chapter 24.
 ```
 
 This book aims to help you learn the fundamental programming skills with Python. The contents grew out of my experience working as a data analyst/scientist as well as teaching data science to young professionals.

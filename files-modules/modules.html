@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7. Naming rules and conventions &#8212; Python tutorials</title>
+    <title>26. Modules &#8212; Python tutorials</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Python’s typing system" href="typing-system.html" />
-    <link rel="prev" title="6. Variables and assignments" href="assignments-variables.html" />
+    <link rel="next" title="27. OOP in Python" href="../oop/oop-intro.html" />
+    <link rel="prev" title="25. Files" href="files.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -145,24 +145,24 @@ const thebe_selector_output = ".output, .cell_output"
   The basics
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="basic-syntax.html">
+  <a class="reference internal" href="../basics/basic-syntax.html">
    5. Python’s basic syntax
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="assignments-variables.html">
+  <a class="reference internal" href="../basics/assignments-variables.html">
    6. Variables and assignments
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/naming.html">
    7. Naming rules and conventions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="typing-system.html">
+  <a class="reference internal" href="../basics/typing-system.html">
    8. Python’s typing system
   </a>
  </li>
@@ -280,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
   Files and modules
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../files-modules/files.html">
+  <a class="reference internal" href="files.html">
    25. Files
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../files-modules/modules.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    26. Modules
   </a>
  </li>
@@ -394,7 +394,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/basics/naming.ipynb"
+        <a href="https://mybinder.org/v2/gh/tuenguyends/python-tutorials/main?urlpath=tree/files-modules/modules.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -454,7 +454,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Fbasics/naming.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/tuenguyends/python-tutorials/issues/new?title=Issue%20on%20page%20%2Ffiles-modules/modules.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -482,7 +482,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/basics/naming.ipynb"
+        <a href="../_sources/files-modules/modules.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -519,90 +519,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   7.1. Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-rules">
-   7.2. Naming rules
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-convention">
-   7.3. Naming convention
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   7.4. Summary
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Naming rules and conventions</h1>
+                <h1>Modules</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   7.1. Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-rules">
-   7.2. Naming rules
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-convention">
-   7.3. Naming convention
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   7.4. Summary
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -610,147 +543,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="naming-rules-and-conventions">
-<h1><span class="section-number">7. </span>Naming rules and conventions<a class="headerlink" href="#naming-rules-and-conventions" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="modules">
+<h1><span class="section-number">26. </span>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h1>
 <p>Author: Tue Nguyen</p>
-<blockquote>
-<div><p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>
-<p>(Phil Karlton)</p>
-</div></blockquote>
-<section id="overview">
-<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>When writing a program, we often have to give names to many things</p></li>
-<li><p>Ex: variables, functions, classes, and modules</p></li>
-<li><p>Thus, it is crucial to learn the rules and conventions</p>
-<ul>
-<li><p><strong>Rules</strong> are specifications that we MUST follow</p></li>
-<li><p><strong>Conventions</strong> are more like <em>suggestions</em> of best practices by experienced programmers and are widely accepted by the community. Thus, we are not required to follow, but we SHOULD.</p></li>
-</ul>
-</li>
-<li><p>For now, we only focus on variable names. Naming for other things is similar</p></li>
-</ul>
-</section>
-<section id="naming-rules">
-<h2><span class="section-number">7.2. </span>Naming rules<a class="headerlink" href="#naming-rules" title="Permalink to this headline">#</a></h2>
-<p>There are 3 rules when naming a variable</p>
-<ul class="simple">
-<li><p>Can consist characters from 3 following groups only</p>
-<ul>
-<li><p>Digits (<code class="docutils literal notranslate"><span class="pre">0-9</span></code>)</p></li>
-<li><p>Latin letters (<code class="docutils literal notranslate"><span class="pre">a-z</span></code> and <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>)</p></li>
-<li><p>Underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
-</ul>
-</li>
-<li><p>Cannot start with a digit</p></li>
-<li><p>Cannot coincide with one of Python’s reserved words</p></li>
-</ul>
-<p>Reserved words or keywords are words that have special meaning to Python (see the list below)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>       <span class="k">class</span>       <span class="nc">finally</span>     <span class="ow">is</span>          <span class="k">return</span>
-<span class="kc">None</span>        <span class="k">continue</span>    <span class="k">for</span>         <span class="k">lambda</span>      <span class="k">try</span>
-<span class="kc">True</span>        <span class="k">def</span>         <span class="nf">from</span>        <span class="k">nonlocal</span>    <span class="k">while</span>
-<span class="ow">and</span>         <span class="k">del</span>         <span class="k">global</span>      <span class="ow">not</span>         <span class="k">with</span>
-<span class="k">as</span>          <span class="k">elif</span>        <span class="k">if</span>          <span class="ow">or</span>          <span class="k">yield</span>
-<span class="k">assert</span>      <span class="k">else</span>        <span class="kn">import</span>      <span class="nn">pass</span>     
-<span class="k">break</span>       <span class="k">except</span>      <span class="ow">in</span>          <span class="k">raise</span>
-</pre></div>
-</div>
-<p>Notes</p>
-<ul class="simple">
-<li><p>For now, you don’t have to remember all of these keywords. You will remember them as you progress</p></li>
-<li><p>Python is case-sensitive, meaning that it distinguishes between lowercase and uppercase. Thus, <code class="docutils literal notranslate"><span class="pre">firstname</span></code>, <code class="docutils literal notranslate"><span class="pre">FirstName</span></code>, and <code class="docutils literal notranslate"><span class="pre">FIRSTNAME</span></code> are different</p></li>
-</ul>
-<p><strong>a) Ex 1: valid names</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span>
-<span class="n">num_jobs</span>
-<span class="n">file_name</span>
-<span class="n">_xyz</span>
-</pre></div>
-</div>
-<p><strong>b) Ex2: invalid name</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>warnings! # contains a special character !
-4oceans # starts with a digit
-break # coincides with break keyword
-</pre></div>
-</div>
-</section>
-<section id="naming-convention">
-<h2><span class="section-number">7.3. </span>Naming convention<a class="headerlink" href="#naming-convention" title="Permalink to this headline">#</a></h2>
-<p>Here are some best practices to follow when naming</p>
-<ul class="simple">
-<li><p>Use all lowercase</p>
-<ul>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">name</span></code> instead of <code class="docutils literal notranslate"><span class="pre">Name</span></code> or <code class="docutils literal notranslate"><span class="pre">NAME</span></code></p></li>
-</ul>
-</li>
-<li><p>Follow <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> convention</p>
-<ul>
-<li><p>Word are separated by <code class="docutils literal notranslate"><span class="pre">_</span></code> so that the name looks like a snake</p></li>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">gross_profit</span></code>, <code class="docutils literal notranslate"><span class="pre">first_name</span></code>, <code class="docutils literal notranslate"><span class="pre">top_score</span></code></p></li>
-</ul>
-</li>
-<li><p>One exception: class names should follow <code class="docutils literal notranslate"><span class="pre">CamelCase</span></code></p>
-<ul>
-<li><p>Start each word in the name with a capital letter followed by lower letter so that the name looks like a camel with humps</p></li>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">Person</span></code>, <code class="docutils literal notranslate"><span class="pre">BankAccount</span></code></p></li>
-</ul>
-</li>
-<li><p>Should be meaningful and easy to remember</p>
-<ul>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">interest_rate</span></code> instead of <code class="docutils literal notranslate"><span class="pre">r</span></code> or <code class="docutils literal notranslate"><span class="pre">ir</span></code></p></li>
-</ul>
-</li>
-<li><p>Should have a reasonable length</p>
-<ul>
-<li><p>Ex: <code class="docutils literal notranslate"><span class="pre">sales_apr</span></code> instead of <code class="docutils literal notranslate"><span class="pre">sales_data_for_april</span></code></p></li>
-</ul>
-</li>
-<li><p>Avoid names of popular functions and modules</p>
-<ul>
-<li><p>Ex: avoid <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">math</span></code>, or <code class="docutils literal notranslate"><span class="pre">collections</span></code></p></li>
-</ul>
-</li>
-</ul>
-<p><strong>a) Ex 1: names having good styles</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span>
-<span class="n">cum_gpa</span>
-<span class="n">class_rank</span>
-</pre></div>
-</div>
-<p><strong>b) Example 2: names having bad styles</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="c1"># ambiguous</span>
-<span class="n">FirstName</span> <span class="c1"># not snake case</span>
-<span class="nb">print</span> <span class="c1"># name of a popular function</span>
-<span class="n">os</span> <span class="c1"># name of a popular module</span>
-<span class="n">sys</span> <span class="c1"># name of a popular module</span>
-<span class="n">salary_data_of_10000_households</span> <span class="c1"># too long</span>
-</pre></div>
-</div>
-</section>
-<section id="summary">
-<h2><span class="section-number">7.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
-<p><strong>Naming rules</strong></p>
-<ul class="simple">
-<li><p>Can consist characters from 3 following groups only</p>
-<ul>
-<li><p>Digits (<code class="docutils literal notranslate"><span class="pre">0-9</span></code>)</p></li>
-<li><p>Latin letters (<code class="docutils literal notranslate"><span class="pre">a-z</span></code> and <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>)</p></li>
-<li><p>Underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
-</ul>
-</li>
-<li><p>Cannot start with a digit</p></li>
-<li><p>Cannot coincide with one of Python’s reserved words</p></li>
-</ul>
-<p><strong>Naming convention</strong></p>
-<ul class="simple">
-<li><p>Use all lowercase</p></li>
-<li><p>Follow <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> convention</p></li>
-<li><p>One exception: class names should follow <code class="docutils literal notranslate"><span class="pre">CamelCase</span></code></p></li>
-<li><p>Should be meaningful and easy to remember</p></li>
-<li><p>Should have a reasonable length</p></li>
-<li><p>Avoid names of popular functions and modules</p></li>
-</ul>
-</section>
+<p>To be updated</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -766,7 +562,7 @@ break # coincides with break keyword
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./basics"
+            path: "./files-modules"
         },
         predefinedOutput: true
     }
@@ -780,17 +576,17 @@ break # coincides with break keyword
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="assignments-variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="files.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Variables and assignments</p>
+            <p class="prev-next-title"><span class="section-number">25. </span>Files</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="typing-system.html" title="next page">
+    <a class='right-next' id="next-link" href="../oop/oop-intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Python’s typing system</p>
+        <p class="prev-next-title"><span class="section-number">27. </span>OOP in Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
