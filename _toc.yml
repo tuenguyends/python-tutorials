@@ -54,3 +54,25 @@ parts:
     chapters:
     - file: "functions/functions-basics"
     - file: "functions/functions-advanced"
+    
+  - caption: "Files and modules"
+    numbered: true
+    chapters:
+    - file: "files-modules/files"
+    - file: "files-modules/modules"
+    
+  - caption: "OOP"
+    numbered: true
+    chapters:
+    - file: "oop/oop-intro"
+    - file: "oop/oop-python"
+    - file: "oop/oop-example-project"
+    
+  - caption: "Extra topics"
+    numbered: true
+    chapters:
+    - file: "extra/generators"
+    - file: "extra/iterators"
+    - file: "extra/exceptions"
+    
+    
